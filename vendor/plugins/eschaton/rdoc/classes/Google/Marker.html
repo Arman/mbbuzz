@@ -1,0 +1,891 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Class: Google::Marker</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href="../.././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }</style>" )
+  
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+
+    <div id="classHeader">
+        <table class="header-table">
+        <tr class="top-aligned-row">
+          <td><strong>Class</strong></td>
+          <td class="class-name-in-header">Google::Marker</td>
+        </tr>
+        <tr class="top-aligned-row">
+            <td><strong>In:</strong></td>
+            <td>
+                <a href="../../files/slices/google_maps/google/marker_rb.html">
+                slices/google_maps/google/marker.rb
+                </a>
+        <br />
+            </td>
+        </tr>
+
+        <tr class="top-aligned-row">
+            <td><strong>Parent:</strong></td>
+            <td>
+                <a href="MapObject.html">
+                MapObject
+               </a>
+            </td>
+        </tr>
+        </table>
+    </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+
+
+  <div id="contextContent">
+
+    <div id="description">
+      <p>
+Represents a marker that can be added to a <a href="Map.html">Map</a> using
+<a href="Map.html#M000123">Map#add_marker</a>. If a method or event is not
+documented here please see googles <a
+href="http://code.google.com/apis/maps/documentation/reference.html#GMarker">online</a>
+docs for details. See <a
+href="MapObject.html#M000108">MapObject#listen_to</a> on how to use events
+not listed on this object.
+</p>
+<p>
+You will most likely use <a href="Marker.html#M000095">click</a>, <a
+href="Marker.html#M000092">open_info_window</a> and <a
+href="Marker.html#M000102">set_tooltip</a> to get some basic functionality
+going.
+</p>
+<h3>General examples:</h3>
+<pre>
+ Google::Marker.new :location =&gt; {:latitude =&gt; -34, :longitude =&gt; 18.5}
+
+ Google::Marker.new :location =&gt; {:latitude =&gt; -34, :longitude =&gt; 18.5},
+                    :draggable =&gt; true,
+                    :title =&gt; &quot;This is a marker!&quot;
+
+ Google::Marker.new :location =&gt; {:latitude =&gt; -34, :longitude =&gt; 18.5},
+                    :icon =&gt; :green_circle #=&gt; &quot;/images/green_circle.png&quot;
+
+ Google::Marker.new :location =&gt; {:latitude =&gt; -34, :longitude =&gt; 18.5},
+                    :icon =&gt; '/images/red_dot.gif'
+</pre>
+<h3><a href="Tooltip.html">Tooltip</a> examples:</h3>
+<pre>
+ Google::Marker.new :location =&gt; {:latitude =&gt; -34, :longitude =&gt; 18.5},
+                    :tooltip =&gt; {:text =&gt; 'This is sparta!'}
+
+ Google::Marker.new :location =&gt; {:latitude =&gt; -34, :longitude =&gt; 18.5},
+                    :tooltip =&gt; {:text =&gt; 'This is sparta!', :show =&gt; :always}
+
+ Google::Marker.new :location =&gt; {:latitude =&gt; -34, :longitude =&gt; 18.5},
+                    :tooltip =&gt; {:partial =&gt; 'spot_information', :show =&gt; :always}
+</pre>
+<h3><a href="../Gravatar.html">Gravatar</a> examples:</h3>
+<pre>
+ Google::Marker.new :location =&gt; {:latitude =&gt; -34, :longitude =&gt; 18.5},
+                    :gravatar =&gt; 'yawningman@eschaton.com'
+
+ Google::Marker.new :location =&gt; {:latitude =&gt; -34, :longitude =&gt; 18.5},
+                    :gravatar =&gt; {:email_address =&gt; 'yawningman@eschaton.com', :size =&gt; 50}
+</pre>
+<h3><a href="Circle.html">Circle</a> examples:</h3>
+<pre>
+ Google::Marker.new :location =&gt; {:latitude =&gt; -33.947, :longitude =&gt; 18.462},
+                    :circle =&gt; true
+
+ Google::Marker.new :location =&gt; {:latitude =&gt; -33.947, :longitude =&gt; 18.462},
+                    :circle =&gt; {:radius =&gt; 500, :border_width =&gt; 5}
+</pre>
+<h3>Info windows using <a href="Marker.html#M000092">open_info_window</a>:</h3>
+<pre>
+ marker.open_info_window :text =&gt; 'Hello there...'
+
+ marker.open_info_window :partial =&gt; 'spot_information'
+
+ marker.open_info_window :partial =&gt; 'spot_information', :locals =&gt; {:information =&gt; information}
+
+ map.open_info_window :url =&gt; {:controller =&gt; :spot, :action =&gt; :show, :id =&gt; @spot}
+</pre>
+<h3>Using the <a href="Marker.html#M000095">click</a> event:</h3>
+<pre>
+ # Open a info window and circle the marker.
+ marker.click do |script|
+   marker.open_info_window :url =&gt; {:controller =&gt; :spot, :action =&gt; :show, :id =&gt; @spot}
+   marker.circle!
+ end
+</pre>
+
+    </div>
+
+
+   </div>
+
+    <div id="method-list">
+      <h3 class="section-bar">Methods</h3>
+
+      <div class="name-list">
+      <a href="#M000093">cache_info_window</a>&nbsp;&nbsp;
+      <a href="#M000100">change_icon</a>&nbsp;&nbsp;
+      <a href="#M000101">circle!</a>&nbsp;&nbsp;
+      <a href="#M000095">click</a>&nbsp;&nbsp;
+      <a href="#M000091">location</a>&nbsp;&nbsp;
+      <a href="#M000104">mouse_off</a>&nbsp;&nbsp;
+      <a href="#M000103">mouse_over</a>&nbsp;&nbsp;
+      <a href="#M000105">move_to</a>&nbsp;&nbsp;
+      <a href="#M000090">new</a>&nbsp;&nbsp;
+      <a href="#M000094">open_cached_info_window</a>&nbsp;&nbsp;
+      <a href="#M000092">open_info_window</a>&nbsp;&nbsp;
+      <a href="#M000102">set_tooltip</a>&nbsp;&nbsp;
+      <a href="#M000099">show_map_blowup</a>&nbsp;&nbsp;
+      <a href="#M000097">when_being_dragged</a>&nbsp;&nbsp;
+      <a href="#M000098">when_dropped</a>&nbsp;&nbsp;
+      <a href="#M000096">when_picked_up</a>&nbsp;&nbsp;
+      </div>
+    </div>
+
+  </div>
+
+
+    <!-- if includes -->
+    <div id="includes">
+      <h3 class="section-bar">Included Modules</h3>
+
+      <div id="includes-list">
+        <span class="include-name"><a href="Tooltipable.html">Tooltipable</a></span>
+      </div>
+    </div>
+
+    <div id="section">
+
+
+
+
+
+    <div id="attribute-list">
+      <h3 class="section-bar">Attributes</h3>
+
+      <div class="name-list">
+        <table>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">circle</td>
+          <td class="context-item-value">&nbsp;[R]&nbsp;</td>
+          <td class="context-item-desc"></td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">circle_var</td>
+          <td class="context-item-value">&nbsp;[R]&nbsp;</td>
+          <td class="context-item-desc"></td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">icon</td>
+          <td class="context-item-value">&nbsp;[RW]&nbsp;</td>
+          <td class="context-item-desc"></td>
+        </tr>
+        </table>
+      </div>
+    </div>
+      
+
+
+    <!-- if method_list -->
+    <div id="methods">
+      <h3 class="section-bar">Public Class methods</h3>
+
+      <div id="method-M000090" class="method-detail">
+        <a name="M000090"></a>
+
+        <div class="method-heading">
+          <a href="#M000090" class="method-signature">
+          <span class="method-name">new</span><span class="method-args">(options = {})</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <h4>Options:</h4>
+<ul>
+<li><tt><a href="Marker.html#M000091">location</a></tt> - Required. A <a
+href="Location.html">Location</a> or whatever <a
+href="Location.html#M000070">Location#new</a> supports which indicates
+where the marker must be placed on the map.
+
+</li>
+<li><tt>icon</tt> - Optional. The <a href="Icon.html">Icon</a> that should be
+used for the marker otherwise the default marker icon will be used.
+
+</li>
+<li><tt>gravatar</tt> - Optional. Uses a gravatar as the icon. If a string is
+supplied it will be used for the <tt>email_address</tt> option, see
+Gravatar#new for other valid options.
+
+</li>
+<li><tt>circle</tt> - Optional. Indicates if a circle should be drawn around
+the marker, also supports styling options(see <a
+href="Circle.html#M000156">Circle#new</a>)
+
+</li>
+<li><tt>tooltip</tt> - Optional. See <a
+href="Tooltip.html#M000067">Google::Tooltip#new</a> for valid options.
+
+</li>
+</ul>
+<p>
+See addtional <a
+href="http://code.google.com/apis/maps/documentation/reference.html#GMarkerOptions">options</a>
+that are supported.
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000090-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000090-source">
+<pre>
+     <span class="ruby-comment cmt"># File slices/google_maps/google/marker.rb, line 80</span>
+ 80:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">options</span> = {})
+ 81:       <span class="ruby-identifier">options</span>.<span class="ruby-identifier">default!</span> <span class="ruby-identifier">:draggable</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">false</span>
+ 82: 
+ 83:       <span class="ruby-keyword kw">super</span>
+ 84: 
+ 85:       <span class="ruby-ivar">@circle_var</span> = <span class="ruby-node">&quot;circle_#{self}&quot;</span>      
+ 86: 
+ 87:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">create_var?</span>
+ 88:         <span class="ruby-identifier">location</span> = <span class="ruby-constant">Google</span><span class="ruby-operator">::</span><span class="ruby-constant">OptionsHelper</span>.<span class="ruby-identifier">to_location</span>(<span class="ruby-identifier">options</span>.<span class="ruby-identifier">extract</span>(<span class="ruby-identifier">:location</span>))
+ 89: 
+ 90:         <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">icon</span> = <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">icon</span> = <span class="ruby-identifier">options</span>.<span class="ruby-identifier">extract</span>(<span class="ruby-identifier">:icon</span>)
+ 91:                       <span class="ruby-constant">Google</span><span class="ruby-operator">::</span><span class="ruby-constant">OptionsHelper</span>.<span class="ruby-identifier">to_icon</span>(<span class="ruby-identifier">icon</span>)
+ 92:                     <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">gravatar</span> = <span class="ruby-identifier">options</span>.<span class="ruby-identifier">extract</span>(<span class="ruby-identifier">:gravatar</span>)
+ 93:                       <span class="ruby-constant">Google</span><span class="ruby-operator">::</span><span class="ruby-constant">OptionsHelper</span>.<span class="ruby-identifier">to_gravatar_icon</span>(<span class="ruby-identifier">gravatar</span>)
+ 94:                     <span class="ruby-keyword kw">end</span>
+ 95: 
+ 96:         <span class="ruby-identifier">options</span>[<span class="ruby-identifier">:icon</span>] = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">icon</span> <span class="ruby-keyword kw">if</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">icon</span>
+ 97:         
+ 98:         <span class="ruby-identifier">circle_options</span> = <span class="ruby-identifier">options</span>.<span class="ruby-identifier">extract</span>(<span class="ruby-identifier">:circle</span>)
+ 99:         <span class="ruby-identifier">tooltip_options</span> = <span class="ruby-identifier">options</span>.<span class="ruby-identifier">extract</span>(<span class="ruby-identifier">:tooltip</span>)
+100:         
+101:         <span class="ruby-keyword kw">self</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;#{self.var} = new GMarker(#{location}, #{options.to_google_options});&quot;</span>
+102: 
+103:         <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">draggable</span> = <span class="ruby-identifier">options</span>[<span class="ruby-identifier">:draggable</span>]
+104:         <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">set_tooltip</span>(<span class="ruby-identifier">tooltip_options</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">tooltip_options</span>
+105: 
+106:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">circle_options</span>
+107:           <span class="ruby-identifier">circle_options</span> = {} <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">circle_options</span> <span class="ruby-operator">==</span> <span class="ruby-keyword kw">true</span>
+108:           <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">circle!</span> <span class="ruby-identifier">circle_options</span>
+109:         <span class="ruby-keyword kw">end</span>
+110:       <span class="ruby-keyword kw">end</span>
+111:     <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="section-bar">Public Instance methods</h3>
+
+      <div id="method-M000093" class="method-detail">
+        <a name="M000093"></a>
+
+        <div class="method-heading">
+          <a href="#M000093" class="method-signature">
+          <span class="method-name">cache_info_window</span><span class="method-args">(options)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Supports all the same options as <a
+href="Marker.html#M000092">open_info_window</a>. The info window is then
+cached so that every time the marker is &#8216;clicked&#8217; it will open
+up the cached info window. The cached info window can also be opened using
+<a href="Marker.html#M000094">open_cached_info_window</a>.
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000093-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000093-source">
+<pre>
+     <span class="ruby-comment cmt"># File slices/google_maps/google/marker.rb, line 143</span>
+143:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">cache_info_window</span>(<span class="ruby-identifier">options</span>)
+144:       <span class="ruby-identifier">info_window</span> = <span class="ruby-constant">InfoWindow</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">:object</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">self</span>)
+145:       <span class="ruby-identifier">info_window</span>.<span class="ruby-identifier">cache_on_marker</span> <span class="ruby-identifier">options</span>
+146:     <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000100" class="method-detail">
+        <a name="M000100"></a>
+
+        <div class="method-heading">
+          <a href="#M000100" class="method-signature">
+          <span class="method-name">change_icon</span><span class="method-args">(image)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Changes the foreground icon of the marker to the given <tt>image</tt>. Note
+neither the print image nor the shadow image are adjusted.
+</p>
+<pre>
+ marker.change_icon :green_cicle #=&gt; &quot;/images/green_circle.png&quot;
+ marker.change_icon &quot;/images/red_dot.gif&quot;
+</pre>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000100-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000100-source">
+<pre>
+     <span class="ruby-comment cmt"># File slices/google_maps/google/marker.rb, line 221</span>
+221:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">change_icon</span>(<span class="ruby-identifier">image</span>)
+222:       <span class="ruby-identifier">image</span> = <span class="ruby-constant">Google</span><span class="ruby-operator">::</span><span class="ruby-constant">OptionsHelper</span>.<span class="ruby-identifier">to_image</span>(<span class="ruby-identifier">image</span>)
+223: 
+224:       <span class="ruby-keyword kw">self</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;#{self.var}.setImage(#{image.to_js});&quot;</span>
+225:     <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000101" class="method-detail">
+        <a name="M000101"></a>
+
+        <div class="method-heading">
+          <a href="#M000101" class="method-signature">
+          <span class="method-name">circle!</span><span class="method-args">(options = {})</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Draws a circle around the marker, see <a
+href="Circle.html#M000156">Circle#new</a> for valid styling options.
+</p>
+<h4>Examples:</h4>
+<pre>
+ marker.circle!
+
+ marker.circle! :radius =&gt; 500, :border_width =&gt; 5
+</pre>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000101-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000101-source">
+<pre>
+     <span class="ruby-comment cmt"># File slices/google_maps/google/marker.rb, line 233</span>
+233:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">circle!</span>(<span class="ruby-identifier">options</span> = {})
+234:       <span class="ruby-identifier">options</span>[<span class="ruby-identifier">:var</span>] = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">circle_var</span>
+235:       <span class="ruby-identifier">options</span>[<span class="ruby-identifier">:location</span>] = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">location</span>
+236: 
+237:       <span class="ruby-ivar">@circle</span> = <span class="ruby-constant">Google</span><span class="ruby-operator">::</span><span class="ruby-constant">Circle</span>.<span class="ruby-identifier">new</span> <span class="ruby-identifier">options</span>
+238:       <span class="ruby-keyword kw">if</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">draggable?</span>
+239:         <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">when_being_dragged</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">script</span>, <span class="ruby-identifier">current_location</span><span class="ruby-operator">|</span>
+240:           <span class="ruby-ivar">@circle</span>.<span class="ruby-identifier">move_to</span> <span class="ruby-identifier">current_location</span>
+241:         <span class="ruby-keyword kw">end</span>
+242:       <span class="ruby-keyword kw">end</span>
+243: 
+244:       <span class="ruby-ivar">@circle</span>
+245:     <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000095" class="method-detail">
+        <a name="M000095"></a>
+
+        <div class="method-heading">
+          <a href="#M000095" class="method-signature">
+          <span class="method-name">click</span><span class="method-args">(info_window_options = nil) {|script| ...}</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+If called with a block it will attach the block to the &quot;<a
+href="Marker.html#M000095">click</a>&quot; event of the marker. If
+<tt>info_window_options</tt> are supplied an info window will be opened
+with those options and the block will be ignored.
+</p>
+<h4>Example:</h4>
+<pre>
+ # Open a info window and circle the marker.
+ marker.click do |script|
+   marker.open_info_window :url =&gt; {:controller =&gt; :spot, :action =&gt; :show, :id =&gt; @spot}
+   marker.circle!
+ end
+</pre>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000095-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000095-source">
+<pre>
+     <span class="ruby-comment cmt"># File slices/google_maps/google/marker.rb, line 162</span>
+162:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">click</span>(<span class="ruby-identifier">info_window_options</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>) <span class="ruby-comment cmt"># :yields: script</span>
+163:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">info_window_options</span>
+164:         <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">click</span> <span class="ruby-keyword kw">do</span>
+165:           <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">open_info_window</span> <span class="ruby-identifier">info_window_options</span>
+166:         <span class="ruby-keyword kw">end</span>
+167:       <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">block_given?</span>
+168:         <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">listen_to</span> <span class="ruby-identifier">:event</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:click</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>
+169:       <span class="ruby-keyword kw">end</span>
+170:     <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000091" class="method-detail">
+        <a name="M000091"></a>
+
+        <div class="method-heading">
+          <a href="#M000091" class="method-signature">
+          <span class="method-name">location</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+The <a href="Marker.html#M000091">location</a> at which the marker is
+currently placed on the map.
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000091-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000091-source">
+<pre>
+     <span class="ruby-comment cmt"># File slices/google_maps/google/marker.rb, line 114</span>
+114:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">location</span>
+115:       <span class="ruby-node">&quot;#{self}.getLatLng()&quot;</span>
+116:     <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000104" class="method-detail">
+        <a name="M000104"></a>
+
+        <div class="method-heading">
+          <a href="#M000104" class="method-signature">
+          <span class="method-name">mouse_off</span><span class="method-args">(&amp;block)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+This event is fired when the mouse &quot;moves off&quot; the marker.
+</p>
+<h4>Yields:</h4>
+<ul>
+<li><tt>script</tt> - A JavaScriptGenerator to assist in generating javascript
+or interacting with the DOM.
+
+</li>
+</ul>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000104-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000104-source">
+<pre>
+     <span class="ruby-comment cmt"># File slices/google_maps/google/marker.rb, line 294</span>
+294:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">mouse_off</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+295:       <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">listen_to</span> <span class="ruby-identifier">:event</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:mouseout</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>
+296:     <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000103" class="method-detail">
+        <a name="M000103"></a>
+
+        <div class="method-heading">
+          <a href="#M000103" class="method-signature">
+          <span class="method-name">mouse_over</span><span class="method-args">(&amp;block)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+This event is fired when the mouse &quot;moves over&quot; the marker.
+</p>
+<h4>Yields:</h4>
+<ul>
+<li><tt>script</tt> - A JavaScriptGenerator to assist in generating javascript
+or interacting with the DOM.
+
+</li>
+</ul>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000103-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000103-source">
+<pre>
+     <span class="ruby-comment cmt"># File slices/google_maps/google/marker.rb, line 286</span>
+286:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">mouse_over</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+287:       <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">listen_to</span> <span class="ruby-identifier">:event</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:mouseover</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>
+288:     <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000105" class="method-detail">
+        <a name="M000105"></a>
+
+        <div class="method-heading">
+          <a href="#M000105" class="method-signature">
+          <span class="method-name">move_to</span><span class="method-args">(location)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Moves the marker to the given <tt><a
+href="Marker.html#M000091">location</a></tt> on the map.
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000105-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000105-source">
+<pre>
+     <span class="ruby-comment cmt"># File slices/google_maps/google/marker.rb, line 299</span>
+299:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">move_to</span>(<span class="ruby-identifier">location</span>)
+300:       <span class="ruby-identifier">location</span> = <span class="ruby-constant">Google</span><span class="ruby-operator">::</span><span class="ruby-constant">OptionsHelper</span>.<span class="ruby-identifier">to_location</span>(<span class="ruby-identifier">location</span>)
+301: 
+302:       <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">lat_lng</span> = <span class="ruby-identifier">location</span>
+303: 
+304:       <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">tooltip</span>.<span class="ruby-identifier">force_redraw</span> <span class="ruby-keyword kw">if</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">tooltip</span>
+305:       <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">circle</span>.<span class="ruby-identifier">move_to</span>(<span class="ruby-identifier">location</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">circled?</span>
+306:     <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000094" class="method-detail">
+        <a name="M000094"></a>
+
+        <div class="method-heading">
+          <a href="#M000094" class="method-signature">
+          <span class="method-name">open_cached_info_window</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000094-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000094-source">
+<pre>
+     <span class="ruby-comment cmt"># File slices/google_maps/google/marker.rb, line 148</span>
+148:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">open_cached_info_window</span>
+149:       <span class="ruby-keyword kw">self</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;GEvent.trigger(#{self}, 'click');&quot;</span>
+150:     <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000092" class="method-detail">
+        <a name="M000092"></a>
+
+        <div class="method-heading">
+          <a href="#M000092" class="method-signature">
+          <span class="method-name">open_info_window</span><span class="method-args">(options)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Opens a information window on the marker using either <tt>url</tt>,
+<tt>partial</tt> or <tt>text</tt> options as content.
+</p>
+<h4>Options:</h4>
+<ul>
+<li><tt>url</tt> - Optional. URL is generated by rails url_for. Supports
+standard url arguments and javascript variable interpolation.
+
+</li>
+<li><tt>partial</tt> - Optional. Supports the same form as rails
+<tt>render</tt> for partials, content of the rendered partial will be
+placed inside the info window.
+
+</li>
+<li><tt>text</tt> - Optional. The html content that will be placed inside the
+info window.
+
+</li>
+<li><tt>include_location</tt> - Optional. Works in conjunction with the
+<tt>url</tt> option and indicates if latitude and longitude parameters of
+<tt><a href="Marker.html#M000091">location</a></tt> should be sent through
+with the <tt>url</tt>, defaulted to <tt>true</tt>. Use <tt>params[:<a
+href="Marker.html#M000091">location</a>]</tt> or <tt>params[:<a
+href="Marker.html#M000091">location</a>][:latitude]</tt> and <tt>params[:<a
+href="Marker.html#M000091">location</a>][:longitude]</tt> in your action.
+
+</li>
+</ul>
+<h4>Examples:</h4>
+<pre>
+ marker.open_info_window :text =&gt; 'Hello there...'
+
+ marker.open_info_window :partial =&gt; 'spot_information'
+
+ marker.open_info_window :partial =&gt; 'spot_information', :locals =&gt; {:information =&gt; information}
+
+ map.open_info_window :url =&gt; {:controller =&gt; :spot, :action =&gt; :show, :id =&gt; @spot}
+</pre>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000092-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000092-source">
+<pre>
+     <span class="ruby-comment cmt"># File slices/google_maps/google/marker.rb, line 136</span>
+136:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">open_info_window</span>(<span class="ruby-identifier">options</span>)
+137:       <span class="ruby-identifier">info_window</span> = <span class="ruby-constant">InfoWindow</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">:object</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">self</span>)
+138:       <span class="ruby-identifier">info_window</span>.<span class="ruby-identifier">open_on_marker</span> <span class="ruby-identifier">options</span>
+139:     <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000102" class="method-detail">
+        <a name="M000102"></a>
+
+        <div class="method-heading">
+          <a href="#M000102" class="method-signature">
+          <span class="method-name">set_tooltip</span><span class="method-args">(options)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+See <a href="Tooltipable.html#M000048">Tooltipable#set_tooltip</a> about
+valid <tt>options</tt>
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000102-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000102-source">
+<pre>
+     <span class="ruby-comment cmt"># File slices/google_maps/google/marker.rb, line 252</span>
+252:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">set_tooltip</span>(<span class="ruby-identifier">options</span>)
+253:       <span class="ruby-keyword kw">super</span>
+254:       
+255:       <span class="ruby-keyword kw">if</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">draggable?</span>
+256:         <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">when_picked_up</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">script</span><span class="ruby-operator">|</span>
+257:           <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">tooltip</span>.<span class="ruby-identifier">marker_picked_up</span>
+258:         <span class="ruby-keyword kw">end</span>
+259: 
+260:         <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">when_dropped</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">script</span>, <span class="ruby-identifier">location</span><span class="ruby-operator">|</span>
+261:           <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">tooltip</span>.<span class="ruby-identifier">marker_dropped</span>
+262:         <span class="ruby-keyword kw">end</span>
+263: 
+264:         <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">when_being_dragged</span> <span class="ruby-keyword kw">do</span>
+265:           <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">tooltip</span>.<span class="ruby-identifier">force_redraw</span>
+266:         <span class="ruby-keyword kw">end</span>
+267:       <span class="ruby-keyword kw">end</span>
+268:     <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000099" class="method-detail">
+        <a name="M000099"></a>
+
+        <div class="method-heading">
+          <a href="#M000099" class="method-signature">
+          <span class="method-name">show_map_blowup</span><span class="method-args">(options = {})</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Opens an info window that contains a blown-up view of the map around this
+marker.
+</p>
+<h4>Options:</h4>
+<ul>
+<li><tt>zoom_level</tt> - Optional. Sets the blowup to a particular zoom level.
+
+</li>
+<li><tt>map_type</tt> - Optional. Set the type of map shown in the blowup.
+
+</li>
+</ul>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000099-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000099-source">
+<pre>
+     <span class="ruby-comment cmt"># File slices/google_maps/google/marker.rb, line 211</span>
+211:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">show_map_blowup</span>(<span class="ruby-identifier">options</span> = {})
+212:      <span class="ruby-identifier">options</span>[<span class="ruby-identifier">:map_type</span>] = <span class="ruby-identifier">options</span>[<span class="ruby-identifier">:map_type</span>].<span class="ruby-identifier">to_map_type</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">options</span>[<span class="ruby-identifier">:map_type</span>]
+213: 
+214:      <span class="ruby-keyword kw">self</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;#{self.var}.showMapBlowup(#{options.to_google_options});&quot;</span> 
+215:     <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000097" class="method-detail">
+        <a name="M000097"></a>
+
+        <div class="method-heading">
+          <a href="#M000097" class="method-signature">
+          <span class="method-name">when_being_dragged</span><span class="method-args">() {|script, :current_location| ...}</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+This event is fired when the marker is being &quot;dragged&quot; across the
+map.
+</p>
+<h4>Yields:</h4>
+<ul>
+<li><tt>script</tt> - A JavaScriptGenerator to assist in generating javascript
+or interacting with the DOM.
+
+</li>
+<li><tt>current_location</tt> - The <a href="Marker.html#M000091">location</a>
+at which the marker is presently hovering.
+
+</li>
+</ul>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000097-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000097-source">
+<pre>
+     <span class="ruby-comment cmt"># File slices/google_maps/google/marker.rb, line 185</span>
+185:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">when_being_dragged</span>
+186:       <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">listen_to</span> <span class="ruby-identifier">:event</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:drag</span> <span class="ruby-keyword kw">do</span>
+187:         <span class="ruby-identifier">script</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;current_location = #{self.var}.getLatLng();&quot;</span>
+188: 
+189:         <span class="ruby-keyword kw">yield</span> <span class="ruby-identifier">script</span>, <span class="ruby-identifier">:current_location</span>
+190:       <span class="ruby-keyword kw">end</span>
+191:     <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000098" class="method-detail">
+        <a name="M000098"></a>
+
+        <div class="method-heading">
+          <a href="#M000098" class="method-signature">
+          <span class="method-name">when_dropped</span><span class="method-args">() {|script, :drop_location| ...}</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+This event is fired when the marker is &quot;dropped&quot; after being
+dragged.
+</p>
+<h4>Yields:</h4>
+<ul>
+<li><tt>script</tt> - A JavaScriptGenerator to assist in generating javascript
+or interacting with the DOM.
+
+</li>
+<li><tt>drop_location</tt> - The <a href="Marker.html#M000091">location</a> on
+the map where the marker was dropped.
+
+</li>
+</ul>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000098-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000098-source">
+<pre>
+     <span class="ruby-comment cmt"># File slices/google_maps/google/marker.rb, line 198</span>
+198:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">when_dropped</span>
+199:       <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">listen_to</span> <span class="ruby-identifier">:event</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:dragend</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">script</span><span class="ruby-operator">|</span>          
+200:         <span class="ruby-identifier">script</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;drop_location = #{self.var}.getLatLng();&quot;</span>
+201: 
+202:         <span class="ruby-keyword kw">yield</span> <span class="ruby-identifier">script</span>, <span class="ruby-identifier">:drop_location</span>
+203:       <span class="ruby-keyword kw">end</span>
+204:     <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000096" class="method-detail">
+        <a name="M000096"></a>
+
+        <div class="method-heading">
+          <a href="#M000096" class="method-signature">
+          <span class="method-name">when_picked_up</span><span class="method-args">(&amp;block)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+This event is fired when the marker is &quot;picked up&quot; at the
+beginning of being dragged.
+</p>
+<h4>Yields:</h4>
+<ul>
+<li><tt>script</tt> - A JavaScriptGenerator to assist in generating javascript
+or interacting with the DOM.
+
+</li>
+</ul>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000096-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000096-source">
+<pre>
+     <span class="ruby-comment cmt"># File slices/google_maps/google/marker.rb, line 176</span>
+176:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">when_picked_up</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+177:       <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">listen_to</span> <span class="ruby-identifier">:event</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:dragstart</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>
+178:     <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>
