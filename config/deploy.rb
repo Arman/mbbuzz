@@ -1,3 +1,7 @@
+deploy.task :restart, :roles => :app do
+  run "touch #{current_path}/tmp/restart.txt" 
+end
+
 # Dreamhost version starts here
 set :user, 'qqumbimk'  # Your dreamhost account's username
 set :domain, 'catwoman.dreamhost.com'  # Dreamhost servername where your account is located 

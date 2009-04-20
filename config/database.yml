@@ -21,6 +21,6 @@ production:
   database: mbbuzz #following rails db naming convention
   username: mbodb
   password: mbo1234
-  host: mysql.ikimiks.com
+  host: mysql.mindbodyturkiye.com
   port: 3306  #not necessary since its the standard mysql port
 
