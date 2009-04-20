@@ -1,0 +1,14 @@
+--- 
+users_001: 
+  salt: e8a4f3358c612b7149c63fd1fa19044f71488004
+  name: Arman
+  key_timestamp: 
+  updated_at: 2009-03-23 20:40:18
+  crypted_password: 7cd23669d5f08d72808c9c4e0962897720460d5f
+  remember_token_expires_at: 
+  id: "1"
+  administrator: t
+  remember_token: 
+  email_address: aaerman@hotmail.com
+  created_at: 2009-03-23 20:40:18
+  state: active

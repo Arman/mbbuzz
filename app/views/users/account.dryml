@@ -1,0 +1,31 @@
+  <page title="#{name} - Account" >
+    <body: class="user-account-page #{type_name}" />
+    <content: >
+      <header>
+        <h2><name/></h2>
+      </header>
+      <section>
+        <error-messages/>
+        <form class="change-password" multipart>
+          <field-list fields="email_address, about_me, current_password, password, password_confirmation" >
+            <password-label:>New Password</password-label:>
+            <password-confirmation-label:>Confirm New Password</password-confirmation-label:>
+          </field-list>
+          <table class="field-list">
+            <tr>
+              <th>Your current avatar is</th>
+              <td><img src="#{this.avatar.url(:med)}"/></td>
+            </tr>
+            <tr>
+              <th>You can upload a new image</th>
+              <td><input type="file" name="user[avatar]"/></td>
+            </tr>
+          </table>
+          <div class="actions">
+            <submit label="Save" />
+          </div>
+        </form>
+      </section>
+    </content:>   
+  </page>
+

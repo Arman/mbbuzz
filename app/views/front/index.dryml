@@ -1,0 +1,23 @@
+<page title="Welcome">
+  <body: class="front-page"/>
+  <content:>
+  
+    <header class="content-header">
+      <section class="welcome-message" unless="&logged_in?">
+        <h3>Welcome to <app-name/>. Find great people to help you reach your health, beauty and fitness goals!</h3>
+      </section>
+      <search-businesses/>
+    </header>
+    <section class="content-body">
+      
+      <h3>Best of <app-name/></h3>
+        <repeat with="&@top_businesses "> 
+          <card/>
+        </repeat> 
+      <h3>Most recent reviews</h3>     
+        <repeat with="&@recent_businesses"> 
+          <card/>
+        </repeat> 
+    </section>
+  </content:>
+</page>

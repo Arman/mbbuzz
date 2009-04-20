@@ -1,0 +1,643 @@
+<!-- AUTOMATICALLY GENERATED FILE - DO NOT EDIT -->
+
+<!-- ====== Main Navigation ====== -->
+
+<def tag="main-nav">
+  <navigation class="main-nav" merge-attrs param="default">
+    <nav-item href="#{base_url}/">Home</nav-item>
+    <nav-item with="&Business">Businesses</nav-item>
+    <nav-item with="&Review">Reviews</nav-item>
+  </navigation>
+</def>
+
+
+
+  
+<!-- ====== Business Pages ====== -->
+
+
+<def tag="index-page" for="Business">
+  <page merge title="Businesses">
+    <body: class="index-page business" param/>
+    
+    <content: param>
+      <header param="content-header">
+        <h2 param="heading">Businesses</h2>
+
+        <p param="count" if>There <count prefix="are"/></p>
+      </header>
+      
+      <section param="content-body">
+
+        <a action="new" to="&model" param="new-link"/>      
+
+        <page-nav param="top-page-nav"/>
+
+        <collection param/>
+
+        <page-nav param="bottom-page-nav"/>
+
+
+      </section>
+    </content:>
+  </page>
+</def>
+
+
+<def tag="new-page" for="Business">
+  <page merge title="New Business">
+    <body: class="new-page business" param/>
+    
+    <content: param>
+      <section param="content-header">
+        <h2 param="heading">New Business</h2>
+      </section>
+      
+      <section param="content-body">
+        <form param>
+          <submit: label="Create Business"/>
+        </form>
+      </section>
+    </content:>
+  </page>
+</def>
+
+
+<def tag="show-page" for="Business">
+  <page merge title="Business">
+
+    <body: class="show-page business" param/>
+
+    <content: param>
+      <section-group>
+        <section param="main-content">
+          <header param="content-header">
+            <h2 param="heading"><name/></h2>
+
+            <record-flags fields="" param/>
+
+            <a:owner param="creator-link"/>
+
+            <a action="edit" if="&can_edit?" param="edit-link">Edit Business</a>
+          </header>
+    
+          <section param="content-body" with-flash-messages>
+            <field-list fields="about, address_line_1, address_line_2, city, zip_code, state_region, country, web_site, phone, fax, avg_rating, latitude, longitude, photo_file_name, photo_content_type, photo_file_size, photo_updated_at" param/>
+            <section param="collection-section">
+              <h3 param="collection-heading">Business Categories</h3>
+              
+              <collection:business_categories param/>
+            </section>
+          </section>
+        </section>
+        
+        <aside param>
+          <section param="business_employees-collection-section">
+            <h3 param="business_employees-collection">Business Employees</h3>
+            <collection:business_employees/>
+          </section>
+          <preview-with-more:reviews.recent param="reviews-preview">
+            <more:>more</more:>
+          </preview-with-more:reviews.recent>
+        </aside>
+      </section-group>
+    </content:>
+    
+  </page>
+</def>
+
+
+<def tag="edit-page" for="Business">
+  <page merge title="Edit Business">
+
+    <body: class="edit-page business" param/>
+
+    <content:>
+      <section param="content-header">
+        <h2 param="heading">Edit <type-name/></h2>
+        <delete-button label="Remove This Business" param/>
+      </section>
+
+      <section param="content-body">
+        <form param/>
+      </section>
+    </content:>
+    
+  </page>
+</def>
+
+
+
+
+  
+<!-- ====== Category Pages ====== -->
+
+
+<def tag="index-page" for="Category">
+  <page merge title="Categories">
+    <body: class="index-page category" param/>
+    
+    <content: param>
+      <header param="content-header">
+        <h2 param="heading">Categories</h2>
+
+        <p param="count" if>There <count prefix="are"/></p>
+      </header>
+      
+      <section param="content-body">
+
+        <a action="new" to="&model" param="new-link"/>      
+
+        <page-nav param="top-page-nav"/>
+
+        <collection param/>
+
+        <page-nav param="bottom-page-nav"/>
+
+
+      </section>
+    </content:>
+  </page>
+</def>
+
+
+<def tag="new-page" for="Category">
+  <page merge title="New Category">
+    <body: class="new-page category" param/>
+    
+    <content: param>
+      <section param="content-header">
+        <h2 param="heading">New Category</h2>
+      </section>
+      
+      <section param="content-body">
+        <form param>
+          <submit: label="Create Category"/>
+        </form>
+      </section>
+    </content:>
+  </page>
+</def>
+
+
+<def tag="show-page" for="Category">
+  <page merge title="Category">
+
+    <body: class="show-page category" param/>
+
+    <content: param>
+          <header param="content-header">
+            <h2 param="heading"><name/></h2>
+
+            <record-flags fields="" param/>
+
+            <a action="edit" if="&can_edit?" param="edit-link">Edit Category</a>
+          </header>
+    
+          <section param="content-body">
+            <field-list fields="desc, about" param/>
+            <section param="collection-section">
+              <h3 param="collection-heading">Business Categories</h3>
+              
+              <collection:business_categories param/>
+            </section>
+          </section>
+    </content:>
+    
+  </page>
+</def>
+
+
+<def tag="edit-page" for="Category">
+  <page merge title="Edit Category">
+
+    <body: class="edit-page category" param/>
+
+    <content:>
+      <section param="content-header">
+        <h2 param="heading">Edit <type-name/></h2>
+        <delete-button label="Remove This Category" param/>
+      </section>
+
+      <section param="content-body">
+        <form param/>
+      </section>
+    </content:>
+    
+  </page>
+</def>
+
+
+
+
+  
+<!-- ====== Page Pages ====== -->
+
+
+<def tag="index-page" for="Page">
+  <page merge title="Pages">
+    <body: class="index-page page" param/>
+    
+    <content: param>
+      <header param="content-header">
+        <h2 param="heading">Pages</h2>
+
+        <p param="count" if>There <count prefix="are"/></p>
+      </header>
+      
+      <section param="content-body">
+
+        <a action="new" to="&model" param="new-link"/>      
+
+        <page-nav param="top-page-nav"/>
+
+        <collection param/>
+
+        <page-nav param="bottom-page-nav"/>
+
+
+      </section>
+    </content:>
+  </page>
+</def>
+
+
+<def tag="new-page" for="Page">
+  <page merge title="New Page">
+    <body: class="new-page page" param/>
+    
+    <content: param>
+      <section param="content-header">
+        <h2 param="heading">New Page</h2>
+      </section>
+      
+      <section param="content-body">
+        <form param>
+          <submit: label="Create Page"/>
+        </form>
+      </section>
+    </content:>
+  </page>
+</def>
+
+
+<def tag="show-page" for="Page">
+  <page merge title="Page">
+
+    <body: class="show-page page" param/>
+
+    <content: param>
+          <header param="content-header">
+            <h2 param="heading"><name/></h2>
+
+            <record-flags fields="" param/>
+
+            <a action="edit" if="&can_edit?" param="edit-link">Edit Page</a>
+          </header>
+    
+          <section param="content-body">
+            <view:content param="description"/>
+            <field-list fields="permalink" param/>
+          </section>
+    </content:>
+    
+  </page>
+</def>
+
+
+<def tag="edit-page" for="Page">
+  <page merge title="Edit Page">
+
+    <body: class="edit-page page" param/>
+
+    <content:>
+      <section param="content-header">
+        <h2 param="heading">Edit <type-name/></h2>
+        <delete-button label="Remove This Page" param/>
+      </section>
+
+      <section param="content-body">
+        <form param/>
+      </section>
+    </content:>
+    
+  </page>
+</def>
+
+
+
+
+  
+<!-- ====== Review Pages ====== -->
+
+
+<def tag="index-page" for="Review">
+  <page merge title="Reviews">
+    <body: class="index-page review" param/>
+    
+    <content: param>
+      <header param="content-header">
+        <h2 param="heading">Reviews</h2>
+
+        <p param="count" if>There <count prefix="are"/></p>
+      </header>
+      
+      <section param="content-body">
+
+        <a action="new" to="&model" param="new-link"/>      
+
+        <page-nav param="top-page-nav"/>
+
+        <collection param/>
+
+        <page-nav param="bottom-page-nav"/>
+
+
+      </section>
+    </content:>
+  </page>
+</def>
+
+
+<def tag="new-page" for="Review">
+  <page merge title="New Review">
+    <body: class="new-page review" param/>
+    
+    <content: param>
+      <section param="content-header">
+        <h2 param="heading">New Review</h2>
+      </section>
+      
+      <section param="content-body">
+        <form param>
+          <submit: label="Create Review"/>
+        </form>
+      </section>
+    </content:>
+  </page>
+</def>
+
+
+<def tag="show-page" for="Review">
+  <page merge title="Review">
+
+    <body: class="show-page review" param/>
+
+    <content: param>
+          <header param="content-header">
+            <a:business param="parent-link">&laquo; <name/></a:business>
+            <h2 param="heading"><name/></h2>
+
+            <record-flags fields="" param/>
+
+            <a:reviewer param="creator-link"/>
+
+            <a action="edit" if="&can_edit?" param="edit-link">Edit Review</a>
+          </header>
+    
+          <section param="content-body">
+            <view:body param="description"/>
+            <field-list fields="rating" param/>
+          </section>
+    </content:>
+    
+  </page>
+</def>
+
+
+<def tag="edit-page" for="Review">
+  <page merge title="Edit Review">
+
+    <body: class="edit-page review" param/>
+
+    <content:>
+      <section param="content-header">
+        <h2 param="heading">Edit <type-name/></h2>
+        <delete-button label="Remove This Review" param/>
+      </section>
+
+      <section param="content-body">
+        <form param/>
+      </section>
+    </content:>
+    
+  </page>
+</def>
+
+<def tag="index-for-business-page" polymorphic/>
+<def tag="index-for-business-page" for="Review">
+  <page merge title="Reviews for #{name :with => @business, :no_wrapper => true}">
+    <body: class="index-for-owner-page business review" param/>
+    
+    <content: param>
+      <header param="content-header">
+        <div param="back-to">Back to <a with="&@business"/></div>
+        <h2 param="heading">Reviews</h2>
+        <h3 param="subheading">For: <a with="&@business"/></h3>
+        <p param="count" if>There <count prefix="are"/></p>
+      </header>
+      
+      <section param="content-body">
+
+        <a action="new" to="&model" param="new-link"/>
+
+        <page-nav param="top-page-nav"/>
+      
+        <collection param/>
+      
+        <page-nav param="bottom-page-nav"/>
+      </section>
+    </content:>
+  </page>
+</def>
+
+
+<def tag="new-for-business-page" polymorphic/>
+<def tag="new-for-business-page" for="Review">
+  <page merge title="New Review for #{name :with => @business}">
+    
+    <body: class="new-for-owner-page  review" param/>
+    
+    <content: param>
+      <header param="content-header">
+        <h2 param="heading">New Review</h2>
+        <h3 param="subheading">For: <a with="&@business"/></h3>
+      </header>
+      
+      <section param="content-body">
+        <form owner="business" method="post" param>
+          <field-list: skip="business"/>
+          <submit: label="Create Review"/>
+        </form>
+      </section>
+    </content:>
+  </page>
+</def>
+
+<def tag="index-for-reviewer-page" polymorphic/>
+<def tag="index-for-reviewer-page" for="Review">
+  <page merge title="Reviews for #{name :with => @reviewer, :no_wrapper => true}">
+    <body: class="index-for-owner-page reviewer review" param/>
+    
+    <content: param>
+      <header param="content-header">
+        <div param="back-to">Back to <a with="&@reviewer"/></div>
+
+        <h2 param="heading"><Your with="&current_user"/> Reviews</h2>
+        <p param="count" if>There <count prefix="are"/></p>
+      </header>
+      
+      <section param="content-body">
+
+        <page-nav param="top-page-nav"/>
+      
+        <collection param/>
+      
+        <page-nav param="bottom-page-nav"/>
+      </section>
+    </content:>
+  </page>
+</def>
+
+
+
+
+
+
+  
+<!-- ====== User Pages ====== -->
+
+
+<def tag="index-page" for="User">
+  <page merge title="Users">
+    <body: class="index-page user" param/>
+    
+    <content: param>
+      <header param="content-header">
+        <h2 param="heading">Users</h2>
+
+        <p param="count" if>There <count prefix="are"/></p>
+      </header>
+      
+      <section param="content-body">
+
+        <page-nav param="top-page-nav"/>
+
+        <collection param/>
+
+        <page-nav param="bottom-page-nav"/>
+
+
+      </section>
+    </content:>
+  </page>
+</def>
+
+
+<def tag="new-page" for="User">
+  <page merge title="New User">
+    <body: class="new-page user" param/>
+    
+    <content: param>
+      <section param="content-header">
+        <h2 param="heading">New User</h2>
+      </section>
+      
+      <section param="content-body">
+        <form param>
+          <submit: label="Create User"/>
+        </form>
+      </section>
+    </content:>
+  </page>
+</def>
+
+
+<def tag="show-page" for="User">
+  <page merge title="User">
+
+    <body: class="show-page user" param/>
+
+    <content: param>
+          <header param="content-header">
+            <h2 param="heading"><name/></h2>
+
+            <record-flags fields="administrator" param/>
+
+            <a action="edit" if="&can_edit?" param="edit-link">Edit User</a>
+          </header>
+    
+          <section param="content-body">
+            <field-list fields="first_name, last_name, email_address, about_me, avatar_file_name, avatar_content_type, avatar_file_size, avatar_updated_at" param/>
+            <section param="collection-section">
+              <h3 param="collection-heading"><Your/>Business Employees</h3>
+              
+              <collection:business_employees param/>
+            </section>
+          </section>
+    </content:>
+    
+  </page>
+</def>
+
+
+<def tag="edit-page" for="User">
+  <page merge title="Edit User">
+
+    <body: class="edit-page user" param/>
+
+    <content:>
+      <section param="content-header">
+        <h2 param="heading">Edit <type-name/></h2>
+        <delete-button label="Remove This User" param/>
+      </section>
+
+      <section param="content-body">
+        <form param/>
+      </section>
+    </content:>
+    
+  </page>
+</def>
+
+
+<def tag="signup-page" polymorphic/>
+<def tag="signup-page" for="User">
+
+  <page title="Signup" merge>
+
+    <body: class="lifecycle-start-page signup-page" param/>
+
+    <content: param>
+      <header param="content-header">
+        <h2 param="heading">Signup</h2>
+      </header>
+
+      <section param="content-body">
+        <signup-form param="form"/>
+      </section>
+    </content:>
+
+  </page>
+</def>
+
+<def tag="reset-password-page" polymorphic/>
+<def tag="reset-password-page" for="User">
+  <page title="Reset Password" merge>
+    
+    <body: class="lifecycle-transition-page reset-password-page" param/>
+    
+    <content:>
+      <header param="content-header">
+        <h2 param="heading">Reset Password</h2>
+      </header>
+      
+      <section param="content-body">
+        <reset-password-form param="form"/>
+      </section>
+    </content:>
+    
+  </page>
+</def>
+
+

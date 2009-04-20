@@ -1,0 +1,307 @@
+html, body {
+	background-color: transparent;
+}
+
+body {width: 960px; background: none;}
+
+.content-header {
+	position: relative;
+	width:100%;
+	background-color: #feb;     
+	padding: 3px; 
+}
+
+.content-body {
+	position: relative;
+	width:100%;  
+	padding: 3px; 
+}
+
+.content-column-left {
+	float:left;
+	width:700;  
+}
+
+.content-column-left {
+	float:left;
+	width:260;  
+}
+
+
+.page-header {
+	/* background-image: url(/images/MBB_header.png);  */
+	height: 70px; 
+	padding: 0; 
+	margin-top: 0;
+	background-color: #AD163D;
+	}
+
+.page-header h1 {
+	margin: 0; 
+	padding: 10px 10px 0;
+	font-family: Verdana, Tahoma, Arial, sans-serif; 
+	font-size: 14px; 
+	font-weight: bold;
+}
+
+.page-header .main-nav {
+	position: absolute; 
+	bottom: 0; 
+	left: 20;
+}
+
+.page-header .main-nav li {
+	margin-right: 1px;
+	}
+	
+.page-header .navigation.main-nav a {
+	background: #666666;
+	}
+
+.page-header .navigation.main-nav a:hover {
+	background: #BE273D;
+	}
+	
+.main-nav a, .main-nav a:hover {
+	text-shadow: none;
+	border: 1px solid white; 
+	border-width: 0 0 0 1px; 	 	
+}
+
+.account-nav {
+	position: absolute; bottom: 5px; right: 20px;
+	font-size: 11px;   
+}
+.account-nav a {color: #bbb;}
+
+.page-header div.search {
+	position: absolute; top: 50px; right: 5px; z-index: 10;
+}
+
+select.dev-user-changer {top: 5px ; left: auto; bottom: auto; right: 5px; height: auto;}
+
+.page-content {background: none;}
+.content-header, .content-body {margin: 0 5px 0 5px;}
+
+
+
+.show-page .content-header a.edit-link {
+	position: absolute; 
+	top: 3px; 
+	bottom: auto;
+	right: 6px;
+	font-size: 11px;
+	background-color: transparent;
+}
+
+body {
+	color: #777;
+	font-size: 11px;
+	line-height: 120%;
+}
+
+h1, h2, h3 {font-weight: bold; line-height: 100%; color: #D61951; padding: 2px;}
+h1 {margin: 3px 0 1px; font-size: 16px;}
+h2 {margin: 2px 0 1px; font-size: 14px;}
+h3 {margin: 2px 0 1px;  font-size: 13px;}
+h4 {margin: 2px 0 1px;  font-size: 12px;}
+h5 {margin: 1px 0 1px;  font-size: 11px;}
+
+.show-page .content-header, .primary-collection h2 {
+	border-bottom: 1px solid #ccc;
+	margin: 4px 0 1px; 
+	padding: 0;
+	vertical-align: bottom;
+}
+
+.front-page .welcome-message {
+	width:100%;
+	background:transparent;
+	padding: 0;
+	text-align:center;
+}
+
+.page-footer {
+	width:100%;
+	background-color: #AD163D;     
+	padding: 8px; 
+	margin: 10px 0 0 0;
+	text-align:center;
+}
+
+/* BUTTONS */
+.button {color: white; background: #AD163D;}
+.button:hover {background-color: #AA143C;}
+
+.button {
+	padding: 3px 6px;
+	border: none;
+    width: auto;
+	font-size: 11px; font-weight: bold;
+	margin-top: 4px;
+}
+
+/* SEARCH form classes*/
+
+div.search-by-location {
+	position:relative;
+	border: 0 0 1px 0;
+	text-align:center;
+}
+
+/* GENERIC CARD classes */ 
+.card {
+	height: 100%; 
+	overflow: hidden;
+	margin: 10px 0;	
+	padding: 2px; 
+	border: none; 
+	background:#F9FBF0;
+	position: relative;
+}
+
+.card
+a, a:hover, .card a, .card a:hover {
+	background: none; 
+	color: #1D7D39;
+	margin: 0;
+	padding: 0;
+}
+
+
+/* REVIEW card classes*/
+
+div.review {
+	width:100%;
+	position:relative;
+	border: 0 0 1px 0;
+}
+
+div.review_card_header {
+	width:100%;
+	background-color: #feb;     
+	padding: 5px; 
+}
+
+div.reviewer {
+	float:left;
+	text-align:center;
+	width:60px;
+	margin: 5px 2px; 
+}
+
+div.review_details {
+	float:left;
+	margin: 5px 2px; 
+}
+
+div.review_date {
+	float:left;
+	margin: 0px 0px 0px 10px; 
+}
+div.big_star, div.small_star {
+	float:left;
+	margin:0px;
+	padding: 0;
+}
+
+div.review_text {
+	clear:both;
+	margin: 5px 0px;
+}
+
+
+/* ORGANIZATION Index SEARCH Classes */
+
+div.filter-container {
+	width:100%;
+	position:relative;
+	border: 0 0 1px 0;
+}
+
+div.filter-link {
+	text-align:center;
+	float:left;
+	width:50px;
+	background-color: #fff; 
+	margin: 0px 10px 0px 0px;
+}
+
+/* ORGANIZATION card classes*/
+div.organization {
+	width:100%;
+	position:relative;
+	border: 0 0 1px 0;
+}
+
+div.organization_card_header {
+	width:100%;
+	position:relative;
+	background-color: #feb;     
+	padding: 5px; 
+}
+
+div.organization_name {
+	float:left;
+	margin: 0px 10px 0px 0px;
+}
+
+div.organization_review_summary {
+	float:left;
+	font-style: italic;
+	margin: 0px 0px 0px 10px;
+}
+
+div.organization_photo {
+	float:left;
+	text-align:center;
+	width:80px;
+	margin: 5px 2px; 
+}
+
+div.organization_about {
+	float:left;
+	margin:2px;
+}
+
+
+/* ORGANIZATION show classes*/
+div.main-image {
+	float:left;
+	text-align:center;
+	width:320px;
+	margin: 5px 2px; 
+
+}
+
+div.content-next-to-image {
+	float: left;
+	width:520px;
+	margin:2px;
+}
+
+div.content-below-image {
+	clear:both;
+	margin:2px;
+}
+
+/* ASIDE */ 
+
+.aside {
+	padding: 20px; 
+	margin: 40px 25px 0 0;
+}
+.aside-content h2, .aside-content h3 {
+	border-bottom: 1px solid #ccc; 
+	margin-top: 0;
+}
+
+/* INPUT */
+input.text, input.string, input.email-address, input.password, input.search, input.integer, input.float, textarea {
+	border-top:1px solid #7c7c7c;
+	border-left:1px solid #c3c3c3;
+	border-right:1px solid #c3c3c3;
+	border-bottom:1px solid #ddd;
+    background: #fff url(../images/fieldbg.gif) repeat-x top;
+	font-size: 0.8 em; line-height: 1.1em;
+}

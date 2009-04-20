@@ -1,0 +1,31 @@
+<page title="Search Results">
+
+  <body: class="front-page"/>
+  <content:>
+    <header class="content-header">
+    <%= include_google_javascript %>
+      <search-organizations/>
+      <section class="filter-container"> <br/>Currently showing the following categories. Click a category to limit results.<br/><br/>
+        <repeat with="&@category_list">
+          <section class="filter-link">
+            <%= link_to "#{this.plain_name}", {:controller => "search", :action => "index", :search_string => "#{@search_string}", :location => "#{@location}", :category_id => "#{this.id}" }  %> <br/>
+            <image src="#{this.plain_name}.png"/>
+          </section>
+        </repeat>
+      </section>
+    </header>
+    
+    <section class="content-body">
+      <section class="content-column-left">
+        <h3>Search Results</h3>
+          <repeat with="&@search_results"> 
+            <card/>
+          </repeat> 
+      </section>
+      <section class="content-column-right"> 
+        <%= init_map(@search_center) %>
+        <%= google_map :width => 250, :height => 250%>
+      </section>
+    </section>
+  </content:>
+</page>
