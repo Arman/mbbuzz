@@ -15,7 +15,7 @@
           <card/>
         </repeat> 
       <h3>Most recent reviews</h3>     
-        <repeat with="&@recent_businesses"> 
+        <repeat with="&@recent_reviews"> 
           <card/>
         </repeat> 
     </section>

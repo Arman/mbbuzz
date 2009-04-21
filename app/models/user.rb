@@ -21,8 +21,8 @@ class User < ActiveRecord::Base
     has_many :employers, :through => :business_employees, :uniq => true, :accessible => true, :source => :business
     has_attached_file :avatar, 
     :styles => {:med=> ["100x75#", :jpg], :small => ["40x40#", :jpg],:xsmall => ["20x20#", :jpg]}, 
-    :url => "/user_assets/:class/:attachment/:id/:style_:basename.:extension",
-    :path => ":rails_root/public/user_assets/:class/:attachment/:id/:style_:basename.:extension"  
+    :url => "/system/user_assets/:class/:attachment/:id/:style_:basename.:extension",
+    :path => ":rails_root/public/system/user_assets/:class/:attachment/:id/:style_:basename.:extension"  
 
   # This gives admin rights to the first sign-up.
   # Just remove it if you don't want that
