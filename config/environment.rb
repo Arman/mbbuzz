@@ -57,7 +57,7 @@ Rails::Initializer.run do |config|
   # Make sure the secret is at least 30 characters and all random, 
   # no regular words or you'll be exposed to dictionary attacks.
   config.action_controller.session = {
-    :session_key => '_yopi_session',
+    :session_key => '_mbbuzz_session',
     :secret      => '0f9ec7677242196575d9aa7f8419ecd9ff430474e44fec355f4f723b731782eb3635839d3d011009dca799f4e5d878633063acf5c72a03219be1737ada5d2968'
   }
 
