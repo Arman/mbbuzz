@@ -75,6 +75,11 @@ class Business < ActiveRecord::Base
   def average_review_rating
      self.reviews.average(:rating)
   end 
+   
+  def before_save
+    self.latitude = 37.200 +rand
+    self.longitude = 237.250+rand
+  end 
 
   # --- Permissions --- #
 

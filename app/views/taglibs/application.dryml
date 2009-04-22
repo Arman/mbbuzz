@@ -6,7 +6,7 @@
 
 <set-theme name="clean"/>
 
-<def tag="app-name">MindBody Buzz! alpha</def>
+<def tag="app-name">MindBody Buzz!  - alpha -  </def>
 
 
 <def tag="footer-nav">   
@@ -209,12 +209,14 @@
     <content: param>
           <header param="content-header">
             <record-flags fields="" param/>
-
+        
             <a action="edit" if="&can_edit?" param="edit-link">Edit Page</a>
           </header>
     
           <section param="content-body">
-            <view:content param="description"/>
+            <section class="static-page">
+              <view:content param="description"/>
+            </section>
           </section>
     </content:>
     

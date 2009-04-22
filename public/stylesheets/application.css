@@ -20,8 +20,9 @@ body {width: 960px; }
 
 .page-header h1 {
 	margin: 0; 
-	padding: 20px 20px 0;
-	font-family: Verdana, Tahoma, Arial, sans-serif; 
+	padding: 15px 20px 0;
+	letter-spacing: 2px;
+	font-family:  Verdana, Tahoma, sans-serif, Arial,  ; 
 	font-size: 16px; 
 	font-weight: bold;
 }
@@ -85,7 +86,7 @@ select.dev-user-changer {top: auto ; left: 400px; bottom: 1px; right: auto; heig
 
 body {
 	color: #777;
-	font-size: 11px;
+	font-size: 12px;
 	line-height: 120%;
 }
 
@@ -108,7 +109,7 @@ h5 {margin: 1px 0 1px;  font-size: 11px;}
 
 .content-column-left {
 	float:left;
-	width:695px;  
+	width:690px;  
 /*	background-color: #888; */
 }
 
@@ -127,6 +128,12 @@ h5 {margin: 1px 0 1px;  font-size: 11px;}
     font-size: 10px; line-height: 10px;
     padding: 5px 0 15px 20px;
 
+}
+
+.static-page  { 
+	text-align:left;
+    font-size: 13px; line-height: 1.2em;
+    padding: 30px 80px 20px 80px;
 }
 
 .page-footer ul { list-style-type: none; text-align:center; }

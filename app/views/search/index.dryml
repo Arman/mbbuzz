@@ -23,7 +23,7 @@
           </repeat> 
       </section>
       <section class="content-column-right"> 
-        <%= init_map(@search_center) %>
+        <%= init_map(@search_center,@markers) %>
         <%= google_map :width => 250, :height => 250%>
       </section>
     </section>
