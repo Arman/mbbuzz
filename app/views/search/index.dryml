@@ -9,7 +9,7 @@
         <repeat with="&@category_list">
           <section class="filter-link">
             <%= link_to "#{this.plain_name}", {:controller => "search", :action => "index", :search_string => "#{@search_string}", :location => "#{@location}", :category_id => "#{this.id}" }  %> <br/>
-            <img src="/system/images/#{this.plain_name}.png"/>
+            <img src="/system/images/#{this.plain_name.downcase}.png"/>
           </section>
         </repeat>
       </section>
