@@ -6,7 +6,7 @@
 
 <set-theme name="clean"/>
 
-<def tag="app-name">MB Buzz!</def>
+<def tag="app-name">MindBody Buzz! alpha</def>
 
 
 <def tag="footer-nav">   
@@ -24,7 +24,7 @@
   <old-page merge without-live-search>   
    <footer: param>
       <footer-nav/><br/>
-      a human powered production 2009
+      a human powered production &copy; 2009
     </footer:> 
   </old-page> 
 </extend>

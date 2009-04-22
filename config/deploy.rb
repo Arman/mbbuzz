@@ -6,8 +6,8 @@ end
 set :user, 'qqumbimk'  # Your dreamhost account's username
 set :domain, 'catwoman.dreamhost.com'  # Dreamhost servername where your account is located 
 set :project, 'mbbuzz'  # Your application as its called in the repository
-set :application, 'www.ikimiks.com'  # Your app's location (domain or sub-domain name as setup in panel)
-set :applicationdir, "/home/#{user}"  # The standard Dreamhost setup
+set :application, 'www.mindbodybuzz.com'  # Your app's location (domain or sub-domain name as setup in panel)
+set :applicationdir, "/home/#{user}/mindbodybuzz.com"  # The standard Dreamhost setup
 
 # version control config
 set :scm, 'git'
