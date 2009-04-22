@@ -3,7 +3,7 @@ class SearchController < ApplicationController
   hobo_controller
 
   def index                                          
-    @search_results = Organization.located_at("%"+params[:location]+"%").named("%"+params[:search_string]+"%").in_category(params[:category_id])    
+    @search_results = Business.located_at("%"+params[:location]+"%").named("%"+params[:search_string]+"%").in_category(params[:category_id])    
     @category_list = Category.find(:all)  
     
     # The following local vars are used to pass on search parameters to filter requests.
