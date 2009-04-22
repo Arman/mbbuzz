@@ -49,17 +49,17 @@
             <h2 param="heading"><name/></h2>
             <record-flags fields="" param/>
             <section class="big_star" if="big_star>0"><%this.big_star.times {%>
-              <image src="big_star.png"/>
+              <img src="/system/images/big_star.png"/>
               <%}%>
             </section>
-            <section class="small_star" if="small_star>0"><image src="small_star.png"/></section>  
+            <section class="small_star" if="small_star>0"><img src="/system/images/small_star.png"/></section>  
             <section class="organization_review_summary">(Average rating of <view:avg_rating/> from <count:reviews param/>)</section>
             <a action="edit" if="&can_edit?" param="edit-link">Edit Business</a>
           </header>
           <section param="content-body">
             <section param="main-image"><img src="#{@business.photo.url(:normal)}"/></section>
             <section param="content-next-to-image">
-              <repeat:categories><image src="#{this.plain_name}.png"/></repeat>
+              <repeat:categories><img src="/system/images/#{this.plain_name}.png"/></repeat>
               <field-list fields="address_line_1, address_line_2, city, state_region, country, web_site, phone, fax" param/>
             </section>
             <section param="content-below-image"><view:about/></section>
@@ -111,10 +111,10 @@
         <section class="reviewer"><img src="#{this.reviewer.avatar.url(:xsmall)}"/><br/><a:reviewer param="creator-link"/></section>
         <section class="review_details">
           <section class="big_star" if="big_star>0"><%this.big_star.times {%>
-            <image src="big_star.png"/>
+            <img src="/system/images/big_star.png"/>
             <%}%>
           </section>
-          <section class="small_star" if="small_star>0"><image src="small_star.png"/></section>  
+          <section class="small_star" if="small_star>0"><img src="/system/images/small_star.png"/></section>  
           <section class="review_date"><view:created_at/></section>
           <section class="review_text"><view:body_short/>   <a>Full Review</a></section>
         </section>
@@ -130,10 +130,10 @@
         <section class="organization_card_header">
           <section class="organization_name"><a><name/></a></section>
           <section class="big_star" if="big_star>0"><%this.big_star.times {%>
-            <image src="big_star.png"/>
+            <image src="/system/images/big_star.png"/>
             <%}%>
           </section>
-          <section class="small_star" if="small_star>0"><image src="small_star.png"/></section>  
+          <section class="small_star" if="small_star>0"><img src="/system/images/small_star.png"/></section>  
           <section class="organization_review_summary">(Average rating of <view:avg_rating/> from <count:reviews param/>)</section>
         </section>
         <section class="organization_photo"><img src="#{this.photo.url(:thumb)}"/></section>
@@ -185,7 +185,7 @@
           <repeat with="&@category_list">
             <section class="filter-link">
             <%= link_to "#{this.plain_name}", {:controller => "business", :action => "index", :search_string => "#{@business}", :location => "#{@location}", :category_id => "#{this.id}" }  %> <br/>
-            <image src="#{this.plain_name}.png"/>
+            <image src="/system/images/#{this.plain_name}.png"/>
             </section>
           </repeat>
         </section>

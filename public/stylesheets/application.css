@@ -9,7 +9,7 @@ body {width: 960px; }
 /* PAGE HEADER */
 
 .page-header {
-	background-image: url(/images/MBB_header.png); /*Color of header image is #AD163D;*/
+	background-image: url(/system/images/MBB_header.png); /*Color of header image is #AD163D;*/
 	background-repeat: no-repeat;
 	height: 77px; 
 	width: 960px; 
