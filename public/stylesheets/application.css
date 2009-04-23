@@ -265,6 +265,7 @@ div.organization_card_header {
 	position:relative;
 	background:#feb;	
 	padding: 5px; 
+        height: 1.2em;
 }
 
 div.organization_name {
