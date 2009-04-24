@@ -5,6 +5,7 @@ class Category < ActiveRecord::Base
   fields do
 
     name :string
+    icon :string
     desc :string
     about :text
     timestamps

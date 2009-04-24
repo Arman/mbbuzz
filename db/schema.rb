@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090416201547) do
+ActiveRecord::Schema.define(:version => 20090423231952) do
 
   create_table "business_categories", :force => true do |t|
     t.datetime "created_at"
@@ -45,9 +45,9 @@ ActiveRecord::Schema.define(:version => 20090416201547) do
     t.string   "web_site"
     t.string   "phone"
     t.string   "fax"
-    t.decimal  "avg_rating",         :precision => 3, :scale => 1, :default => 0.0
-    t.decimal  "latitude",           :precision => 6, :scale => 3, :default => 0.0
-    t.decimal  "longitude",          :precision => 6, :scale => 3, :default => 0.0
+    t.decimal  "avg_rating",         :default => 0.0
+    t.decimal  "lat",                :default => 0.0
+    t.decimal  "lng",                :default => 0.0
     t.string   "photo_file_name"
     t.string   "photo_content_type"
     t.integer  "photo_file_size"
@@ -63,6 +63,18 @@ ActiveRecord::Schema.define(:version => 20090416201547) do
     t.datetime "updated_at"
     t.string   "desc"
     t.text     "about"
+    t.string   "icon"
+  end
+
+  create_table "locations", :force => true do |t|
+    t.string   "address_line_1"
+    t.string   "address_line_2"
+    t.string   "city"
+    t.string   "zip_code"
+    t.string   "state_region"
+    t.string   "country"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "pages", :force => true do |t|

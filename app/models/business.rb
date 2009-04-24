@@ -1,7 +1,7 @@
 class Business < ActiveRecord::Base
 
   hobo_model # Don't put anything above this
-  
+    
   fields do
     name           :string
     about       :text
@@ -10,19 +10,22 @@ class Business < ActiveRecord::Base
     city           :string
     zip_code    :string
     state_region   :string
-    country        :string
+    country        :string, :default => 'US'
     web_site       :string
     phone          :string
     fax            :string
     avg_rating  :decimal,:precision => 3, :scale => 1, :default => 0
-    latitude :decimal,:precision => 6, :scale => 3, :default => 0
-    longitude :decimal,:precision => 6, :scale => 3, :default => 0
+    lat :decimal,:precision => 10, :scale => 7, :default => 0
+    lng :decimal,:precision => 10, :scale => 7, :default => 0
     photo_file_name :string
     photo_content_type :string
     photo_file_size :integer
     photo_updated_at :datetime
     timestamps
   end
+  
+  acts_as_mappable 
+  before_validation :geocode_address
   
   belongs_to :owner, :class_name => "User", :creator => true 
   has_many :reviews, :dependent => :destroy, :accessible => :true
@@ -76,10 +79,7 @@ class Business < ActiveRecord::Base
      self.reviews.average(:rating)
   end 
    
-  def before_save
-    self.latitude = 37.200 +rand
-    self.longitude = 237.250+rand
-  end 
+
 
   # --- Permissions --- #
 
@@ -98,5 +98,15 @@ class Business < ActiveRecord::Base
   def view_permitted?(field)
     true
   end
-
+  
+  private
+  def geocode_address
+    address= [address_line_1, address_line_2, city, state_region, zip_code, country].join(', ')
+    logger.info(address)
+    #address='31 tareyton Ct,, San Ramon, CA, 94583,'
+    geo=Geokit::Geocoders::MultiGeocoder.geocode (address)
+    errors.add(:address, "Could not Geocode address") if !geo.success
+    self.lat, self.lng = geo.lat,geo.lng if geo.success
+  end
+  
 end

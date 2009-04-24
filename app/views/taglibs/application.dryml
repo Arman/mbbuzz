@@ -59,7 +59,7 @@
           <section param="content-body">
             <section param="main-image"><img src="#{@business.photo.url(:normal)}"/></section>
             <section param="content-next-to-image">
-              <repeat:categories><img src="/system/images/#{this.plain_name.downcase}.png"/></repeat>
+              <repeat:categories><img src="/system/images/#{this.icon}"/></repeat>
               <field-list fields="address_line_1, address_line_2, city, state_region, country, web_site, phone, fax" param/>
             </section>
             <section param="content-below-image"><view:about/></section>
@@ -185,7 +185,7 @@
           <repeat with="&@category_list">
             <section class="filter-link">
             <%= link_to "#{this.plain_name}", {:controller => "business", :action => "index", :search_string => "#{@business}", :location => "#{@location}", :category_id => "#{this.id}" }  %> <br/>
-            <img src="/system/images/#{this.plain_name.downcase}.png"/>
+            <img src="/system/images/#{this.icon}"/>
             </section>
           </repeat>
         </section>

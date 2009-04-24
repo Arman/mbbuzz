@@ -47,6 +47,14 @@
   </card>
 </def>
 
+<def tag="card" for="Location">
+  <card class="location" param="default" merge>
+    <header: param>
+      <h4 param="heading"><name/></h4>
+    </header:>
+  </card>
+</def>
+
 <def tag="card" for="Page">
   <card class="page" param="default" merge>
     <header: param>

@@ -10,9 +10,15 @@ RAILS_GEM_VERSION = '2.2.2' unless defined? RAILS_GEM_VERSION
 # Bootstrap the Rails environment, frameworks, and default configuration
 require File.join(File.dirname(__FILE__), 'boot')
 
+# Silences gem spec missing error messages  
+Rails::VendorGemSourceIndex.silence_spec_warnings = true
+
 # require 'lib/patches/temp_file_patch.rb'
 
 Rails::Initializer.run do |config|
+  
+  config.gem "geokit"
+
   # Settings in config/environments/* take precedence over those specified here.
   # Application configuration should go into files in config/initializers
   # -- all .rb files in that directory are automatically loaded.
@@ -75,3 +81,6 @@ Rails::Initializer.run do |config|
   # Please note that observers generated using script/generate observer need to have an _observer suffix
   # config.active_record.observers = :cacher, :garbage_collector, :forum_observer
 end
+
+# Google API for Geokit
+GeoKit::Geocoders::google = 'ABQIAAAAJdyRw7Jy6mdPWWZtBcaTKxTqLCYZFytT_XoyVzY7PsJCy6sYwRSQb99QYgzaSuojxMBIcEABEqnCFQ'

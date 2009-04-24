@@ -9,7 +9,7 @@
         <repeat with="&@category_list">
           <section class="filter-link">
             <%= link_to "#{this.plain_name}", {:controller => "search", :action => "index", :search_string => "#{@search_string}", :location => "#{@location}", :category_id => "#{this.id}" }  %> <br/>
-            <img src="/system/images/#{this.plain_name.downcase}.png"/>
+            <img src="/system/images/#{this.icon}"/>
           </section>
         </repeat>
       </section>
@@ -24,7 +24,7 @@
       </section>
       <section class="content-column-right"> 
         <%= init_map(@search_center,@markers) %>
-        <%= google_map :width => 250, :height => 250%>
+        <%= google_map :width => 250, :height => 300%>
       </section>
     </section>
   </content:>
