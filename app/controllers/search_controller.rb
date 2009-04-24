@@ -17,7 +17,7 @@ class SearchController < ApplicationController
     #@search_center={:latitude => 37.700, :longitude => 237.750}
     geo=Geokit::Geocoders::MultiGeocoder.geocode(params[:location])
     errors.add(:address, "Could not Geocode address") if !geo.success
-    @search_center=geo
+    @search_center={geo.lat, geo.lng}
 #    @markers = [[-34.2023, 18.3794], [-34.2029, 18.3797], [-34.2022, 18.3811],[-34.2016, 18.3829], [-34.2006, 18.3849]].collect
     items = [*@search_results]
     @markers =  items.collect do |item|
