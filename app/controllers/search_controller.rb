@@ -17,10 +17,13 @@ class SearchController < ApplicationController
     @location = params[:location]
     
     #Geocode search location if rails env is production otherwise use a default location
-    geo=Geokit::Geocoders::MultiGeocoder.geocode(params[:location])
-    errors.add(:address, "Could not Geocode address") if !geo.success
-    @search_center={:latitude => geo.lat,  :longitude => geo.lng} 
-    #dummy center @search_center={:latitude =>37.757763,  :longitude => -121.964991}
+    if !params[:location].blank? then 
+      geo=Geokit::Geocoders::MultiGeocoder.geocode(params[:location])
+      errors.add(:address, "Could not Geocode address") if !geo.success
+      @search_center={:latitude => geo.lat,  :longitude => geo.lng} 
+    else
+      @search_center={:latitude =>37.757763,  :longitude => -121.964991}
+    end
     
     #Create markers array from search results
     items = [*@search_results]
