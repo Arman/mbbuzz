@@ -104,7 +104,7 @@ class Business < ActiveRecord::Base
     address= [address_line_1, address_line_2, city, state_region, zip_code, country].join(', ')
     logger.info(address)
     #address='31 tareyton Ct,, San Ramon, CA, 94583,'
-    geo=Geokit::Geocoders::MultiGeocoder.geocode (address)
+    geo=Geokit::Geocoders::MultiGeocoder.geocode(address)
     errors.add(:address, "Could not Geocode address") if !geo.success
     self.lat, self.lng = geo.lat,geo.lng if geo.success
   end
