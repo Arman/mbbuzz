@@ -3063,3 +3063,54 @@ Rendering search/index
   [4;36;1mReview Load (0.0ms)[0m   [0;1mSELECT * FROM "reviews" WHERE ("reviews".business_id = 5) [0m
   [4;35;1mReview Load (0.0ms)[0m   [0mSELECT * FROM "reviews" WHERE ("reviews".business_id = 6) [0m
 Completed in 1656ms (View: 1641, DB: 15) | 200 OK [http://localhost/power_search?search_string=&location=&category_id=]
+eschaton: loading slice 'eschaton_kernel'
+eschaton: loading slice 'eschaton_kernel'
+eschaton: loading slice 'google_maps'
+eschaton: loading slice 'google_maps'
+eschaton: loading slice 'jquery'
+eschaton: loading slice 'jquery'
+eschaton: loading slice 'yopi'
+eschaton: loading slice 'yopi'
+  [4;36;1mSQL (78.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (47.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing FrontController#index (for 127.0.0.1 at 2009-04-27 11:08:10) [GET]
+Rendering front/index
+  DRYML: Compiled vendor/plugins/hobo/hobo/taglibs/core.dryml in 0.03s
+  DRYML: Compiled vendor/plugins/hobo/hobo/taglibs/rapid_core.dryml in 0.39s
+  DRYML: Compiled vendor/plugins/hobo/hobo/taglibs/rapid_support.dryml in 0.09s
+  DRYML: Compiled vendor/plugins/hobo/hobo/taglibs/rapid_document_tags.dryml in 0.27s
+  DRYML: Compiled vendor/plugins/hobo/hobo/taglibs/rapid_pages.dryml in 0.70s
+  DRYML: Compiled vendor/plugins/hobo/hobo/taglibs/rapid_editing.dryml in 0.17s
+  DRYML: Compiled vendor/plugins/hobo/hobo/taglibs/rapid_forms.dryml in 0.48s
+  DRYML: Compiled vendor/plugins/hobo/hobo/taglibs/rapid_navigation.dryml in 0.06s
+  DRYML: Compiled vendor/plugins/hobo/hobo/taglibs/rapid_plus.dryml in 0.44s
+  DRYML: Compiled vendor/plugins/hobo/hobo/taglibs/rapid_generics.dryml in 0.03s
+  DRYML: Compiled vendor/plugins/hobo/hobo/taglibs/rapid_lifecycles.dryml in 0.02s
+  DRYML: Compiled vendor/plugins/hobo/hobo/taglibs/rapid.dryml in 3.22s
+  DRYML: Compiled app/views/taglibs/auto/rapid/cards.dryml in 0.55s
+  DRYML: Compiled app/views/taglibs/auto/rapid/pages.dryml in 1.34s
+  DRYML: Compiled app/views/taglibs/auto/rapid/forms.dryml in 0.13s
+  DRYML: Compiled app/views/taglibs/themes/clean/clean.dryml in 0.03s
+  DRYML: Compiled app/views/taglibs/application.dryml in 6.11s
+  DRYML: Compiled app/views/front/index.dryml in 6.47s
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" LIMIT 30[0m
+  [4;36;1mBusiness Load (31.0ms)[0m   [0;1mSELECT * FROM "businesses" ORDER BY avg_rating DESC LIMIT 3[0m
+  [4;35;1mReview Load (15.0ms)[0m   [0mSELECT * FROM "reviews" WHERE ("reviews".business_id = 2) [0m
+  [4;36;1mReview Load (0.0ms)[0m   [0;1mSELECT * FROM "reviews" WHERE ("reviews".business_id = 3) [0m
+  [4;35;1mReview Load (0.0ms)[0m   [0mSELECT * FROM "reviews" WHERE ("reviews".business_id = 4) [0m
+  [4;36;1mReview Load (0.0ms)[0m   [0;1mSELECT * FROM "reviews" ORDER BY created_at DESC LIMIT 3[0m
+  [4;35;1mBusiness Load (16.0ms)[0m   [0mSELECT * FROM "businesses" WHERE ("businesses"."id" = 4) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mBusiness Load (0.0ms)[0m   [0mSELECT * FROM "businesses" WHERE ("businesses"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mBusiness Load (0.0ms)[0m   [0mSELECT * FROM "businesses" WHERE ("businesses"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Completed in 7688ms (View: 7672, DB: 0) | 200 OK [http://localhost/]
