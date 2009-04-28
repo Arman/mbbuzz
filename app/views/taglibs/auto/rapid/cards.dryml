@@ -20,14 +20,6 @@
   </card>
 </def>
 
-<def tag="card" for="BusinessEmployee">
-  <card class="business-employee" param="default" merge>
-    <header: param>
-      <h4 param="heading"><name/></h4>
-    </header:>
-  </card>
-</def>
-
 <def tag="card" for="BusinessOwnership">
   <card class="business-ownership" param="default" merge>
     <header: param>
@@ -47,6 +39,14 @@
   </card>
 </def>
 
+<def tag="card" for="Employment">
+  <card class="employment" param="default" merge>
+    <header: param>
+      <h4 param="heading"><name/></h4>
+    </header:>
+  </card>
+</def>
+
 <def tag="card" for="Location">
   <card class="location" param="default" merge>
     <header: param>
@@ -60,6 +60,17 @@
     <header: param>
       <h4 param="heading"><a><name/></a></h4>
     </header:>
+  </card>
+</def>
+
+<def tag="card" for="Person">
+  <card class="person" param="default" merge>
+    <header: param>
+      <h4 param="heading"><a><name/></a></h4>
+    </header:>
+    <body: param>
+      <count:employments param/>
+    </body:>
   </card>
 </def>
 
@@ -79,9 +90,6 @@
     <header: param>
       <h4 param="heading"><a><name/></a></h4>
     </header:>
-    <body: param>
-      <count:business_employees param/>
-    </body:>
   </card>
 </def>
 

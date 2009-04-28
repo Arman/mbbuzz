@@ -44,7 +44,7 @@
 <def tag="form" for="Business">
   <form merge param="default" multipart >
   <error-messages param/>
-    <field-list fields="name, about, address_line_1, address_line_2, city, zip_code, state_region, country, web_site, phone, fax" param/>
+    <field-list fields="name, about, address_line_1, city, state_region, zip_code, web_site, phone" param/>
     <table class="field-list">  <tr><th class="photo-label">Main Image</th><td class="photo-view"><input type="file" name="business[photo]"/></td></tr></table>
     <field-list fields="categories, employees" param/>
     <div param="actions">
@@ -72,13 +72,16 @@
             <section param="main-image"><img src="#{@business.photo.url(:normal)}"/></section>
             <section param="content-next-to-image">
               <repeat:categories><img src="/system/images/#{this.icon}"/></repeat>
-              <field-list fields="address_line_1, address_line_2, city, state_region, country, web_site, phone, fax" param/>
+              <field-list fields="address_line_1, city, state_region, zip_code, web_site, phone" param/>
             </section>
             <section param="content-below-image"><view:about/></section>
             <section param="collection-section">
               <h3 param="collection-heading">Reviews</h3>
               <collection:reviews param/>
-              <a:reviews action="new" if="&can_create?(@business.reviews)" param="new-link">New Review</a:reviews>
+              <a:reviews action="new" if="&can_create?(@business.reviews)" param="new-link">Write a Review</a:reviews>
+               <h3 param="collection-heading">Employees</h3>
+              <collection:employees param/>
+              <a:employees action="new" if="&can_create?(@business.employees)" param="new-link">Add an Employee</a:employees>
             </section>
           </section>
     </content:>
@@ -155,35 +158,34 @@
   </card>
 </def>
 
+<def tag="card" for="Person">
+  <card class="person" param="default" merge>
+    <header: param>
+      <h4 param="heading"><a><name/></a></h4>
+    </header:>
+    <body: param>       
+      <section class="person">
+        Temporary place holder ! Real attributes should be added
+      </section>
+      
+    </body:>
+  </card>
+</def>
 
+   
 <def tag="search-businesses">    
-    <div param="search_by_location">      
-      <form action="#{url_for(:controller => 'search' , :action => 'index')}" method="get">
-        <b>Search for
-          <input type="text" class="search-field" name="search_string"/> 
-           near 
-          <input type="text" class="search-field" name="location"/>
-          <input type="hidden" name="category_id"/>
-          <submit label="Go"/> 
-        </b>
-      </form>          
-    </div>     
- </def>
- 
- 
- <def tag="search-businesses">    
-    <div param="search_by_location">      
-      <form action="#{url_for(:controller => 'search' , :action => 'index')}" method="get">
-        <b>Search for
-          <input type="text" class="search-field" name="search_string"/> 
-           near 
-          <input type="text" class="search-field" name="location"/>
-          <input type="hidden" name="category_id"/>
-          <submit label="Go"/> 
-        </b>
-      </form>          
-    </div>     
- </def>
+  <div param="search_by_location">      
+    <form action="#{url_for(:controller => 'search' , :action => 'index')}" method="get">
+      <b>Search for
+        <input type="text" class="search-field" name="search_string"/> 
+         near 
+        <input type="text" class="search-field" name="location"/>
+        <input type="hidden" name="category_id"/>
+        <submit label="Go"/> 
+      </b>
+    </form>          
+  </div>     
+</def>
 
 
 <def tag="index-page" for="Business">
@@ -192,7 +194,7 @@
     <content: param>
       <header param="content-header">
         <h2 param="heading">Businesses</h2>
-        <p param="count" if>There <count prefix="are"/> that matches your search criteria.</p>
+        <p param="count" if>There <count prefix="are"/> that match your search criteria.</p>
         <section class="filter-container"> Currently showing the following categories. Click a category to limit results. 
           <repeat with="&@category_list">
             <section class="filter-link">
@@ -231,6 +233,6 @@
             </section>
           </section>
     </content:>
-    
   </page>
 </def>
+

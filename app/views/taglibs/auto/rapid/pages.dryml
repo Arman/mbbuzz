@@ -6,6 +6,7 @@
   <navigation class="main-nav" merge-attrs param="default">
     <nav-item href="#{base_url}/">Home</nav-item>
     <nav-item with="&Business">Businesses</nav-item>
+    <nav-item with="&Person">People</nav-item>
     <nav-item with="&Review">Reviews</nav-item>
   </navigation>
 </def>
@@ -92,9 +93,9 @@
         </section>
         
         <aside param>
-          <section param="business_employees-collection-section">
-            <h3 param="business_employees-collection">Business Employees</h3>
-            <collection:business_employees/>
+          <section param="employments-collection-section">
+            <h3 param="employments-collection">Employments</h3>
+            <collection:employments/>
           </section>
           <preview-with-more:reviews.recent param="reviews-preview">
             <more:>more</more:>
@@ -328,6 +329,107 @@
 
 
   
+<!-- ====== Person Pages ====== -->
+
+
+<def tag="index-page" for="Person">
+  <page merge title="People">
+    <body: class="index-page person" param/>
+    
+    <content: param>
+      <header param="content-header">
+        <h2 param="heading">People</h2>
+
+        <p param="count" if>There <count prefix="are"/></p>
+      </header>
+      
+      <section param="content-body">
+
+        <a action="new" to="&model" param="new-link"/>      
+
+        <page-nav param="top-page-nav"/>
+
+        <collection param/>
+
+        <page-nav param="bottom-page-nav"/>
+
+
+      </section>
+    </content:>
+  </page>
+</def>
+
+
+<def tag="new-page" for="Person">
+  <page merge title="New Person">
+    <body: class="new-page person" param/>
+    
+    <content: param>
+      <section param="content-header">
+        <h2 param="heading">New Person</h2>
+      </section>
+      
+      <section param="content-body">
+        <form param>
+          <submit: label="Create Person"/>
+        </form>
+      </section>
+    </content:>
+  </page>
+</def>
+
+
+<def tag="show-page" for="Person">
+  <page merge title="Person">
+
+    <body: class="show-page person" param/>
+
+    <content: param>
+          <header param="content-header">
+            <h2 param="heading"><name/></h2>
+
+            <record-flags fields="" param/>
+
+            <a action="edit" if="&can_edit?" param="edit-link">Edit Person</a>
+          </header>
+    
+          <section param="content-body">
+            <field-list fields="last_name, bio" param/>
+            <section param="collection-section">
+              <h3 param="collection-heading">Employments</h3>
+              
+              <collection:employments param/>
+            </section>
+          </section>
+    </content:>
+    
+  </page>
+</def>
+
+
+<def tag="edit-page" for="Person">
+  <page merge title="Edit Person">
+
+    <body: class="edit-page person" param/>
+
+    <content:>
+      <section param="content-header">
+        <h2 param="heading">Edit <type-name/></h2>
+        <delete-button label="Remove This Person" param/>
+      </section>
+
+      <section param="content-body">
+        <form param/>
+      </section>
+    </content:>
+    
+  </page>
+</def>
+
+
+
+
+  
 <!-- ====== Review Pages ====== -->
 
 
@@ -424,6 +526,33 @@
   </page>
 </def>
 
+<def tag="index-for-reviewer-page" polymorphic/>
+<def tag="index-for-reviewer-page" for="Review">
+  <page merge title="Reviews for #{name :with => @reviewer, :no_wrapper => true}">
+    <body: class="index-for-owner-page reviewer review" param/>
+    
+    <content: param>
+      <header param="content-header">
+        <div param="back-to">Back to <a with="&@reviewer"/></div>
+
+        <h2 param="heading"><Your with="&current_user"/> Reviews</h2>
+        <p param="count" if>There <count prefix="are"/></p>
+      </header>
+      
+      <section param="content-body">
+
+        <page-nav param="top-page-nav"/>
+      
+        <collection param/>
+      
+        <page-nav param="bottom-page-nav"/>
+      </section>
+    </content:>
+  </page>
+</def>
+
+
+
 <def tag="index-for-business-page" polymorphic/>
 <def tag="index-for-business-page" for="Review">
   <page merge title="Reviews for #{name :with => @business, :no_wrapper => true}">
@@ -473,33 +602,6 @@
     </content:>
   </page>
 </def>
-
-<def tag="index-for-reviewer-page" polymorphic/>
-<def tag="index-for-reviewer-page" for="Review">
-  <page merge title="Reviews for #{name :with => @reviewer, :no_wrapper => true}">
-    <body: class="index-for-owner-page reviewer review" param/>
-    
-    <content: param>
-      <header param="content-header">
-        <div param="back-to">Back to <a with="&@reviewer"/></div>
-
-        <h2 param="heading"><Your with="&current_user"/> Reviews</h2>
-        <p param="count" if>There <count prefix="are"/></p>
-      </header>
-      
-      <section param="content-body">
-
-        <page-nav param="top-page-nav"/>
-      
-        <collection param/>
-      
-        <page-nav param="bottom-page-nav"/>
-      </section>
-    </content:>
-  </page>
-</def>
-
-
 
 
 
@@ -569,11 +671,6 @@
     
           <section param="content-body">
             <field-list fields="first_name, last_name, email_address, about_me, avatar_file_name, avatar_content_type, avatar_file_size, avatar_updated_at" param/>
-            <section param="collection-section">
-              <h3 param="collection-heading"><Your/>Business Employees</h3>
-              
-              <collection:business_employees param/>
-            </section>
           </section>
     </content:>
     

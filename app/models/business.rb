@@ -29,9 +29,9 @@ class Business < ActiveRecord::Base
   
   belongs_to :owner, :class_name => "User", :creator => true 
   has_many :reviews, :dependent => :destroy, :accessible => :true
-  # has_many :reviews, :as => :commentable
-  has_many :business_employees, :dependent => :destroy   
-  has_many :employees, :through => :business_employees, :uniq => true,:accessible => true, :source => :user
+  # has_many :reviews, :as => :reviewable, :dependent => :destroy, :accessible => :true
+  has_many :employments, :dependent => :destroy  
+  has_many :employees, :through => :employments, :uniq => true,:accessible => true, :source => :person
   has_many :business_categories, :dependent => :destroy   
   has_many :categories, :through => :business_categories, :uniq => true, :accessible => true
   has_attached_file :photo, 

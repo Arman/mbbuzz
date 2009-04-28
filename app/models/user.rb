@@ -17,8 +17,8 @@ class User < ActiveRecord::Base
   end
   
     has_many :reviews, :class_name => "Review", :foreign_key => "reviewer_id"
-    has_many :business_employees, :dependent => :destroy   
-    has_many :employers, :through => :business_employees, :uniq => true, :accessible => true, :source => :business
+    #has_many :business_employees, :dependent => :destroy   
+    #has_many :employers, :through => :business_employees, :uniq => true, :accessible => true, :source => :business
     has_attached_file :avatar, 
     :styles => {:med=> ["100x75#", :jpg], :small => ["40x40#", :jpg],:xsmall => ["20x20#", :jpg]}, 
     :url => "/system/user_assets/:class/:attachment/:id/:style_:basename.:extension",

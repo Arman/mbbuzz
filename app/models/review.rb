@@ -9,17 +9,18 @@ class Review < ActiveRecord::Base
     body   :text
     timestamps
   end
+  
+  never_show :reviewable_type
 
   belongs_to :business
-  #belongs_to :reviewable, polymorphic => true
+  #belongs_to :reviewable, :polymorphic => true
   belongs_to :reviewer, :class_name => "User", :creator => true 
   
   named_scope :limit, lambda { |num| { :limit => num }} 
   named_scope :recent, {:order => 'created_at DESC' } 
   
-  
   attr_readonly(:body_short,:big_star,:small_star)  
-
+  
   def body_short
     return body.first(360)+'...' unless body.length<=360
     body.to_s
@@ -36,7 +37,6 @@ class Review < ActiveRecord::Base
   def after_save
     self.review.update_attribute(:avg_rating, self.review.average_review_rating)
   end
-   
 
   # --- Permissions --- #
 

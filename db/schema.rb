@@ -9,20 +9,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090423231952) do
+ActiveRecord::Schema.define(:version => 20090428210230) do
 
   create_table "business_categories", :force => true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "category_id"
     t.integer  "business_id"
-  end
-
-  create_table "business_employees", :force => true do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "business_id"
-    t.integer  "user_id"
   end
 
   create_table "business_ownerships", :force => true do |t|
@@ -41,7 +34,7 @@ ActiveRecord::Schema.define(:version => 20090423231952) do
     t.string   "city"
     t.string   "zip_code"
     t.string   "state_region"
-    t.string   "country"
+    t.string   "country",            :default => "US"
     t.string   "web_site"
     t.string   "phone"
     t.string   "fax"
@@ -66,6 +59,13 @@ ActiveRecord::Schema.define(:version => 20090423231952) do
     t.string   "icon"
   end
 
+  create_table "employments", :force => true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "business_id"
+    t.integer  "person_id"
+  end
+
   create_table "locations", :force => true do |t|
     t.string   "address_line_1"
     t.string   "address_line_2"
@@ -81,6 +81,14 @@ ActiveRecord::Schema.define(:version => 20090423231952) do
     t.string   "name"
     t.string   "permalink"
     t.text     "content"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "people", :force => true do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.text     "bio"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
