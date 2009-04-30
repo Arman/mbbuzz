@@ -37,7 +37,8 @@ class Business < ActiveRecord::Base
   has_attached_file :photo, 
     :styles => {:normal => ["296x200#", :jpg], :thumb => ["74x50#", :jpg]}, 
     :url => "/system/user_assets/:class/:attachment/:id/:style_:basename.:extension",
-    :path => ":rails_root/public/system/user_assets/:class/:attachment/:id/:style_:basename.:extension"  
+    :path => ":rails_root/public/system/user_assets/:class/:attachment/:id/:style_:basename.:extension",
+    :default_url => ":rails_root/public/system/user_assets/:class/:attachment/:style/missing.png"  
 
   named_scope :located_at, lambda {|*args| {:conditions => ["(city like :location or state_region like :location or zip_code like :location)" , {:location => if args.first then '%'+args.first+'%' else '%' end}]}}
   named_scope :named, lambda {|*args| {:conditions => ["name like :name" , {:name =>   if args.first then '%'+args.first+'%' else '%' end}]}}

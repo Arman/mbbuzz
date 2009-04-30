@@ -22,7 +22,8 @@ class User < ActiveRecord::Base
     has_attached_file :avatar, 
     :styles => {:med=> ["100x75#", :jpg], :small => ["40x40#", :jpg],:xsmall => ["20x20#", :jpg]}, 
     :url => "/system/user_assets/:class/:attachment/:id/:style_:basename.:extension",
-    :path => ":rails_root/public/system/user_assets/:class/:attachment/:id/:style_:basename.:extension"  
+    :path => ":rails_root/public/system/user_assets/:class/:attachment/:id/:style_:basename.:extension" ,
+    :default_url => ":rails_root/public/system/user_assets/:class/:attachment/:style/missing.png"
 
   # This gives admin rights to the first sign-up.
   # Just remove it if you don't want that
