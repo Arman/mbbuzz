@@ -24,6 +24,18 @@
 
 
 
+<def tag="form" for="Message">
+  <form merge param="default">
+    <error-messages param/>
+    <field-list fields="subject, body, author" param/>
+    <div param="actions">
+      <submit label="Save" param/><or-cancel param="cancel"/>
+    </div>
+  </form>
+</def>
+
+
+
 <def tag="form" for="Page">
   <form merge param="default">
     <error-messages param/>
@@ -39,7 +51,7 @@
 <def tag="form" for="Person">
   <form merge param="default">
     <error-messages param/>
-    <field-list fields="first_name, last_name, bio" param/>
+    <field-list fields="first_name, last_name, professional_title, bio" param/>
     <div param="actions">
       <submit label="Save" param/><or-cancel param="cancel"/>
     </div>

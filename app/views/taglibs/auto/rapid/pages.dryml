@@ -6,6 +6,7 @@
   <navigation class="main-nav" merge-attrs param="default">
     <nav-item href="#{base_url}/">Home</nav-item>
     <nav-item with="&Business">Businesses</nav-item>
+    <nav-item with="&Message">Messages</nav-item>
     <nav-item with="&Person">People</nav-item>
     <nav-item with="&Review">Reviews</nav-item>
   </navigation>
@@ -232,6 +233,103 @@
 
 
   
+<!-- ====== Message Pages ====== -->
+
+
+<def tag="index-page" for="Message">
+  <page merge title="Messages">
+    <body: class="index-page message" param/>
+    
+    <content: param>
+      <header param="content-header">
+        <h2 param="heading">Messages</h2>
+
+        <p param="count" if>There <count prefix="are"/></p>
+      </header>
+      
+      <section param="content-body">
+
+        <a action="new" to="&model" param="new-link"/>      
+
+        <page-nav param="top-page-nav"/>
+
+        <collection param/>
+
+        <page-nav param="bottom-page-nav"/>
+
+
+      </section>
+    </content:>
+  </page>
+</def>
+
+
+<def tag="new-page" for="Message">
+  <page merge title="New Message">
+    <body: class="new-page message" param/>
+    
+    <content: param>
+      <section param="content-header">
+        <h2 param="heading">New Message</h2>
+      </section>
+      
+      <section param="content-body">
+        <form param>
+          <submit: label="Create Message"/>
+        </form>
+      </section>
+    </content:>
+  </page>
+</def>
+
+
+<def tag="show-page" for="Message">
+  <page merge title="Message">
+
+    <body: class="show-page message" param/>
+
+    <content: param>
+          <header param="content-header">
+            <h2 param="heading"><name/></h2>
+
+            <record-flags fields="" param/>
+
+            <a action="edit" if="&can_edit?" param="edit-link">Edit Message</a>
+          </header>
+    
+          <section param="content-body">
+            <view:body param="description"/>
+            <field-list fields="subject, author" param/>
+          </section>
+    </content:>
+    
+  </page>
+</def>
+
+
+<def tag="edit-page" for="Message">
+  <page merge title="Edit Message">
+
+    <body: class="edit-page message" param/>
+
+    <content:>
+      <section param="content-header">
+        <h2 param="heading">Edit <type-name/></h2>
+        <delete-button label="Remove This Message" param/>
+      </section>
+
+      <section param="content-body">
+        <form param/>
+      </section>
+    </content:>
+    
+  </page>
+</def>
+
+
+
+
+  
 <!-- ====== Page Pages ====== -->
 
 
@@ -394,7 +492,7 @@
           </header>
     
           <section param="content-body">
-            <field-list fields="last_name, bio" param/>
+            <field-list fields="last_name, professional_title, bio" param/>
             <section param="collection-section">
               <h3 param="collection-heading">Employments</h3>
               

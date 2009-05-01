@@ -15,20 +15,29 @@ class User < ActiveRecord::Base
     avatar_updated_at :datetime
     timestamps
   end
-  
-    has_many :reviews, :class_name => "Review", :foreign_key => "reviewer_id"
-    #has_many :business_employees, :dependent => :destroy   
-    #has_many :employers, :through => :business_employees, :uniq => true, :accessible => true, :source => :business
-    has_attached_file :avatar, 
-    :styles => {:med=> ["100x75#", :jpg], :small => ["40x40#", :jpg],:xsmall => ["20x20#", :jpg]}, 
-    :url => "/system/user_assets/:class/:attachment/:id/:style_:basename.:extension",
-    :path => ":rails_root/public/system/user_assets/:class/:attachment/:id/:style_:basename.:extension" ,
-    :default_url => ":rails_root/public/system/user_assets/:class/:attachment/:style/missing.png"
+
+  has_many :sent_messages, :class_name => "Message", :foreign_key => "author_id"
+  has_many :recived_messages, :class_name => "MessageCopy", :foreign_key => "recipient_id"
+  has_many :folders
+  has_many :reviews, :class_name => "Review", :foreign_key => "reviewer_id"
+  has_attached_file :avatar, 
+  :styles => {:med=> ["100x75#", :jpg], :small => ["40x40#", :jpg],:xsmall => ["20x20#", :jpg]}, 
+  :url => "/system/user_assets/:class/:attachment/:id/:style_:basename.:extension",
+  :path => ":rails_root/public/system/user_assets/:class/:attachment/:id/:style_:basename.:extension" ,
+  :default_url => ":rails_root/public/system/user_assets/:class/:attachment/:style/missing.png"
 
   # This gives admin rights to the first sign-up.
   # Just remove it if you don't want that
   before_create { |user| user.administrator = true if RAILS_ENV != "test" && count == 0 }
   
+  def inbox
+    build_and_save_inbox unless folders.find_by_name("Inbox")
+    folders.find_by_name("Inbox")
+  end
+
+  def build_and_save_inbox
+    folders.build(:name => "Inbox").save
+  end
   
   # --- Signup lifecycle --- #
 

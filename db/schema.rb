@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090428210230) do
+ActiveRecord::Schema.define(:version => 20090501185329) do
 
   create_table "business_categories", :force => true do |t|
     t.datetime "created_at"
@@ -66,6 +66,13 @@ ActiveRecord::Schema.define(:version => 20090428210230) do
     t.integer  "person_id"
   end
 
+  create_table "folders", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "user_id"
+  end
+
   create_table "locations", :force => true do |t|
     t.string   "address_line_1"
     t.string   "address_line_2"
@@ -75,6 +82,22 @@ ActiveRecord::Schema.define(:version => 20090428210230) do
     t.string   "country"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "message_copies", :force => true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "message_id"
+    t.integer  "recipient_id"
+    t.integer  "folder_id"
+  end
+
+  create_table "messages", :force => true do |t|
+    t.string   "subject"
+    t.text     "body"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "author_id"
   end
 
   create_table "pages", :force => true do |t|
@@ -91,6 +114,7 @@ ActiveRecord::Schema.define(:version => 20090428210230) do
     t.text     "bio"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "professional_title"
   end
 
   create_table "reviews", :force => true do |t|

@@ -217,16 +217,12 @@
 
 <def tag="show-page" for="Page">
   <page merge title="#{this.name}">
-
     <body: class="show-page page" param/>
-
     <content: param>
           <header param="content-header">
             <record-flags fields="" param/>
-        
             <a action="edit" if="&can_edit?" param="edit-link">Edit Page</a>
           </header>
-    
           <section param="content-body">
             <section class="static-page">
               <view:content param="description"/>
@@ -236,3 +232,39 @@
   </page>
 </def>
 
+<def tag="mailbox">
+  <div id="mailbox_list" style="border:1px solid #aaa; float:right; margin:1em; padding:1em; width:20%">
+  <p><%= link_to "Compose",  :controller => "sent", :action => "new"  %></p>
+  <p><strong>Mailboxes</strong></p>
+  <ul>
+    <li><%= link_to "Inbox", :controller => "mailbox", :action => "index"  %></li>
+    <li><%= link_to "Sent", :controller => "sent", :action => "index" %></li>
+  </ul>
+</div>
+</def>
+
+
+<def tag="index-page" for="Message">
+  <page merge title="Messages">
+    <body: class="index-page message" param/>
+    <content: param>
+      <header param="content-header">
+        <h2 param="heading">Messages</h2>
+        <p param="count" if>There <count prefix="are"/></p>
+      </header>
+      
+      <section param="content-body">
+
+        <a action="new" to="&model" param="new-link"/>      
+
+        <page-nav param="top-page-nav"/>
+
+        <mailbox/>
+
+        <page-nav param="bottom-page-nav"/>
+
+
+      </section>
+    </content:>
+  </page>
+</def>
