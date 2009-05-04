@@ -1,0 +1,15 @@
+<h2>Compose</h2>
+
+<% form_for :message, :url => {:controller => "sent", :action => "create"} do |f| %>
+
+  <p>
+    To:<br />
+    <select name="message[to][]">
+      <%= options_from_collection_for_select(User.find(:all), :id, :login, @message.to) %>
+    </select>
+  </p>
+
+  <p>Subject: <%= f.text_field :subject %></p>
+  <p>Body:<br /> <%= f.text_area :body %></p>
+  <p><%= submit_tag "Send" %></p>
+<% end %>
