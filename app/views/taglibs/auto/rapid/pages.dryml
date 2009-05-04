@@ -624,33 +624,6 @@
   </page>
 </def>
 
-<def tag="index-for-reviewer-page" polymorphic/>
-<def tag="index-for-reviewer-page" for="Review">
-  <page merge title="Reviews for #{name :with => @reviewer, :no_wrapper => true}">
-    <body: class="index-for-owner-page reviewer review" param/>
-    
-    <content: param>
-      <header param="content-header">
-        <div param="back-to">Back to <a with="&@reviewer"/></div>
-
-        <h2 param="heading"><Your with="&current_user"/> Reviews</h2>
-        <p param="count" if>There <count prefix="are"/></p>
-      </header>
-      
-      <section param="content-body">
-
-        <page-nav param="top-page-nav"/>
-      
-        <collection param/>
-      
-        <page-nav param="bottom-page-nav"/>
-      </section>
-    </content:>
-  </page>
-</def>
-
-
-
 <def tag="index-for-business-page" polymorphic/>
 <def tag="index-for-business-page" for="Review">
   <page merge title="Reviews for #{name :with => @business, :no_wrapper => true}">
@@ -700,6 +673,33 @@
     </content:>
   </page>
 </def>
+
+<def tag="index-for-reviewer-page" polymorphic/>
+<def tag="index-for-reviewer-page" for="Review">
+  <page merge title="Reviews for #{name :with => @reviewer, :no_wrapper => true}">
+    <body: class="index-for-owner-page reviewer review" param/>
+    
+    <content: param>
+      <header param="content-header">
+        <div param="back-to">Back to <a with="&@reviewer"/></div>
+
+        <h2 param="heading"><Your with="&current_user"/> Reviews</h2>
+        <p param="count" if>There <count prefix="are"/></p>
+      </header>
+      
+      <section param="content-body">
+
+        <page-nav param="top-page-nav"/>
+      
+        <collection param/>
+      
+        <page-nav param="bottom-page-nav"/>
+      </section>
+    </content:>
+  </page>
+</def>
+
+
 
 
 

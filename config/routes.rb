@@ -3,8 +3,14 @@ ActionController::Routing::Routes.draw do |map|
   map.site_search  'search', :controller => 'front', :action => 'search'
   map.power_search  'power_search', :controller => 'search', :action => 'index'
   map.root :controller => 'front', :action => 'index'
-  
   map.static 'static/:permalink', :controller => 'pages', :action => 'show'
+  
+  #Routes for messaging
+  map.resources :users, :sent, :mailbox
+  map.resources :messages, :member => { :reply => :get }
+  # Home route leads to inbox
+  map.inbox '', :controller => "mailbox", :action => "index"
+
  
   Hobo.add_routes(map)
 

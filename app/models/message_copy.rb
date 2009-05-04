@@ -3,6 +3,7 @@ class MessageCopy < ActiveRecord::Base
   hobo_model # Don't put anything above this
 
   fields do
+    #deleted :boolean
     timestamps
   end
   

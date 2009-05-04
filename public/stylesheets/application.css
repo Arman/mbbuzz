@@ -50,7 +50,7 @@ body {width: 960px; }
 	background: #DDD;
 	}
 	
-.page-header .navigation.main-nav li.current a {background: #FFF; color: #AD163D;}
+.page-header .navigation.main-nav li.current a {background: #FFF; }
 
 .account-nav {
 	position: absolute; 
@@ -62,6 +62,22 @@ body {width: 960px; }
 }
 .account-nav a {color: #bbb;}
 
+.secondary-nav {
+	position: absolute; 
+	top: auto; 
+	right: 20px;
+	bottom: 2px;
+	left: auto;
+	font-size: 12px;  
+	color: #777; 
+}
+
+ .secondary-nav li {
+	margin-right: 1px;
+	border-right: 1px solid #777;
+	padding: 0 4px 0 4px;
+	}
+	
 .page-header div.search {
 	position: absolute; top: 50px; right: 5px; z-index: 10;
 }
@@ -332,3 +348,4 @@ input.text, input.string, input.email-address, input.password, input.search, inp
     background: #fff url(../images/fieldbg.gif) repeat-x top;
 	font-size: 0.8 em; line-height: 1.1em;
 }
+

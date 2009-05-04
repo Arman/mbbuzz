@@ -12,6 +12,8 @@ class Message < ActiveRecord::Base
   has_many :message_copies
   has_many :recipients, :through => :message_copies
   
+  # named_scope :all, :conditions => ['deleted = ?', false] 
+  
   before_create :prepare_copies
   
   attr_accessor :to #array of users

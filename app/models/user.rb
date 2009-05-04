@@ -17,7 +17,7 @@ class User < ActiveRecord::Base
   end
 
   has_many :sent_messages, :class_name => "Message", :foreign_key => "author_id"
-  has_many :recived_messages, :class_name => "MessageCopy", :foreign_key => "recipient_id"
+  has_many :received_messages, :class_name => "MessageCopy", :foreign_key => "recipient_id"
   has_many :folders
   has_many :reviews, :class_name => "Review", :foreign_key => "reviewer_id"
   has_attached_file :avatar, 

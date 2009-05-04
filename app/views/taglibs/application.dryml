@@ -4,9 +4,44 @@
 <include src="taglibs/auto/rapid/pages"/>
 <include src="taglibs/auto/rapid/forms"/>
 
+<!-- ====== Main Navigation ====== -->
+
+<def tag="main-nav">
+  <navigation class="main-nav" merge-attrs param="default">
+    <nav-item href="#{base_url}/">Home</nav-item>
+    <nav-item with="&Business">Businesses</nav-item>
+    <nav-item with="&Person">People</nav-item>
+    <nav-item with="&Review">Reviews</nav-item>
+  </navigation>
+</def>
+
+
 <set-theme name="clean"/>
 
 <def tag="app-name">MindBody Buzz!  - alpha -  </def>
+
+<!-- ====== Secondary Navigation :Messaging etc. ====== -->
+
+<def tag="secondary-nav">
+  <navigation class="secondary-nav" merge>
+    <nav-item href="/messages">Messages</nav-item>  
+    <nav-item href="/compose">New Message</nav-item>  
+    <nav-item href="/businesses/new">Add Business</nav-item>
+    <nav-item href="/people/new">Add Person</nav-item>
+  </navigation>
+</def>
+
+<def tag="secondary-nav">
+  <div class="secondary-nav">  
+    <if test="&logged_in?">
+      <nav-item href="/messages">Messages</nav-item>  
+      <nav-item href="/sent/new">New Message</nav-item>  
+      <nav-item href="/businesses/new">Add Business</nav-item>
+      <nav-item href="/people/new">Add Person</nav-item>  
+     </if>
+  </div>    
+</def>
+
 
 
 <def tag="footer-nav">   
@@ -19,10 +54,9 @@
   </div> 
 </def>
 
-
 <extend tag="page">   
   <old-page merge without-live-search>   
-    <append-header:>
+    <append-head:>
       <script type="text/javascript">
         var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
         document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
@@ -33,6 +67,9 @@
         pageTracker._trackPageview();
       } catch(err) {}
       </script>
+    </append-head:>
+    <append-header:>
+      <secondary-nav/>
     </append-header:>
     <footer: param>
     <footer-nav/><br/>

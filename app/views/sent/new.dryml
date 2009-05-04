@@ -4,9 +4,7 @@
 
   <p>
     To:<br />
-    <select name="message[to][]">
-      <%= options_from_collection_for_select(User.find(:all), :id, :login, @message.to) %>
-    </select>
+    <%= checklist "message[to][]", User.find(:all), :id, :login, @message.to %>
   </p>
 
   <p>Subject: <%= f.text_field :subject %></p>
