@@ -1,7 +1,6 @@
 ruby script/generate hobo_model_resource organization name:string address_line_1:string address_line_2:string city:string zip_code:string state_region:string country:string web_site:string phone:string fax:string 
 ruby script/generate hobo_model_resource review rating:integer body:text
 ruby script/generate hobo_model_resource category name:string
-ruby script/generate hobo_model_resource service name:string duration:integer
 ruby script/generate hobo_model category_organization
 
 ASSOCIATONS:
