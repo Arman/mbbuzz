@@ -11,6 +11,7 @@ class Service < ActiveRecord::Base
   end
 
   belongs_to :business
+  has_many :service_schedules, :dependent => :destroy, :accessible => :true
 
   # --- Permissions --- #
 

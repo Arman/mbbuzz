@@ -11763,3 +11763,88 @@ eschaton: loading slice 'eschaton_kernel'
 eschaton: loading slice 'google_maps'
 eschaton: loading slice 'jquery'
 eschaton: loading slice 'yopi'
+eschaton: loading slice 'eschaton_kernel'
+eschaton: loading slice 'eschaton_kernel'
+eschaton: loading slice 'google_maps'
+eschaton: loading slice 'google_maps'
+eschaton: loading slice 'jquery'
+eschaton: loading slice 'jquery'
+eschaton: loading slice 'yopi'
+eschaton: loading slice 'yopi'
+  [4;36;1mSQL (250.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (250.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+!! Database exception during hobo auto-scope creation -- continuing automatic scopes
+!! Could not find table 'service_schedules'
+!! Database exception during hobo auto-scope creation -- continuing automatic scopes
+!! Could not find table 'services'
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-06 10:25:09) [GET]
+
+
+ActiveRecord::StatementInvalid (Could not find table 'service_schedules'):
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/sqlite3_adapter.rb:29:in `table_structure'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/core_ext/object/misc.rb:39:in `returning'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/sqlite3_adapter.rb:28:in `table_structure'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/sqlite_adapter.rb:189:in `columns'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/base.rb:1220:in `columns'
+    rapid/pages:89:in `run_one'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/dryml_generator.rb:124:in `each_controller'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/dryml_generator.rb:122:in `each'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/dryml_generator.rb:122:in `each_controller'
+    rapid/pages:14:in `run_one'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/dryml_generator.rb:71:in `run_for_subsite'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/dryml_generator.rb:70:in `each_pair'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/dryml_generator.rb:70:in `run_for_subsite'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/dryml_generator.rb:64:in `run'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/dryml_generator.rb:64:in `each'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/dryml_generator.rb:64:in `run'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/dryml_generator.rb:36:in `run'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/dryml_generator.rb:28:in `reload_application'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/callbacks.rb:178:in `send'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/callbacks.rb:178:in `evaluate_method'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/callbacks.rb:166:in `call'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/callbacks.rb:90:in `run'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/callbacks.rb:90:in `each'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/callbacks.rb:90:in `send'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/callbacks.rb:90:in `run'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/callbacks.rb:277:in `run_callbacks'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:109:in `dispatch_unlocked'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:103:in `handle_dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:74:in `service'
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:60:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/servers/webrick.rb:66
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_trace (63.0ms)
+Rendered c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_request_and_response (0.0ms)
+Rendering c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
