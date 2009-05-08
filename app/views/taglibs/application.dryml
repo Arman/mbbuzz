@@ -4,7 +4,13 @@
 <include src="taglibs/auto/rapid/pages"/>
 <include src="taglibs/auto/rapid/forms"/>
 
-<!-- ====== Main Navigation ====== -->
+<set-theme name="clean"/>
+
+<!-- 1. TAG DEFS ================================ -->
+
+<def tag="app-name">MindBody Buzz!  - alpha -  </def>
+
+<!--    1.1. Main Navigation ======================= -->
 
 <def tag="main-nav">
   <navigation class="main-nav" merge-attrs param="default">
@@ -15,12 +21,7 @@
   </navigation>
 </def>
 
-
-<set-theme name="clean"/>
-
-<def tag="app-name">MindBody Buzz!  - alpha -  </def>
-
-<!-- ====== Secondary Navigation :Messaging etc. ====== -->
+<!--    1.2. Secondary Navigation =================== -->
 
 <def tag="secondary-nav">
   <navigation class="secondary-nav" merge>
@@ -42,7 +43,7 @@
   </div>    
 </def>
 
-
+<!--    1.3. Footer Nav ============================= -->
 
 <def tag="footer-nav">   
   <div class="footer-nav">     
@@ -53,6 +54,20 @@
     </ul>   
   </div> 
 </def>
+
+
+
+<def tag="input-many" for="Service"> 
+   <input-many>
+      <input:name/>
+      <input:duration/>
+      <input:price/>
+      <input:description/>
+    </input-many> 
+</def> 
+
+
+<!-- 2. TAG EXTS ================================= -->
 
 <extend tag="page">   
   <old-page merge without-live-search>   
@@ -78,12 +93,13 @@
   </old-page> 
 </extend>
 
+
 <def tag="form" for="Business">
   <form merge param="default" multipart >
   <error-messages param/>
     <field-list fields="name, about, address_line_1, city, state_region, zip_code, web_site, phone" param/>
     <table class="field-list">  <tr><th class="photo-label">Main Image</th><td class="photo-view"><input type="file" name="business[photo]"/></td></tr></table>
-    <field-list fields="categories, employees" param/>
+    <field-list fields="categories, employees, services" param/>
     <div param="actions">
       <submit label="Save" param/><or-cancel param="cancel"/>
     </div>
@@ -125,7 +141,7 @@
   </page>
 </def>
 
-
+<!-- ====== USER ====== -->
 
 <def tag="form" for="User">
   <form merge param="default" multipart>
@@ -154,6 +170,9 @@
     </content:>
   </page>
 </def>
+
+
+<!-- ====== CARDS ====== -->
 
 <def tag="card" for="Review">
   <card class="review" param="default" merge>
@@ -195,6 +214,8 @@
   </card>
 </def>
 
+<!-- ====== PERSON ====== -->
+
 <def tag="card" for="Person">
   <card class="person" param="default" merge>
     <header: param>
@@ -204,7 +225,6 @@
       <section class="person">
         Temporary place holder ! Real attributes should be added
       </section>
-      
     </body:>
   </card>
 </def>
@@ -269,6 +289,7 @@
   </page>
 </def>
 
+
 <def tag="mailbox">
   <div id="mailbox_list" style="border:1px solid #aaa; float:right; margin:1em; padding:1em; width:20%">
   <p><%= link_to "Compose",  :controller => "sent", :action => "new"  %></p>
@@ -280,7 +301,6 @@
 </div>
 </def>
 
-
 <def tag="index-page" for="Message">
   <page merge title="Messages">
     <body: class="index-page message" param/>
@@ -289,18 +309,11 @@
         <h2 param="heading">Messages</h2>
         <p param="count" if>There <count prefix="are"/></p>
       </header>
-      
       <section param="content-body">
-
         <a action="new" to="&model" param="new-link"/>      
-
         <page-nav param="top-page-nav"/>
-
         <mailbox/>
-
         <page-nav param="bottom-page-nav"/>
-
-
       </section>
     </content:>
   </page>

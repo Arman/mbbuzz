@@ -9,6 +9,7 @@
     <nav-item with="&Message">Messages</nav-item>
     <nav-item with="&Person">People</nav-item>
     <nav-item with="&Review">Reviews</nav-item>
+    <nav-item with="&Service">Services</nav-item>
   </navigation>
 </def>
 
@@ -101,6 +102,10 @@
           <preview-with-more:reviews.recent param="reviews-preview">
             <more:>more</more:>
           </preview-with-more:reviews.recent>
+          <section param="services-collection-section">
+            <h3 param="services-collection">Services</h3>
+            <collection:services/>
+          </section>
         </aside>
       </section-group>
     </content:>
@@ -700,6 +705,206 @@
 </def>
 
 
+
+
+
+
+  
+<!-- ====== ServiceSchedule Pages ====== -->
+
+
+<def tag="index-page" for="ServiceSchedule">
+  <page merge title="Service Schedules">
+    <body: class="index-page service-schedule" param/>
+    
+    <content: param>
+      <header param="content-header">
+        <h2 param="heading">Service Schedules</h2>
+
+        <p param="count" if>There <count prefix="are"/></p>
+      </header>
+      
+      <section param="content-body">
+
+        <a action="new" to="&model" param="new-link"/>      
+
+        <page-nav param="top-page-nav"/>
+
+        <collection param/>
+
+        <page-nav param="bottom-page-nav"/>
+
+
+      </section>
+    </content:>
+  </page>
+</def>
+
+
+<def tag="new-page" for="ServiceSchedule">
+  <page merge title="New Service Schedule">
+    <body: class="new-page service-schedule" param/>
+    
+    <content: param>
+      <section param="content-header">
+        <h2 param="heading">New Service Schedule</h2>
+      </section>
+      
+      <section param="content-body">
+        <form param>
+          <submit: label="Create Service Schedule"/>
+        </form>
+      </section>
+    </content:>
+  </page>
+</def>
+
+
+<def tag="show-page" for="ServiceSchedule">
+  <page merge title="Service Schedule">
+
+    <body: class="show-page service-schedule" param/>
+
+    <content: param>
+          <header param="content-header">
+            <a:service param="parent-link">&laquo; <name/></a:service>
+            <h2 param="heading"><name/></h2>
+
+            <record-flags fields="recurring" param/>
+
+            <a action="edit" if="&can_edit?" param="edit-link">Edit Service Schedule</a>
+          </header>
+    
+          <section param="content-body">
+            <field-list fields="start_date, start_time, interval, frequency, price" param/>
+          </section>
+    </content:>
+    
+  </page>
+</def>
+
+
+<def tag="edit-page" for="ServiceSchedule">
+  <page merge title="Edit Service Schedule">
+
+    <body: class="edit-page service-schedule" param/>
+
+    <content:>
+      <section param="content-header">
+        <h2 param="heading">Edit <type-name/></h2>
+        <delete-button label="Remove This Service Schedule" param/>
+      </section>
+
+      <section param="content-body">
+        <form param/>
+      </section>
+    </content:>
+    
+  </page>
+</def>
+
+
+
+
+  
+<!-- ====== Service Pages ====== -->
+
+
+<def tag="index-page" for="Service">
+  <page merge title="Services">
+    <body: class="index-page service" param/>
+    
+    <content: param>
+      <header param="content-header">
+        <h2 param="heading">Services</h2>
+
+        <p param="count" if>There <count prefix="are"/></p>
+      </header>
+      
+      <section param="content-body">
+
+        <a action="new" to="&model" param="new-link"/>      
+
+        <page-nav param="top-page-nav"/>
+
+        <collection param/>
+
+        <page-nav param="bottom-page-nav"/>
+
+
+      </section>
+    </content:>
+  </page>
+</def>
+
+
+<def tag="new-page" for="Service">
+  <page merge title="New Service">
+    <body: class="new-page service" param/>
+    
+    <content: param>
+      <section param="content-header">
+        <h2 param="heading">New Service</h2>
+      </section>
+      
+      <section param="content-body">
+        <form param>
+          <submit: label="Create Service"/>
+        </form>
+      </section>
+    </content:>
+  </page>
+</def>
+
+
+<def tag="show-page" for="Service">
+  <page merge title="Service">
+
+    <body: class="show-page service" param/>
+
+    <content: param>
+          <header param="content-header">
+            <a:business param="parent-link">&laquo; <name/></a:business>
+            <h2 param="heading"><name/></h2>
+
+            <record-flags fields="" param/>
+
+            <a action="edit" if="&can_edit?" param="edit-link">Edit Service</a>
+          </header>
+    
+          <section param="content-body">
+            <view:description param="description"/>
+            <field-list fields="duration, price" param/>
+            <section param="collection-section">
+              <h3 param="collection-heading">Service Schedules</h3>
+              
+              <collection:service_schedules param/>
+            </section>
+          </section>
+    </content:>
+    
+  </page>
+</def>
+
+
+<def tag="edit-page" for="Service">
+  <page merge title="Edit Service">
+
+    <body: class="edit-page service" param/>
+
+    <content:>
+      <section param="content-header">
+        <h2 param="heading">Edit <type-name/></h2>
+        <delete-button label="Remove This Service" param/>
+      </section>
+
+      <section param="content-body">
+        <form param/>
+      </section>
+    </content:>
+    
+  </page>
+</def>
 
 
 

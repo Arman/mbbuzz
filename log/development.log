@@ -11848,3 +11848,1215 @@ ActiveRecord::StatementInvalid (Could not find table 'service_schedules'):
 Rendered c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_trace (63.0ms)
 Rendered c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_request_and_response (0.0ms)
 Rendering c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+eschaton: loading slice 'eschaton_kernel'
+eschaton: loading slice 'eschaton_kernel'
+eschaton: loading slice 'google_maps'
+eschaton: loading slice 'google_maps'
+eschaton: loading slice 'jquery'
+eschaton: loading slice 'jquery'
+eschaton: loading slice 'yopi'
+eschaton: loading slice 'yopi'
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (31.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+!! Database exception during hobo auto-scope creation -- continuing automatic scopes
+!! Could not find table 'service_schedules'
+!! Database exception during hobo auto-scope creation -- continuing automatic scopes
+!! Could not find table 'services'
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-07 13:19:53) [GET]
+
+
+ActiveRecord::StatementInvalid (Could not find table 'service_schedules'):
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/sqlite3_adapter.rb:29:in `table_structure'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/core_ext/object/misc.rb:39:in `returning'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/sqlite3_adapter.rb:28:in `table_structure'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/sqlite_adapter.rb:189:in `columns'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/base.rb:1220:in `columns'
+    rapid/pages:89:in `run_one'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/dryml_generator.rb:124:in `each_controller'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/dryml_generator.rb:122:in `each'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/dryml_generator.rb:122:in `each_controller'
+    rapid/pages:14:in `run_one'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/dryml_generator.rb:71:in `run_for_subsite'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/dryml_generator.rb:70:in `each_pair'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/dryml_generator.rb:70:in `run_for_subsite'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/dryml_generator.rb:64:in `run'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/dryml_generator.rb:64:in `each'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/dryml_generator.rb:64:in `run'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/dryml_generator.rb:36:in `run'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/dryml_generator.rb:28:in `reload_application'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/callbacks.rb:178:in `send'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/callbacks.rb:178:in `evaluate_method'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/callbacks.rb:166:in `call'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/callbacks.rb:90:in `run'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/callbacks.rb:90:in `each'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/callbacks.rb:90:in `send'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/callbacks.rb:90:in `run'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/callbacks.rb:277:in `run_callbacks'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:109:in `dispatch_unlocked'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:103:in `handle_dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:74:in `service'
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:60:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/servers/webrick.rb:66
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_trace (47.0ms)
+Rendered c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_request_and_response (0.0ms)
+Rendering c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+eschaton: loading slice 'eschaton_kernel'
+eschaton: loading slice 'google_maps'
+eschaton: loading slice 'jquery'
+eschaton: loading slice 'yopi'
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("businesses")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("businesses")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("businesses")[0m
+eschaton: loading slice 'eschaton_kernel'
+eschaton: loading slice 'google_maps'
+eschaton: loading slice 'jquery'
+eschaton: loading slice 'yopi'
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to HoboMigration1 (20090323203645)
+Migrating to HoboMigration2 (20090323233637)
+Migrating to AddAttachmentsPhotoToOrganization (20090324202631)
+Migrating to HoboMigration3 (20090326204750)
+Migrating to AddAttachmentsAvatarToUser (20090326224711)
+Migrating to HoboMigration4 (20090326230034)
+Migrating to HoboMigration5 (20090327173502)
+Migrating to HoboMigration6 (20090330212700)
+Migrating to HoboMigration7 (20090330215940)
+Migrating to HoboMigration8 (20090401171033)
+Migrating to HoboMigration9 (20090401183117)
+Migrating to HoboMigration10 (20090401194633)
+Migrating to HoboMigration11 (20090413215502)
+Migrating to HoboMigration12 (20090413220844)
+Migrating to HoboMigration13 (20090413222201)
+Migrating to HoboMigration14 (20090413223359)
+Migrating to HoboMigration15 (20090414221304)
+Migrating to HoboMigration16 (20090416181222)
+Migrating to HoboMigration17 (20090416201547)
+Migrating to HoboMigration18 (20090423223257)
+Migrating to HoboMigration19 (20090423231952)
+Migrating to HoboMigration20 (20090427212903)
+Migrating to HoboMigration21 (20090428210230)
+Migrating to HoboMigration22 (20090501185329)
+Migrating to HoboMigration23 (20090507203321)
+  [4;35;1mSQL (0.0ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (406.0ms)[0m   [0;1mCREATE TABLE "services" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "duration" integer, "price" decimal(7,2) DEFAULT 0, "description" text, "created_at" datetime, "updated_at" datetime, "business_id" integer) [0m
+  [4;35;1mSQL (203.0ms)[0m   [0mCREATE TABLE "service_schedules" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "start_date" date, "start_time" time, "recurring" boolean, "interval" varchar(255), "frequency" integer, "price" decimal, "created_at" datetime, "updated_at" datetime, "service_id" integer) [0m
+  [4;36;1mSQL (47.0ms)[0m   [0;1mCREATE TEMPORARY TABLE "altered_businesses" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "about" text, "address_line_1" varchar(255), "address_line_2" varchar(255), "city" varchar(255), "zip_code" varchar(255), "state_region" varchar(255), "country" varchar(255) DEFAULT 'US', "web_site" varchar(255), "phone" varchar(255), "fax" varchar(255), "avg_rating" decimal DEFAULT 0.0, "lat" decimal DEFAULT 0.0, "lng" decimal DEFAULT 0.0, "photo_file_name" varchar(255), "photo_content_type" varchar(255), "photo_file_size" integer, "photo_updated_at" datetime, "created_at" datetime, "updated_at" datetime, "owner_id" integer) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("businesses")[0m
+  [4;36;1mSQL (15.0ms)[0m   [0;1mDROP TABLE "businesses"[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE "businesses" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "about" text, "address_line_1" varchar(255), "address_line_2" varchar(255), "city" varchar(255), "zip_code" varchar(255), "state_region" varchar(255), "country" varchar(255) DEFAULT 'US', "web_site" varchar(255), "phone" varchar(255), "fax" varchar(255), "avg_rating" decimal DEFAULT 0.0, "lat" decimal DEFAULT 0.0, "lng" decimal DEFAULT 0, "photo_file_name" varchar(255), "photo_content_type" varchar(255), "photo_file_size" integer, "photo_updated_at" datetime, "created_at" datetime, "updated_at" datetime, "owner_id" integer) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("altered_businesses")[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mDROP TABLE "altered_businesses"[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mCREATE TEMPORARY TABLE "altered_businesses" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "about" text, "address_line_1" varchar(255), "address_line_2" varchar(255), "city" varchar(255), "zip_code" varchar(255), "state_region" varchar(255), "country" varchar(255) DEFAULT 'US', "web_site" varchar(255), "phone" varchar(255), "fax" varchar(255), "avg_rating" decimal DEFAULT 0.0, "lat" decimal DEFAULT 0.0, "lng" decimal DEFAULT 0.0, "photo_file_name" varchar(255), "photo_content_type" varchar(255), "photo_file_size" integer, "photo_updated_at" datetime, "created_at" datetime, "updated_at" datetime, "owner_id" integer) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("businesses")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mDROP TABLE "businesses"[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE "businesses" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "about" text, "address_line_1" varchar(255), "address_line_2" varchar(255), "city" varchar(255), "zip_code" varchar(255), "state_region" varchar(255), "country" varchar(255) DEFAULT 'US', "web_site" varchar(255), "phone" varchar(255), "fax" varchar(255), "avg_rating" decimal DEFAULT 0.0, "lat" decimal DEFAULT 0, "lng" decimal DEFAULT 0.0, "photo_file_name" varchar(255), "photo_content_type" varchar(255), "photo_file_size" integer, "photo_updated_at" datetime, "created_at" datetime, "updated_at" datetime, "owner_id" integer) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("altered_businesses")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mDROP TABLE "altered_businesses"[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCREATE TEMPORARY TABLE "altered_businesses" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "about" text, "address_line_1" varchar(255), "address_line_2" varchar(255), "city" varchar(255), "zip_code" varchar(255), "state_region" varchar(255), "country" varchar(255) DEFAULT 'US', "web_site" varchar(255), "phone" varchar(255), "fax" varchar(255), "avg_rating" decimal DEFAULT 0.0, "lat" decimal DEFAULT 0.0, "lng" decimal DEFAULT 0.0, "photo_file_name" varchar(255), "photo_content_type" varchar(255), "photo_file_size" integer, "photo_updated_at" datetime, "created_at" datetime, "updated_at" datetime, "owner_id" integer) [0m
+  [4;35;1mSQL (16.0ms)[0m   [0mPRAGMA index_list("businesses")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mDROP TABLE "businesses"[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE "businesses" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "about" text, "address_line_1" varchar(255), "address_line_2" varchar(255), "city" varchar(255), "zip_code" varchar(255), "state_region" varchar(255), "country" varchar(255) DEFAULT 'US', "web_site" varchar(255), "phone" varchar(255), "fax" varchar(255), "avg_rating" decimal DEFAULT 0, "lat" decimal DEFAULT 0.0, "lng" decimal DEFAULT 0.0, "photo_file_name" varchar(255), "photo_content_type" varchar(255), "photo_file_size" integer, "photo_updated_at" datetime, "created_at" datetime, "updated_at" datetime, "owner_id" integer) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("altered_businesses")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mDROP TABLE "altered_businesses"[0m
+  [4;36;1mSQL (203.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090507203321')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("business_categories")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("business_ownerships")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("businesses")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("categories")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("employments")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("folders")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("locations")[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mPRAGMA index_list("message_copies")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("messages")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("pages")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("people")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("reviews")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("service_schedules")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("services")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("users")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing FrontController#index (for 127.0.0.1 at 2009-05-07 13:33:46) [GET]
+Rendering front/index
+  DRYML: Compiled vendor/plugins/hobo/hobo/taglibs/core.dryml in 0.03s
+  DRYML: Compiled vendor/plugins/hobo/hobo/taglibs/rapid_core.dryml in 0.48s
+  DRYML: Compiled vendor/plugins/hobo/hobo/taglibs/rapid_support.dryml in 0.02s
+  DRYML: Compiled vendor/plugins/hobo/hobo/taglibs/rapid_document_tags.dryml in 0.06s
+  DRYML: Compiled vendor/plugins/hobo/hobo/taglibs/rapid_pages.dryml in 0.70s
+  DRYML: Compiled vendor/plugins/hobo/hobo/taglibs/rapid_editing.dryml in 0.17s
+  DRYML: Compiled vendor/plugins/hobo/hobo/taglibs/rapid_forms.dryml in 0.45s
+  DRYML: Compiled vendor/plugins/hobo/hobo/taglibs/rapid_navigation.dryml in 0.30s
+  DRYML: Compiled vendor/plugins/hobo/hobo/taglibs/rapid_plus.dryml in 0.14s
+  DRYML: Compiled vendor/plugins/hobo/hobo/taglibs/rapid_generics.dryml in 0.09s
+  DRYML: Compiled vendor/plugins/hobo/hobo/taglibs/rapid_lifecycles.dryml in 0.16s
+  DRYML: Compiled vendor/plugins/hobo/hobo/taglibs/rapid.dryml in 3.09s
+  DRYML: Compiled app/views/taglibs/auto/rapid/cards.dryml in 0.77s
+  DRYML: Compiled app/views/taglibs/auto/rapid/pages.dryml in 2.56s
+  DRYML: Compiled app/views/taglibs/auto/rapid/forms.dryml in 0.17s
+  DRYML: Compiled app/views/taglibs/themes/clean/clean.dryml in 0.06s
+  DRYML: Compiled app/views/taglibs/application.dryml in 8.40s
+  DRYML: Compiled app/views/front/index.dryml in 8.70s
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" LIMIT 30[0m
+  [4;35;1mBusiness Load (16.0ms)[0m   [0mSELECT * FROM "businesses" ORDER BY avg_rating DESC LIMIT 4[0m
+  [4;36;1mReview Load (0.0ms)[0m   [0;1mSELECT * FROM "reviews" WHERE ("reviews".business_id = 2) [0m
+  [4;35;1mReview Load (0.0ms)[0m   [0mSELECT * FROM "reviews" WHERE ("reviews".business_id = 3) [0m
+  [4;36;1mReview Load (0.0ms)[0m   [0;1mSELECT * FROM "reviews" WHERE ("reviews".business_id = 4) [0m
+  [4;35;1mReview Load (0.0ms)[0m   [0mSELECT * FROM "reviews" WHERE ("reviews".business_id = 1) [0m
+  [4;36;1mReview Load (0.0ms)[0m   [0;1mSELECT * FROM "reviews" ORDER BY created_at DESC LIMIT 4[0m
+  [4;35;1mBusiness Load (0.0ms)[0m   [0mSELECT * FROM "businesses" WHERE ("businesses"."id" = 4) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mBusiness Load (16.0ms)[0m   [0mSELECT * FROM "businesses" WHERE ("businesses"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mBusiness Load (0.0ms)[0m   [0mSELECT * FROM "businesses" WHERE ("businesses"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "businesses" WHERE ("businesses"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Completed in 9875ms (View: 9734, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing BusinessesController#index (for 127.0.0.1 at 2009-05-07 13:38:50) [GET]
+  [4;36;1mBusiness Load (0.0ms)[0m   [0;1mSELECT * FROM "businesses" WHERE ((name like '%') AND ((city like '%' or state_region like '%' or zip_code like '%'))) [0m
+  [4;35;1mBusiness Load (15.0ms)[0m   [0mSELECT * FROM "businesses" WHERE ((name like '%') AND ((city like '%' or state_region like '%' or zip_code like '%'))) LIMIT 30 OFFSET 0[0m
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+Rendering businesses/index
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" LIMIT 30[0m
+  [4;36;1mReview Load (0.0ms)[0m   [0;1mSELECT * FROM "reviews" WHERE ("reviews".business_id = 1) [0m
+  [4;35;1mReview Load (0.0ms)[0m   [0mSELECT * FROM "reviews" WHERE ("reviews".business_id = 2) [0m
+  [4;36;1mReview Load (0.0ms)[0m   [0;1mSELECT * FROM "reviews" WHERE ("reviews".business_id = 3) [0m
+  [4;35;1mReview Load (0.0ms)[0m   [0mSELECT * FROM "reviews" WHERE ("reviews".business_id = 4) [0m
+  [4;36;1mReview Load (0.0ms)[0m   [0;1mSELECT * FROM "reviews" WHERE ("reviews".business_id = 5) [0m
+  [4;35;1mReview Load (0.0ms)[0m   [0mSELECT * FROM "reviews" WHERE ("reviews".business_id = 6) [0m
+  [4;36;1mReview Load (0.0ms)[0m   [0;1mSELECT * FROM "reviews" WHERE ("reviews".business_id = 7) [0m
+Completed in 1406ms (View: 1375, DB: 15) | 200 OK [http://localhost/businesses]
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing BusinessesController#show (for 127.0.0.1 at 2009-05-07 13:38:54) [GET]
+  Parameters: {"id"=>"2-caddebostan-yoga-ve-pilates-st-dyosu"}
+  [4;36;1mBusiness Load (0.0ms)[0m   [0;1mSELECT * FROM "businesses" WHERE ("businesses"."id" = 2) [0m
+Rendering businesses/show
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" LIMIT 30[0m
+  [4;36;1mReview Load (0.0ms)[0m   [0;1mSELECT * FROM "reviews" WHERE ("reviews".business_id = 2) [0m
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT DISTINCT "categories".* FROM "categories" INNER JOIN business_categories ON categories.id = business_categories.category_id WHERE (("business_categories".business_id = 2)) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "businesses" WHERE ("businesses"."id" = 2) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(DISTINCT "people".id) AS count_people_id FROM "people" INNER JOIN employments ON people.id = employments.person_id WHERE (("employments".business_id = 2)) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(DISTINCT "people".id) AS count_people_id FROM "people" INNER JOIN employments ON people.id = employments.person_id WHERE (("employments".business_id = 2)) [0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT DISTINCT "people".* FROM "people" INNER JOIN employments ON people.id = employments.person_id WHERE (("employments".business_id = 2)) [0m
+Completed in 969ms (View: 953, DB: 0) | 200 OK [http://localhost/businesses/2-caddebostan-yoga-ve-pilates-st-dyosu]
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing Hobo::DevController#set_current_user (for 127.0.0.1 at 2009-05-07 13:38:58) [GET]
+  Parameters: {"login"=>"aaerman@hotmail.com"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."email_address" = 'aaerman@hotmail.com') LIMIT 1[0m
+Redirected to 
+Completed in 16ms (DB: 0) | 302 Found [http://localhost/dev/set_current_user?login=aaerman@hotmail.com]
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing FrontController#index (for 127.0.0.1 at 2009-05-07 13:39:00) [GET]
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering front/index
+  [4;36;1mUser Load (15.0ms)[0m   [0;1mSELECT * FROM "users" LIMIT 30[0m
+  [4;35;1mBusiness Load (0.0ms)[0m   [0mSELECT * FROM "businesses" ORDER BY avg_rating DESC LIMIT 4[0m
+  [4;36;1mReview Load (0.0ms)[0m   [0;1mSELECT * FROM "reviews" WHERE ("reviews".business_id = 2) [0m
+  [4;35;1mReview Load (0.0ms)[0m   [0mSELECT * FROM "reviews" WHERE ("reviews".business_id = 3) [0m
+  [4;36;1mReview Load (0.0ms)[0m   [0;1mSELECT * FROM "reviews" WHERE ("reviews".business_id = 4) [0m
+  [4;35;1mReview Load (0.0ms)[0m   [0mSELECT * FROM "reviews" WHERE ("reviews".business_id = 1) [0m
+  [4;36;1mReview Load (0.0ms)[0m   [0;1mSELECT * FROM "reviews" ORDER BY created_at DESC LIMIT 4[0m
+  [4;35;1mBusiness Load (0.0ms)[0m   [0mSELECT * FROM "businesses" WHERE ("businesses"."id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mBusiness Load (0.0ms)[0m   [0mSELECT * FROM "businesses" WHERE ("businesses"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mBusiness Load (0.0ms)[0m   [0mSELECT * FROM "businesses" WHERE ("businesses"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "businesses" WHERE ("businesses"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Completed in 1047ms (View: 1047, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing BusinessesController#show (for 127.0.0.1 at 2009-05-07 13:39:07) [GET]
+  Parameters: {"id"=>"2-caddebostan-yoga-ve-pilates-st-dyosu"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mBusiness Load (0.0ms)[0m   [0mSELECT * FROM "businesses" WHERE ("businesses"."id" = 2) [0m
+Rendering businesses/show
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" LIMIT 30[0m
+  [4;35;1mReview Load (0.0ms)[0m   [0mSELECT * FROM "reviews" WHERE ("reviews".business_id = 2) [0m
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT DISTINCT "categories".* FROM "categories" INNER JOIN business_categories ON categories.id = business_categories.category_id WHERE (("business_categories".business_id = 2)) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "businesses" WHERE ("businesses"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(DISTINCT "people".id) AS count_people_id FROM "people" INNER JOIN employments ON people.id = employments.person_id WHERE (("employments".business_id = 2)) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(DISTINCT "people".id) AS count_people_id FROM "people" INNER JOIN employments ON people.id = employments.person_id WHERE (("employments".business_id = 2)) [0m
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT DISTINCT "people".* FROM "people" INNER JOIN employments ON people.id = employments.person_id WHERE (("employments".business_id = 2)) [0m
+Completed in 937ms (View: 937, DB: 0) | 200 OK [http://localhost/businesses/2-caddebostan-yoga-ve-pilates-st-dyosu]
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing BusinessesController#edit (for 127.0.0.1 at 2009-05-07 13:39:21) [GET]
+  Parameters: {"id"=>"2-caddebostan-yoga-ve-pilates-st-dyosu"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mBusiness Load (0.0ms)[0m   [0mSELECT * FROM "businesses" WHERE ("businesses"."id" = 2) [0m
+Rendering businesses/edit
+  [4;36;1mUser Load (15.0ms)[0m   [0;1mSELECT * FROM "users" LIMIT 30[0m
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT DISTINCT "categories".* FROM "categories" INNER JOIN business_categories ON categories.id = business_categories.category_id WHERE (("business_categories".business_id = 2)) [0m
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT DISTINCT "people".* FROM "people" INNER JOIN employments ON people.id = employments.person_id WHERE (("employments".business_id = 2)) [0m
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM "people" [0m
+Completed in 1891ms (View: 1860, DB: 15) | 200 OK [http://localhost/businesses/2-caddebostan-yoga-ve-pilates-st-dyosu/edit]
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-07 13:39:29) [GET]
+
+
+ActionController::RoutingError (No route matches "/images/fieldbg.gif" with {:method=>:get}):
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/routing/route_set.rb:386:in `recognize'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:182:in `handle_request'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:103:in `handle_dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:74:in `service'
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:60:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/servers/webrick.rb:66
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing BusinessesController#update (for 127.0.0.1 at 2009-05-07 13:39:34) [PUT]
+  Parameters: {"business"=>{"photo"=>"", "city"=>"Caddebostan ", "name"=>"Caddebostan Yoga ve Pilates Stüdyosu", "zip_code"=>"", "employees"=>[""], "address_line_1"=>"", "categories"=>["", "@1", "@2"], "about"=>"Cras ornare nisl in nunc. In suscipit nulla mattis nulla. Donec feugiat, mi et pulvinar sodales, metus lectus porttitor lectus, at rhoncus tortor odio eleifend quam. Sed id turpis eu magna tempor ultrices. Donec nisi. Aenean ligula risus, ullamcorper ut, rutrum eget, gravida sed, arcu. In lacus odio, adipiscing vitae, porta at, interdum eu, magna. Nulla sodales, lacus semper lobortis cursus, urna metus suscipit velit, sed lobortis urna massa et ante. Aenean nec ante. In nisi felis, mattis a, interdum nec, feugiat eu, risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Fusce posuere porta lectus. Nulla congue lorem vel eros. Pellentesque in justo. Nam vehicula, est sed cursus elementum, libero ligula mattis enim, quis malesuada sapien nulla sed purus. Ut aliquet tortor consectetur massa.", "state_region"=>"Istanbul", "phone"=>"", "web_site"=>""}, "page_path"=>"businesses/edit", "authenticity_token"=>"2bb0a8f3859d7a8828d1645fbbc38fa5031df420", "id"=>"2-caddebostan-yoga-ve-pilates-st-dyosu"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mBusiness Load (0.0ms)[0m   [0;1mSELECT * FROM "businesses" WHERE ("businesses"."id" = 2) [0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM "people" WHERE ("people"."first_name" = '') LIMIT 1[0m
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT DISTINCT "people".* FROM "people" INNER JOIN employments ON people.id = employments.person_id WHERE (("employments".business_id = 2)) [0m
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."name" = '') LIMIT 1[0m
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;35;1mCategory Load (15.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT DISTINCT "categories".* FROM "categories" INNER JOIN business_categories ON categories.id = business_categories.category_id WHERE (("business_categories".business_id = 2)) [0m
+  [4;35;1mBusinessCategory Load (0.0ms)[0m   [0mSELECT * FROM "business_categories" WHERE ("business_categories"."business_id" = 2 AND "business_categories"."category_id" = 4) LIMIT 1[0m
+  [4;36;1mBusinessCategory Delete all (0.0ms)[0m   [0;1mDELETE FROM "business_categories" WHERE ("business_categories"."business_id" = 2 AND "business_categories"."category_id" = 4) [0m
+, , Caddebostan , Istanbul, , Turkey
+Google geocoding. Address: , , Caddebostan , Istanbul, , Turkey. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>, , Caddebostan , Istanbul, , Turkey</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>Kadıköy, Caddebostan, Turkey</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>TR</CountryNameCode><CountryName>Turkey</CountryName><AdministrativeArea><AdministrativeAreaName>Istanbul</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>Kadıköy</SubAdministrativeAreaName><Locality><LocalityName>Caddebostan</LocalityName></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="40.9737000" south="40.9600460" east="29.0766620" west="29.0487040" />
+    </ExtendedData>
+    <Point><coordinates>29.0628250,40.9667680,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+  [4;35;1mBusiness Update (16.0ms)[0m   [0mUPDATE "businesses" SET "lng" = 29.062825, "lat" = 40.966768, "updated_at" = '2009-05-07 20:39:35' WHERE "id" = 2[0m
+[paperclip] Saving attachments.
+Redirected to /businesses/2-caddebostan-yoga-ve-pilates-st-dyosu
+Completed in 860ms (DB: 31) | 302 Found [http://localhost/businesses/2-caddebostan-yoga-ve-pilates-st-dyosu]
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing BusinessesController#show (for 127.0.0.1 at 2009-05-07 13:39:38) [GET]
+  Parameters: {"id"=>"2-caddebostan-yoga-ve-pilates-st-dyosu"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mBusiness Load (0.0ms)[0m   [0;1mSELECT * FROM "businesses" WHERE ("businesses"."id" = 2) [0m
+Rendering businesses/show
+  [4;35;1mUser Load (16.0ms)[0m   [0mSELECT * FROM "users" LIMIT 30[0m
+  [4;36;1mReview Load (0.0ms)[0m   [0;1mSELECT * FROM "reviews" WHERE ("reviews".business_id = 2) [0m
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT DISTINCT "categories".* FROM "categories" INNER JOIN business_categories ON categories.id = business_categories.category_id WHERE (("business_categories".business_id = 2)) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "businesses" WHERE ("businesses"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(DISTINCT "people".id) AS count_people_id FROM "people" INNER JOIN employments ON people.id = employments.person_id WHERE (("employments".business_id = 2)) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(DISTINCT "people".id) AS count_people_id FROM "people" INNER JOIN employments ON people.id = employments.person_id WHERE (("employments".business_id = 2)) [0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT DISTINCT "people".* FROM "people" INNER JOIN employments ON people.id = employments.person_id WHERE (("employments".business_id = 2)) [0m
+Completed in 1297ms (View: 1249, DB: 32) | 200 OK [http://localhost/businesses/2-caddebostan-yoga-ve-pilates-st-dyosu]
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing BusinessesController#new (for 127.0.0.1 at 2009-05-07 15:13:51) [GET]
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering businesses/new
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" LIMIT 30[0m
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM "people" [0m
+Completed in 2313ms (View: 2297, DB: 0) | 200 OK [http://localhost/businesses/new]
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-07 15:14:13) [GET]
+
+
+ActionController::RoutingError (No route matches "/images/fieldbg.gif" with {:method=>:get}):
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/routing/route_set.rb:386:in `recognize'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:182:in `handle_request'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:103:in `handle_dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:74:in `service'
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:60:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/servers/webrick.rb:66
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing BusinessesController#new (for 127.0.0.1 at 2009-05-07 15:31:44) [GET]
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering businesses/new
+  DRYML: Compiled app/views/taglibs/application.dryml in 2.03s
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" LIMIT 30[0m
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM "people" [0m
+Completed in 3703ms (View: 3687, DB: 0) | 200 OK [http://localhost/businesses/new]
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-07 15:31:53) [GET]
+
+
+ActionController::RoutingError (No route matches "/images/fieldbg.gif" with {:method=>:get}):
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/routing/route_set.rb:386:in `recognize'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:182:in `handle_request'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:103:in `handle_dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:74:in `service'
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:60:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/servers/webrick.rb:66
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing BusinessesController#new (for 127.0.0.1 at 2009-05-07 16:07:18) [GET]
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering businesses/new
+  DRYML: Compiled app/views/taglibs/application.dryml in 2.33s
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" LIMIT 30[0m
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM "people" [0m
+
+
+NoMethodError (undefined method `duration' for #<ActionView::Base:0x6006954>):
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:605:in `send'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:605:in `method_missing'
+    app/views/taglibs/application.dryml:63:in `input_many__for_service'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/helpers/capture_helper.rb:129:in `with_output_buffer'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    app/views/taglibs/application.dryml:61:in `input_many__for_service'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:368:in `call'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:368:in `call_tag_parameter_with_default_content'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/helpers/capture_helper.rb:129:in `with_output_buffer'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:368:in `call_tag_parameter_with_default_content'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:403:in `call_tag_parameter'
+    vendor/plugins/hobo/hobo/taglibs/rapid_forms.dryml:836:in `input_many__base'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/helpers/capture_helper.rb:129:in `with_output_buffer'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    vendor/plugins/hobo/hobo/taglibs/rapid_forms.dryml:835:in `input_many__base'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/tag_parameters.rb:21:in `call'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/tag_parameters.rb:21:in `method_missing'
+    vendor/plugins/hobo/hobo/taglibs/core.dryml:102:in `fake_field_context'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:292:in `new_field_context'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/helpers/capture_helper.rb:129:in `with_output_buffer'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:273:in `new_field_context'
+    vendor/plugins/hobo/hobo/taglibs/core.dryml:102:in `fake_field_context'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:328:in `_tag_context'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/helpers/capture_helper.rb:129:in `with_output_buffer'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:328:in `_tag_context'
+    vendor/plugins/hobo/hobo/taglibs/core.dryml:100:in `fake_field_context'
+    vendor/plugins/hobo/hobo/taglibs/rapid_forms.dryml:835:in `input_many__base'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/helpers/capture_helper.rb:129:in `with_output_buffer'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    vendor/plugins/hobo/hobo/taglibs/rapid_forms.dryml:834:in `input_many__base'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:328:in `_tag_context'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/helpers/capture_helper.rb:129:in `with_output_buffer'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:328:in `_tag_context'
+    vendor/plugins/hobo/hobo/taglibs/rapid_forms.dryml:822:in `input_many__base'
+    app/views/taglibs/application.dryml:61:in `input_many__for_service'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:328:in `_tag_context'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/helpers/capture_helper.rb:129:in `with_output_buffer'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:328:in `_tag_context'
+    app/views/taglibs/application.dryml:60:in `input_many__for_service'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:200:in `send'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:200:in `call_polymorphic_tag'
+    vendor/plugins/hobo/hobo/taglibs/rapid_forms.dryml:827:in `input_many'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:328:in `_tag_context'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/helpers/capture_helper.rb:129:in `with_output_buffer'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:328:in `_tag_context'
+    vendor/plugins/hobo/hobo/taglibs/rapid_forms.dryml:824:in `input_many'
+    vendor/plugins/hobo/hobo/taglibs/rapid_forms.dryml:283:in `input'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:328:in `_tag_context'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/helpers/capture_helper.rb:129:in `with_output_buffer'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:328:in `_tag_context'
+    vendor/plugins/hobo/hobo/taglibs/rapid_forms.dryml:261:in `input'
+    vendor/plugins/hobo/hobo/taglibs/core.dryml:7:in `send'
+    vendor/plugins/hobo/hobo/taglibs/core.dryml:7:in `call_tag'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:328:in `_tag_context'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/helpers/capture_helper.rb:129:in `with_output_buffer'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:328:in `_tag_context'
+    vendor/plugins/hobo/hobo/taglibs/core.dryml:6:in `call_tag'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:464:in `send'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:464:in `override_and_call_tag'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:427:in `call_tag_parameter'
+    vendor/plugins/hobo/hobo/taglibs/rapid_core.dryml:33:in `field_list'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/helpers/capture_helper.rb:129:in `with_output_buffer'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    vendor/plugins/hobo/hobo/taglibs/rapid_core.dryml:33:in `field_list'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:457:in `call'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:457:in `override_and_call_tag'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/tag_parameters.rb:21:in `call'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/tag_parameters.rb:21:in `method_missing'
+    vendor/plugins/hobo/hobo/taglibs/core.dryml:55:in `do_'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:328:in `_tag_context'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/helpers/capture_helper.rb:129:in `with_output_buffer'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:328:in `_tag_context'
+    vendor/plugins/hobo/hobo/taglibs/core.dryml:55:in `do_'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:464:in `send'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:464:in `override_and_call_tag'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:427:in `call_tag_parameter'
+    vendor/plugins/hobo/hobo/taglibs/rapid_core.dryml:33:in `field_list'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/helpers/capture_helper.rb:129:in `with_output_buffer'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    vendor/plugins/hobo/hobo/taglibs/rapid_core.dryml:32:in `field_list'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:457:in `call'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:457:in `override_and_call_tag'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:377:in `call'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:377:in `call_tag_parameter_with_default_content'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/tag_parameters.rb:21:in `call'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/tag_parameters.rb:21:in `method_missing'
+    vendor/plugins/hobo/hobo/taglibs/core.dryml:55:in `do_'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:328:in `_tag_context'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/helpers/capture_helper.rb:129:in `with_output_buffer'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:328:in `_tag_context'
+    vendor/plugins/hobo/hobo/taglibs/core.dryml:55:in `do_'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:381:in `send'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:381:in `call_tag_parameter_with_default_content'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:403:in `call_tag_parameter'
+    vendor/plugins/hobo/hobo/taglibs/rapid_document_tags.dryml:56:in `item_value'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/helpers/capture_helper.rb:129:in `with_output_buffer'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    vendor/plugins/hobo/hobo/taglibs/rapid_document_tags.dryml:56:in `item_value'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:328:in `_tag_context'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/helpers/capture_helper.rb:129:in `with_output_buffer'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:328:in `_tag_context'
+    vendor/plugins/hobo/hobo/taglibs/rapid_document_tags.dryml:56:in `item_value'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:464:in `send'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:464:in `override_and_call_tag'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:427:in `call_tag_parameter'
+    vendor/plugins/hobo/hobo/taglibs/rapid_core.dryml:32:in `field_list'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/helpers/capture_helper.rb:129:in `with_output_buffer'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    vendor/plugins/hobo/hobo/taglibs/rapid_core.dryml:28:in `field_list'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:377:in `call'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:377:in `call_tag_parameter_with_default_content'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/tag_parameters.rb:21:in `call'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/tag_parameters.rb:21:in `method_missing'
+    vendor/plugins/hobo/hobo/taglibs/core.dryml:55:in `do_'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:328:in `_tag_context'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/helpers/capture_helper.rb:129:in `with_output_buffer'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:328:in `_tag_context'
+    vendor/plugins/hobo/hobo/taglibs/core.dryml:55:in `do_'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:381:in `send'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:381:in `call_tag_parameter_with_default_content'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:403:in `call_tag_parameter'
+    vendor/plugins/hobo/hobo/taglibs/rapid_document_tags.dryml:50:in `labelled_item'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/helpers/capture_helper.rb:129:in `with_output_buffer'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    vendor/plugins/hobo/hobo/taglibs/rapid_document_tags.dryml:50:in `labelled_item'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:328:in `_tag_context'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/helpers/capture_helper.rb:129:in `with_output_buffer'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:328:in `_tag_context'
+    vendor/plugins/hobo/hobo/taglibs/rapid_document_tags.dryml:50:in `labelled_item'
+    vendor/plugins/hobo/hobo/taglibs/rapid_core.dryml:28:in `field_list'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/helpers/capture_helper.rb:129:in `with_output_buffer'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    vendor/plugins/hobo/hobo/taglibs/rapid_core.dryml:24:in `field_list'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:377:in `call'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:377:in `call_tag_parameter_with_default_content'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/tag_parameters.rb:21:in `call'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/tag_parameters.rb:21:in `method_missing'
+    vendor/plugins/hobo/hobo/taglibs/core.dryml:55:in `do_'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:328:in `_tag_context'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/helpers/capture_helper.rb:129:in `with_output_buffer'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:328:in `_tag_context'
+    vendor/plugins/hobo/hobo/taglibs/core.dryml:55:in `do_'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:381:in `send'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:381:in `call_tag_parameter_with_default_content'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:403:in `call_tag_parameter'
+    vendor/plugins/hobo/hobo/taglibs/rapid_support.dryml:50:in `with_fields'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/helpers/capture_helper.rb:129:in `with_output_buffer'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    vendor/plugins/hobo/hobo/taglibs/rapid_support.dryml:50:in `with_fields'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/tag_parameters.rb:21:in `call'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/tag_parameters.rb:21:in `method_missing'
+    vendor/plugins/hobo/hobo/taglibs/core.dryml:55:in `with'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:324:in `_tag_context'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:292:in `new_field_context'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/helpers/capture_helper.rb:129:in `with_output_buffer'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:273:in `new_field_context'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:324:in `_tag_context'
+    vendor/plugins/hobo/hobo/taglibs/core.dryml:55:in `with'
+    vendor/plugins/hobo/hobo/taglibs/rapid_support.dryml:50:in `with_fields'
+    vendor/plugins/hobo/hobo/taglibs/rapid_support.dryml:46:in `each'
+    vendor/plugins/hobo/hobo/taglibs/rapid_support.dryml:46:in `with_fields'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:328:in `_tag_context'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/helpers/capture_helper.rb:129:in `with_output_buffer'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:328:in `_tag_context'
+    vendor/plugins/hobo/hobo/taglibs/rapid_support.dryml:22:in `with_fields'
+    vendor/plugins/hobo/hobo/taglibs/rapid_core.dryml:24:in `field_list'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/helpers/capture_helper.rb:129:in `with_output_buffer'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    vendor/plugins/hobo/hobo/taglibs/rapid_core.dryml:23:in `field_list'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:377:in `call'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:377:in `call_tag_parameter_with_default_content'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/tag_parameters.rb:21:in `call'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/tag_parameters.rb:21:in `method_missing'
+    vendor/plugins/hobo/hobo/taglibs/core.dryml:55:in `do_'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:328:in `_tag_context'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/helpers/capture_helper.rb:129:in `with_output_buffer'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:328:in `_tag_context'
+    vendor/plugins/hobo/hobo/taglibs/core.dryml:55:in `do_'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:381:in `send'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:381:in `call_tag_parameter_with_default_content'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:403:in `call_tag_parameter'
+    vendor/plugins/hobo/hobo/taglibs/rapid_document_tags.dryml:47:in `labelled_item_list'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/helpers/capture_helper.rb:129:in `with_output_buffer'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    vendor/plugins/hobo/hobo/taglibs/rapid_document_tags.dryml:47:in `labelled_item_list'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/tag_parameters.rb:21:in `call'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/tag_parameters.rb:21:in `method_missing'
+    vendor/plugins/hobo/hobo/taglibs/rapid_core.dryml:92:in `table'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/helpers/capture_helper.rb:129:in `with_output_buffer'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    vendor/plugins/hobo/hobo/taglibs/rapid_core.dryml:91:in `table'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/tag_parameters.rb:21:in `call'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/tag_parameters.rb:21:in `method_missing'
+    vendor/plugins/hobo/hobo/taglibs/core.dryml:78:in `if_'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:328:in `_tag_context'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/helpers/capture_helper.rb:129:in `with_output_buffer'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:328:in `_tag_context'
+    vendor/plugins/hobo/hobo/taglibs/core.dryml:76:in `if_'
+    vendor/plugins/hobo/hobo/taglibs/rapid_core.dryml:91:in `table'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:328:in `_tag_context'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/helpers/capture_helper.rb:129:in `with_output_buffer'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:328:in `_tag_context'
+    vendor/plugins/hobo/hobo/taglibs/rapid_core.dryml:90:in `table'
+    vendor/plugins/hobo/hobo/taglibs/rapid_document_tags.dryml:47:in `labelled_item_list'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:328:in `_tag_context'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/helpers/capture_helper.rb:129:in `with_output_buffer'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:328:in `_tag_context'
+    vendor/plugins/hobo/hobo/taglibs/rapid_document_tags.dryml:47:in `labelled_item_list'
+    vendor/plugins/hobo/hobo/taglibs/rapid_core.dryml:23:in `field_list'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:328:in `_tag_context'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/helpers/capture_helper.rb:129:in `with_output_buffer'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:328:in `_tag_context'
+    vendor/plugins/hobo/hobo/taglibs/rapid_core.dryml:21:in `field_list'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:464:in `send'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:464:in `override_and_call_tag'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:427:in `call_tag_parameter'
+    app/views/taglibs/application.dryml:102:in `form__for_business'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/helpers/capture_helper.rb:129:in `with_output_buffer'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    app/views/taglibs/application.dryml:98:in `form__for_business'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:457:in `call'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:457:in `override_and_call_tag'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/tag_parameters.rb:21:in `call'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/tag_parameters.rb:21:in `method_missing'
+    vendor/plugins/hobo/hobo/taglibs/rapid_forms.dryml:169:in `form__base'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:338:in `with_form_context'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/scoped_variables.rb:20:in `new_scope'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:337:in `with_form_context'
+    vendor/plugins/hobo/hobo/taglibs/rapid_forms.dryml:167:in `form__base'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:328:in `_tag_context'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/helpers/capture_helper.rb:129:in `with_output_buffer'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:328:in `_tag_context'
+    vendor/plugins/hobo/hobo/taglibs/rapid_forms.dryml:123:in `form__base'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:464:in `send'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:464:in `override_and_call_tag'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:427:in `call_tag_parameter'
+    app/views/taglibs/application.dryml:98:in `form__for_business'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:328:in `_tag_context'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/helpers/capture_helper.rb:129:in `with_output_buffer'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:328:in `_tag_context'
+    app/views/taglibs/application.dryml:97:in `form__for_business'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:200:in `send'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:200:in `call_polymorphic_tag'
+    vendor/plugins/hobo/hobo/taglibs/rapid_forms.dryml:128:in `form'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:328:in `_tag_context'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/helpers/capture_helper.rb:129:in `with_output_buffer'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:328:in `_tag_context'
+    vendor/plugins/hobo/hobo/taglibs/rapid_forms.dryml:125:in `form'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:464:in `send'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:464:in `override_and_call_tag'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:427:in `call_tag_parameter'
+    app/views/taglibs/auto/rapid/pages.dryml:60:in `new_page__for_business'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/helpers/capture_helper.rb:129:in `with_output_buffer'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    app/views/taglibs/auto/rapid/pages.dryml:59:in `new_page__for_business'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:457:in `call'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:457:in `override_and_call_tag'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/tag_parameters.rb:21:in `call'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/tag_parameters.rb:21:in `method_missing'
+    vendor/plugins/hobo/hobo/taglibs/rapid_document_tags.dryml:21:in `section'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:328:in `_tag_context'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/helpers/capture_helper.rb:129:in `with_output_buffer'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:328:in `_tag_context'
+    vendor/plugins/hobo/hobo/taglibs/rapid_document_tags.dryml:20:in `section'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:464:in `send'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:464:in `override_and_call_tag'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:427:in `call_tag_parameter'
+    app/views/taglibs/auto/rapid/pages.dryml:59:in `new_page__for_business'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/helpers/capture_helper.rb:129:in `with_output_buffer'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    app/views/taglibs/auto/rapid/pages.dryml:54:in `new_page__for_business'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:455:in `call'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:455:in `override_and_call_tag'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/tag_parameters.rb:21:in `call'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/tag_parameters.rb:21:in `method_missing'
+    vendor/plugins/hobo/hobo/taglibs/rapid_document_tags.dryml:21:in `section'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:328:in `_tag_context'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/helpers/capture_helper.rb:129:in `with_output_buffer'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:328:in `_tag_context'
+    vendor/plugins/hobo/hobo/taglibs/rapid_document_tags.dryml:20:in `section'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:464:in `send'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:464:in `override_and_call_tag'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:427:in `call_tag_parameter'
+    vendor/plugins/hobo/hobo/taglibs/rapid_pages.dryml:42:in `page_without_aaa82d3a9ca5'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/scoped_variables.rb:20:in `new_scope'
+    vendor/plugins/hobo/hobo/taglibs/rapid_pages.dryml:34:in `page_without_aaa82d3a9ca5'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/helpers/capture_helper.rb:129:in `with_output_buffer'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    vendor/plugins/hobo/hobo/taglibs/rapid_pages.dryml:33:in `page_without_aaa82d3a9ca5'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:447:in `call'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:447:in `override_and_call_tag'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/helpers/capture_helper.rb:129:in `with_output_buffer'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:447:in `override_and_call_tag'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:427:in `call_tag_parameter'
+    vendor/plugins/hobo/hobo/taglibs/rapid_pages.dryml:33:in `page_without_aaa82d3a9ca5'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/helpers/capture_helper.rb:129:in `with_output_buffer'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    vendor/plugins/hobo/hobo/taglibs/rapid_pages.dryml:16:in `page_without_aaa82d3a9ca5'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:377:in `call'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:377:in `call_tag_parameter_with_default_content'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/tag_parameters.rb:21:in `call'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/tag_parameters.rb:21:in `method_missing'
+    vendor/plugins/hobo/hobo/taglibs/core.dryml:55:in `do_'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:328:in `_tag_context'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/helpers/capture_helper.rb:129:in `with_output_buffer'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:328:in `_tag_context'
+    vendor/plugins/hobo/hobo/taglibs/core.dryml:55:in `do_'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:381:in `send'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:381:in `call_tag_parameter_with_default_content'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:403:in `call_tag_parameter'
+    vendor/plugins/hobo/hobo/taglibs/rapid_pages.dryml:161:in `html'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/scoped_variables.rb:20:in `new_scope'
+    vendor/plugins/hobo/hobo/taglibs/rapid_pages.dryml:161:in `html'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:328:in `_tag_context'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/helpers/capture_helper.rb:129:in `with_output_buffer'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:328:in `_tag_context'
+    vendor/plugins/hobo/hobo/taglibs/rapid_pages.dryml:156:in `html'
+    vendor/plugins/hobo/hobo/taglibs/rapid_pages.dryml:16:in `page_without_aaa82d3a9ca5'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:328:in `_tag_context'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/helpers/capture_helper.rb:129:in `with_output_buffer'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:328:in `_tag_context'
+    vendor/plugins/hobo/hobo/taglibs/rapid_pages.dryml:14:in `page_without_aaa82d3a9ca5'
+    app/views/taglibs/themes/clean/clean.dryml:2:in `page_without_afa1507a7bc7'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:328:in `_tag_context'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/helpers/capture_helper.rb:129:in `with_output_buffer'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:328:in `_tag_context'
+    app/views/taglibs/themes/clean/clean.dryml:1:in `page_without_afa1507a7bc7'
+    app/views/taglibs/application.dryml:73:in `page'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:328:in `_tag_context'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/helpers/capture_helper.rb:129:in `with_output_buffer'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:328:in `_tag_context'
+    app/views/taglibs/application.dryml:72:in `page'
+    app/views/taglibs/auto/rapid/pages.dryml:51:in `new_page__for_business'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:328:in `_tag_context'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/helpers/capture_helper.rb:129:in `with_output_buffer'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:328:in `_tag_context'
+    app/views/taglibs/auto/rapid/pages.dryml:50:in `new_page__for_business'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:200:in `send'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:200:in `call_polymorphic_tag'
+    vendor/plugins/hobo/hobo/taglibs/rapid_pages.dryml:68:in `new_page'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:326:in `_tag_context'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:267:in `new_object_context'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/helpers/capture_helper.rb:129:in `with_output_buffer'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:255:in `new_object_context'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:326:in `_tag_context'
+    vendor/plugins/hobo/hobo/taglibs/rapid_pages.dryml:65:in `new_page'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:544:in `send'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_environment.rb:544:in `render_tag'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml.rb:52:in `render_tag'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_handler.rb:54:in `call_dryml_tag'
+    /vendor/plugins/hobo/hobo/lib/hobo/dryml/template_handler.rb:72:in `render_for_file'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:940:in `render_without_benchmark'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render_without_hobo_model'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render_without_hobo_model'
+    /vendor/plugins/hobo/hobo/lib/hobo/model_controller.rb:758:in `render'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1248:in `default_render'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1254:in `perform_action_without_filters'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:617:in `call_filters'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:638:in `run_before_filters'
+    /vendor/plugins/hobo/hobo/lib/hobo/controller.rb:22:in `call'
+    /vendor/plugins/hobo/hobo/lib/hobo/controller.rb:22:in `included_in_class'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/callbacks.rb:182:in `call'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/callbacks.rb:182:in `evaluate_method'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:184:in `call'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:635:in `run_before_filters'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:615:in `call_filters'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    c:/ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/query_cache.rb:8:in `cache'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `send'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/session_management.rb:134:in `process'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:392:in `process'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:103:in `handle_dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:74:in `service'
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:60:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/servers/webrick.rb:66
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_trace (625.0ms)
+Rendered c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_request_and_response (15.0ms)
+Rendering c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing BusinessesController#new (for 127.0.0.1 at 2009-05-07 16:09:11) [GET]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering businesses/new
+  DRYML: Compiled app/views/taglibs/application.dryml in 2.00s
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" LIMIT 30[0m
+  [4;36;1mCategory Load (16.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM "people" [0m
+Completed in 3702ms (View: 3671, DB: 16) | 200 OK [http://localhost/businesses/new]
+  [4;36;1mSQL (16.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-07 16:09:21) [GET]
+
+
+ActionController::RoutingError (No route matches "/images/fieldbg.gif" with {:method=>:get}):
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/routing/route_set.rb:386:in `recognize'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:182:in `handle_request'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:103:in `handle_dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:74:in `service'
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:60:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/servers/webrick.rb:66
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing BusinessesController#new (for 127.0.0.1 at 2009-05-08 09:21:53) [GET]
+  [4;36;1mUser Load (15.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering businesses/new
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" LIMIT 30[0m
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM "people" [0m
+Completed in 4249ms (View: 4234, DB: 15) | 200 OK [http://localhost/businesses/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-08 09:22:05) [GET]
+
+
+ActionController::RoutingError (No route matches "/images/fieldbg.gif" with {:method=>:get}):
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/routing/route_set.rb:386:in `recognize'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:182:in `handle_request'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:103:in `handle_dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:74:in `service'
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:60:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/servers/webrick.rb:66
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (not_found)

@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090501185329) do
+ActiveRecord::Schema.define(:version => 20090507203321) do
 
   create_table "business_categories", :force => true do |t|
     t.datetime "created_at"
@@ -123,6 +123,28 @@ ActiveRecord::Schema.define(:version => 20090501185329) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "reviewer_id"
+    t.integer  "business_id"
+  end
+
+  create_table "service_schedules", :force => true do |t|
+    t.date     "start_date"
+    t.time     "start_time"
+    t.boolean  "recurring"
+    t.string   "interval"
+    t.integer  "frequency"
+    t.decimal  "price"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "service_id"
+  end
+
+  create_table "services", :force => true do |t|
+    t.string   "name"
+    t.integer  "duration"
+    t.decimal  "price",       :precision => 7, :scale => 2, :default => 0.0
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
     t.integer  "business_id"
   end
 

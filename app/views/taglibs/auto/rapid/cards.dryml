@@ -109,6 +109,25 @@
   </card>
 </def>
 
+<def tag="card" for="Service">
+  <card class="service" param="default" merge>
+    <header: param>
+      <h4 param="heading"><a><name/></a></h4>
+    </header:>
+    <body: param>
+      <count:service_schedules param/>
+    </body:>
+  </card>
+</def>
+
+<def tag="card" for="ServiceSchedule">
+  <card class="service-schedule" param="default" merge>
+    <header: param>
+      <h4 param="heading"><a><name/></a></h4>
+    </header:>
+  </card>
+</def>
+
 <def tag="card" for="User">
   <card class="user" param="default" merge>
     <header: param>
