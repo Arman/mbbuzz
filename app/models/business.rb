@@ -29,6 +29,7 @@ class Business < ActiveRecord::Base
   
   belongs_to :owner, :class_name => "User", :creator => true 
   has_many :reviews, :dependent => :destroy, :accessible => :true
+  # has_many :business_ownerships, :dependent => :destroy, :accessible => :true
   # has_many :reviews, :as => :reviewable, :dependent => :destroy, :accessible => :true
   has_many :services, :dependent => :destroy, :accessible => :true
   has_many :employments, :dependent => :destroy  

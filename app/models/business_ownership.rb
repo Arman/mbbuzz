@@ -3,31 +3,36 @@ class BusinessOwnership < ActiveRecord::Base
   hobo_model # Don't put anything above this
 
   fields do
+    acknowledge :boolean
+    notes :text
     timestamps
   end
 
-  # The 'business' that is being requested  
+  # The 'business' that is being claimed  
   belongs_to :business
-  # The 'sender' of the request   
-  belongs_to :requester, :class_name => "User"   
-  # The 'reviewer' of the request   
+
+  # The 'sender' of the claim   
+  belongs_to :claimant, :class_name => "User"   
+  # The 'reviewer' of the claim   
   belongs_to :reviewer, :class_name => "User"   
-  
-=begin
+
   lifecycle do     
-    state :requested, :active, :rejected, :retracted
+    state :in_review, :active, :unclaimed, :contested
     
-    create :request, :params => [ :requester ], :become => :requested,                      
-      :available_to => "User",                      
-      :user_becomes => :requester 
+    create :claim, :params => [ :business, :acknowledge ], :become => :in_review,                      
+      :available_to => "User"
+=begin
+      ,                      
+      :user_becomes => :claimant 
       
-    transition :accept, { :requested => :active }, 
+    transition :accept, { :in_review => :active }, 
       :available_to => :reviewer 
-    transition :reject, { :requested => :rejected }, 
+    transition :reject, { :in_review => :unclaimed }, 
       :available_to => :reviewer  
-    transition :retract, { :requested => :retracted }, :available_to => :requester    
-  end 
+    transition :contest, { :active => :contested }, :available_to => "User"    
 =end
+  end 
+
 
   # --- Permissions --- #
 

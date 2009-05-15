@@ -1,5 +1,27 @@
 <!-- AUTOMATICALLY GENERATED FILE - DO NOT EDIT -->
 
+<def tag="form" for="BusinessOwnership">
+  <form merge param="default">
+    <error-messages param/>
+    <field-list fields="acknowledge, notes, business, claimant, reviewer" param/>
+    <div param="actions">
+      <submit label="Save" param/><or-cancel param="cancel"/>
+    </div>
+  </form>
+</def>
+
+<def tag="claim-form" polymorphic/>
+<def tag="claim-form" for="BusinessOwnership">
+  <form lifecycle="claim">
+    <error-messages param/>
+    <field-list fields="business, acknowledge" param/>
+    <div param="actions">
+      <submit label="Claim" param/><or-cancel param="cancel"/>
+    </div>
+  </form>
+</def>
+
+
 <def tag="form" for="Business">
   <form merge param="default">
     <error-messages param/>

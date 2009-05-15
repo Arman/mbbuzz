@@ -16,6 +16,117 @@
 
 
   
+<!-- ====== BusinessOwnership Pages ====== -->
+
+
+<def tag="index-page" for="BusinessOwnership">
+  <page merge title="Business Ownerships">
+    <body: class="index-page business-ownership" param/>
+    
+    <content: param>
+      <header param="content-header">
+        <h2 param="heading">Business Ownerships</h2>
+
+        <p param="count" if>There <count prefix="are"/></p>
+      </header>
+      
+      <section param="content-body">
+
+        <page-nav param="top-page-nav"/>
+
+        <collection param/>
+
+        <page-nav param="bottom-page-nav"/>
+
+
+      </section>
+    </content:>
+  </page>
+</def>
+
+
+<def tag="new-page" for="BusinessOwnership">
+  <page merge title="New Business Ownership">
+    <body: class="new-page business-ownership" param/>
+    
+    <content: param>
+      <section param="content-header">
+        <h2 param="heading">New Business Ownership</h2>
+      </section>
+      
+      <section param="content-body">
+        <form param>
+          <submit: label="Create Business Ownership"/>
+        </form>
+      </section>
+    </content:>
+  </page>
+</def>
+
+
+<def tag="show-page" for="BusinessOwnership">
+  <page merge title="Business Ownership">
+
+    <body: class="show-page business-ownership" param/>
+
+    <content: param>
+          <header param="content-header">
+            <h2 param="heading"><name/></h2>
+
+            <record-flags fields="acknowledge" param/>
+          </header>
+    
+          <section param="content-body">
+            <field-list fields="notes, business, claimant, reviewer" param/>
+          </section>
+    </content:>
+    
+  </page>
+</def>
+
+
+<def tag="edit-page" for="BusinessOwnership">
+  <page merge title="Edit Business Ownership">
+
+    <body: class="edit-page business-ownership" param/>
+
+    <content:>
+      <section param="content-header">
+        <h2 param="heading">Edit <type-name/></h2>
+        <delete-button label="Remove This Business Ownership" param/>
+      </section>
+
+      <section param="content-body">
+        <form param/>
+      </section>
+    </content:>
+    
+  </page>
+</def>
+
+
+<def tag="claim-page" polymorphic/>
+<def tag="claim-page" for="BusinessOwnership">
+
+  <page title="Claim" merge>
+
+    <body: class="lifecycle-start-page claim-page" param/>
+
+    <content: param>
+      <header param="content-header">
+        <h2 param="heading">Claim</h2>
+      </header>
+
+      <section param="content-body">
+        <claim-form param="form"/>
+      </section>
+    </content:>
+
+  </page>
+</def>
+
+
+  
 <!-- ====== Business Pages ====== -->
 
 
