@@ -3,12 +3,59 @@ users_001:
   salt: e8a4f3358c612b7149c63fd1fa19044f71488004
   name: Arman
   key_timestamp: 
-  updated_at: 2009-03-23 20:40:18
+  avatar_updated_at: 2009-03-27 20:11:56
+  updated_at: 2009-03-27 20:12:03
+  avatar_file_name: arman.png
+  avatar_file_size: "63957"
   crypted_password: 7cd23669d5f08d72808c9c4e0962897720460d5f
+  about_me: I am the crazy one!
   remember_token_expires_at: 
   id: "1"
   administrator: t
+  avatar_content_type: image/x-png
   remember_token: 
+  first_name: 
+  last_name: 
   email_address: aaerman@hotmail.com
   created_at: 2009-03-23 20:40:18
+  state: active
+users_002: 
+  salt: b4a64c5e6c7d4574ecce0a88f4331794a2db786d
+  name: Beatrice Beetle
+  key_timestamp: 
+  avatar_updated_at: 
+  updated_at: 2009-03-26 23:09:53
+  avatar_file_name: 
+  avatar_file_size: 
+  crypted_password: 8a572af46a0102ca71cc2d4f8caf58c396846c5e
+  about_me: 
+  remember_token_expires_at: 
+  id: "2"
+  administrator: f
+  avatar_content_type: 
+  remember_token: 
+  first_name: 
+  last_name: 
+  email_address: beatrice@beetle.gork
+  created_at: 2009-03-26 23:09:53
+  state: active
+users_003: 
+  salt: fcee0ebbb656aca0dabbe386fa2d4f7598bd66bf
+  name: Tom Tom
+  key_timestamp: 
+  avatar_updated_at: 2009-03-27 17:20:18
+  updated_at: 2009-03-27 17:40:26
+  avatar_file_name: logo_small.jpg
+  avatar_file_size: "42617"
+  crypted_password: 9bf1488866c3db5cdc57c3a074225047c48b57e3
+  about_me: I love fishing and sleeping! Give me a call if you'd like to fish for fishies...
+  remember_token_expires_at: 
+  id: "3"
+  administrator: f
+  avatar_content_type: image/pjpeg
+  remember_token: 
+  first_name: 
+  last_name: 
+  email_address: tom@tom.tom
+  created_at: 2009-03-27 16:34:37
   state: active

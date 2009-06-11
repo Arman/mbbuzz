@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090515232334) do
+ActiveRecord::Schema.define(:version => 20090520200206) do
 
   create_table "business_categories", :force => true do |t|
     t.datetime "created_at"
@@ -24,6 +24,11 @@ ActiveRecord::Schema.define(:version => 20090515232334) do
     t.integer  "business_id"
     t.boolean  "acknowledge"
     t.text     "notes"
+    t.integer  "claimant_id"
+    t.integer  "reviewer_id"
+    t.integer  "owner_id"
+    t.string   "state"
+    t.datetime "key_timestamp"
   end
 
   create_table "businesses", :force => true do |t|

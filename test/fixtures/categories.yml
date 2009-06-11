@@ -1,6 +1,50 @@
-# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
-one:
-  id: 1
-
-two:
-  id: 2
+--- 
+categories_001: 
+  name: Yoga
+  updated_at: 2009-04-24 18:51:37
+  icon: yoga.png
+  id: "1"
+  desc: ""
+  about: ""
+  created_at: 2009-04-01 19:32:52
+categories_002: 
+  name: Pilates
+  updated_at: 2009-04-24 18:44:38
+  icon: pilates.png
+  id: "2"
+  desc: Pilates, is a physical fitness system developed in the early 20th century by Joseph Pilates in Germany.
+  about: "Pilates, is a physical fitness system developed in the early 20th century by Joseph Pilates in Germany. As of 2005 there are 11 million people who practice the discipline regularly and 14,000 instructors in the United States.\r\n\
+    Pilates called his method Contrology (from control and Greek -\xCE\xBB\xCE\xBF\xCE\xB3\xCE\xAF\xCE\xB1, -logia), because he believed his method uses the mind to control the muscles. The program focuses on the core postural muscles which help keep the body balanced and which are essential to providing support for the spine. In particular, Pilates exercises teach awareness of breath and alignment of the spine, and aim to strengthen the deep torso muscles.\r\n"
+  created_at: 2009-04-01 19:49:06
+categories_003: 
+  name: Dance
+  updated_at: 2009-04-24 18:44:14
+  icon: dance.png
+  id: "3"
+  desc: Dance is an art form that generally refers to movement of the body, usually rhythmic and to music.
+  about: Dance (from French danser, perhaps from Frankish) is an art form that generally refers to movement of the body, usually rhythmic and to music, used as a form of expression, social interaction or presented in a spiritual or performance setting.
+  created_at: 2009-04-01 19:52:27
+categories_004: 
+  name: Spa
+  updated_at: 2009-04-24 18:43:14
+  icon: spa.png
+  id: "4"
+  desc: Where you are the Queen of Sheba.
+  about: ""
+  created_at: 2009-04-07 00:35:28
+categories_005: 
+  name: Nails
+  updated_at: 2009-04-24 18:53:43
+  icon: nailsalon.png
+  id: "5"
+  desc: Where the nails are pretty
+  about: ""
+  created_at: 2009-04-24 18:39:05
+categories_006: 
+  name: Hair
+  updated_at: 2009-04-24 18:55:14
+  icon: hairsalon.png
+  id: "6"
+  desc: ""
+  about: ""
+  created_at: 2009-04-24 18:52:10

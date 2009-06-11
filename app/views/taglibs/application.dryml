@@ -24,22 +24,11 @@
 <!--    1.2. Secondary Navigation =================== -->
 
 <def tag="secondary-nav">
-  <navigation class="secondary-nav" merge>
-    <nav-item href="/messages">Messages</nav-item>  
-    <nav-item href="/compose">New Message</nav-item>  
-    <nav-item href="/businesses/new">Add Business</nav-item>
-    <nav-item href="/people/new">Add Person</nav-item>
-  </navigation>
-</def>
-
-<def tag="secondary-nav">
   <div class="secondary-nav">  
-    <if test="&logged_in?">
-      <nav-item href="/messages">Messages</nav-item>  
-      <nav-item href="/sent/new">New Message</nav-item>  
       <nav-item href="/businesses/new">Add Business</nav-item>
       <nav-item href="/people/new">Add Person</nav-item>  
-     </if>
+      <nav-item href="/reviews/new">Add Review</nav-item>  
+      <nav-item href="/owner_dashboard">Business Owners</nav-item>   
   </div>    
 </def>
 
@@ -50,7 +39,8 @@
     <ul>       
       <nav-item href="/static/about">About</nav-item>      
       <nav-item href="/static/faq">FAQ</nav-item>       
-      <nav-item href="/static/terms">Terms of Use</nav-item>       
+      <nav-item href="/static/terms">Terms of Use</nav-item>  
+      <nav-item href="/owner_dashboard">Business Owners</nav-item>        
     </ul>   
   </div> 
 </def>

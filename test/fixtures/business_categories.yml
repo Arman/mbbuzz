@@ -1,6 +1,55 @@
-# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
-one:
-  id: 1
-
-two:
-  id: 2
+--- 
+business_categories_006: 
+  updated_at: 2009-04-23 20:32:53
+  business_id: "5"
+  id: "7"
+  category_id: "2"
+  created_at: 2009-04-23 20:32:53
+business_categories_007: 
+  updated_at: 2009-04-23 20:32:53
+  business_id: "5"
+  id: "8"
+  category_id: "1"
+  created_at: 2009-04-23 20:32:53
+business_categories_008: 
+  updated_at: 2009-04-24 18:59:29
+  business_id: "6"
+  id: "9"
+  category_id: "5"
+  created_at: 2009-04-24 18:59:29
+business_categories_009: 
+  updated_at: 2009-04-28 21:29:20
+  business_id: "7"
+  id: "10"
+  category_id: "1"
+  created_at: 2009-04-28 21:29:20
+business_categories_001: 
+  updated_at: 2009-04-01 20:29:11
+  business_id: "1"
+  id: "1"
+  category_id: "3"
+  created_at: 2009-04-01 20:29:11
+business_categories_002: 
+  updated_at: 2009-04-01 20:29:11
+  business_id: "1"
+  id: "2"
+  category_id: "2"
+  created_at: 2009-04-01 20:29:11
+business_categories_003: 
+  updated_at: 2009-04-01 22:19:55
+  business_id: "2"
+  id: "3"
+  category_id: "1"
+  created_at: 2009-04-01 22:19:55
+business_categories_004: 
+  updated_at: 2009-04-01 22:19:55
+  business_id: "2"
+  id: "4"
+  category_id: "2"
+  created_at: 2009-04-01 22:19:55
+business_categories_005: 
+  updated_at: 2009-04-07 01:06:26
+  business_id: "4"
+  id: "5"
+  category_id: "4"
+  created_at: 2009-04-07 01:06:26

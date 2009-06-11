@@ -104,6 +104,7 @@ body {
 	color: #777;
 	font-size: 12px;
 	line-height: 120%;
+	overflow:none;
 }
 
 h1, h2, h3 {font-weight: bold; line-height: 100%; color: #D61951; padding: 2px;}
@@ -137,10 +138,11 @@ h5 {margin: 1px 0 1px;  font-size: 11px;}
 }
 
 .page-footer {
+	float:left;
 	width:100%;
 	background-color: #AD163D;     
 	text-align:center;
-	overflow: hidden; height: 100%;
+	height: 40px;
     font-size: 10px; line-height: 10px;
     padding: 5px 0 15px 20px;
 
@@ -162,6 +164,7 @@ h5 {margin: 1px 0 1px;  font-size: 11px;}
 	padding: 0;
 	vertical-align: bottom;
 }
+
 
 .front-page .welcome-message {
 	width:100%;
@@ -195,7 +198,6 @@ div.search-by-location {
 /* GENERIC CARD classes */ 
 .card {
 	height: 100%; 
-	overflow: hidden;
 	margin: 10px 0;	
 	padding: 2px; 
 	border-bottom: 1px solid #AD163D;

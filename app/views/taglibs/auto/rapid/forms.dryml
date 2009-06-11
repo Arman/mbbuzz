@@ -3,7 +3,7 @@
 <def tag="form" for="BusinessOwnership">
   <form merge param="default">
     <error-messages param/>
-    <field-list fields="acknowledge, notes, business, claimant, reviewer" param/>
+    <field-list fields="acknowledge, notes, business, claimant, owner, reviewer" param/>
     <div param="actions">
       <submit label="Save" param/><or-cancel param="cancel"/>
     </div>
@@ -21,6 +21,39 @@
   </form>
 </def>
 
+<def tag="accept-form" polymorphic/>
+<def tag="accept-form" for="BusinessOwnership">
+  <form lifecycle="accept">
+    <error-messages param/>
+    <input type="hidden" name="key" value="&this.lifecycle.provided_key" if="&this.lifecycle.provided_key"/>
+    <field-list fields="" param/>
+    <div param="actions">
+      <submit label="Accept" param/><or-cancel param="cancel"/>
+    </div>
+  </form>
+</def>
+<def tag="reject-form" polymorphic/>
+<def tag="reject-form" for="BusinessOwnership">
+  <form lifecycle="reject">
+    <error-messages param/>
+    <input type="hidden" name="key" value="&this.lifecycle.provided_key" if="&this.lifecycle.provided_key"/>
+    <field-list fields="" param/>
+    <div param="actions">
+      <submit label="Reject" param/><or-cancel param="cancel"/>
+    </div>
+  </form>
+</def>
+<def tag="contest-form" polymorphic/>
+<def tag="contest-form" for="BusinessOwnership">
+  <form lifecycle="contest">
+    <error-messages param/>
+    <input type="hidden" name="key" value="&this.lifecycle.provided_key" if="&this.lifecycle.provided_key"/>
+    <field-list fields="" param/>
+    <div param="actions">
+      <submit label="Contest" param/><or-cancel param="cancel"/>
+    </div>
+  </form>
+</def>
 
 <def tag="form" for="Business">
   <form merge param="default">
