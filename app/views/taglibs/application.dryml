@@ -219,6 +219,19 @@
   </card>
 </def>
 
+
+<def tag="card" for="BusinessOwnership">
+  <card class="business-ownership" param="default" merge>
+    <header: param>
+      <h4 param="heading"><a>You have a pending claim for <field-list fields="business" param/></a></h4>
+    </header:>
+    <body: param>       
+      <section class="business_ownership">
+      </section>
+    </body:>
+  </card>
+</def>
+
    
 <def tag="search-businesses">    
   <div param="search_by_location">      

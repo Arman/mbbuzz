@@ -1,4 +1,4 @@
-class Business_Ownership < ActiveRecord::Base
+class BusinessOwnership < ActiveRecord::Base
 
   hobo_model # Don't put anything above this
 
@@ -17,7 +17,7 @@ class Business_Ownership < ActiveRecord::Base
   # The 'owner' of a successful claim
   belongs_to :owner, :class_name => "User"   
   
-  named_scope :state_is, lambda {|*args| {:conditions => ["state = :state" , {:state =>   if args.first then '%'+args.first+'%' else '%' end}]}}
+  named_scope :state_is, lambda {|*args| {:conditions => ["state like :state" , {:state =>   if args.first then args.first else '%' end}]}}
 
   named_scope :claimed_by, lambda { 
                                                     |claimant_id| 
@@ -27,6 +27,8 @@ class Business_Ownership < ActiveRecord::Base
                                                         :conditions => ["user.id = :claimant_id" , {:claimant_id => claimant_id}]
                                                       } 
                                                   }
+                                                  
+  named_scope :limit, lambda { |num| { :limit => num }} 
 
   lifecycle do     
     state :in_review, :active, :unclaimed, :contested
