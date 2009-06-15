@@ -28,7 +28,12 @@ class BusinessOwnership < ActiveRecord::Base
                                                       } 
                                                   }
                                                   
+  named_scope :claimed_by_acting_user, { :include => :claimant, 
+                                                        :conditions => ["user.id = :claimant_id" , {:claimant_id => acting_user.id}]
+                                                        } 
+                                                
   named_scope :limit, lambda { |num| { :limit => num }} 
+
 
   lifecycle do     
     state :in_review, :active, :unclaimed, :contested

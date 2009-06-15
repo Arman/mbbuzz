@@ -4,7 +4,7 @@ class OwnerDashboardController < ApplicationController
 
   def index  
     @recent_reviews = Review.recent.limit(2)
-    @business_ownerships_in_review = BusinessOwnership.state_is("in_review")
+    @business_ownerships_in_review = BusinessOwnership.state_is("in_review").claimed_by_acting_user
   end
 
   def site_search
