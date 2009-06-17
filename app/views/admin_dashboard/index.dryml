@@ -1,15 +1,16 @@
 <page title="Site administrator dashboard">
   <body: class="front-page"/>
   <content:>
-    <header class="content-header">
-      <section class="welcome-message" unless="&logged_in?">
-        <h3>Welcome to <app-name/>. How do we know that you are an admin...You are not logged in. Please login to use all capabilities! <br/>
-        Once logged in you'll be able to add your business to our directory and claim ownership. <br/>
-        We will contact you to verify your identity and your relationship to the business. After this step you'll have increased control over the business listing.
-        </h3>
-      </section>
-    </header>
+  
+    <section class="content-body" unless="&logged_in?">
+        <br/><br/>
+        <h5>Please login with an administrator account to administration pages of our application! <br/>
+        </h5>
+        <br/><br/>
+    </section>
+    
     <section class="content-body" if="&logged_in?">
+    
       <section class="dashboard-without-business" if="&logged_in?">
         <h5> You currently do not own any businesses on our systems. Please choose one the following options to claim your business:</h5><br/>
         <ul>
@@ -17,19 +18,16 @@
           <li><a href="business_ownerships/claim">Claim ownership of an existing business in our directory.</a></li>
         </ul>
       </section><br/><br/>
-      <section class="dashboard-with-business" if="&logged_in?">
-        <h3>Reviews trends</h3>
-          <h5>Reviews trend graph goes here</h5>
-        <h3>Most recent reviews</h3>
-          <repeat with="&@recent_reviews"> 
+      
+      <section class="pending claims" unless="&@business_ownership_claims_in_review.empty?"> 
+      <h3>Pending business ownership claims</h3>
+          <repeat with="&@business_ownership_claims_in_review"> 
             <card/>
           </repeat> 
-        <h3>Best reviews</h3>     
-          <h5>Best reviews go here</h5>
-        <h3>Worst reviews</h3>     
-          <h5>Worst reviews go here</h5>
-      </section>
+      </section><br/><br/>
+    
     </section>
+      
   </content:>
 </page>
 

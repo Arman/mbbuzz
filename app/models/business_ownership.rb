@@ -17,21 +17,24 @@ class BusinessOwnership < ActiveRecord::Base
   # The 'owner' of a successful claim
   belongs_to :owner, :class_name => "User"   
   
-  named_scope :state_is, lambda {|*args| {:conditions => ["state like :state" , {:state =>   if args.first then args.first else '%' end}]}}
+  named_scope :state_is, lambda {|*args| {:conditions => ["business_ownerships.state like :state" , {:state =>   if args.first then args.first else '%' end}]}}
 
   named_scope :claimed_by, lambda { 
-                                                    |claimant_id| 
-                                                      return {} if claimant_id.blank?; 
-                                                      {:select => 'DISTINCT businesses.*', 
-                                                        :include => :claimant, 
-                                                        :conditions => ["user.id = :claimant_id" , {:claimant_id => claimant_id}]
+                                                    |user_id| 
+                                                      return {} if user_id.blank?; 
+                                                      {:include => :claimant, 
+                                                        :conditions => ["claimant_id = :user_id" , {:user_id => user_id}]
                                                       } 
                                                   }
                                                   
-  named_scope :claimed_by_acting_user, { :include => :claimant, 
-                                                        :conditions => ["user.id = :claimant_id" , {:claimant_id => acting_user.id}]
-                                                        } 
-                                                
+    named_scope :owned_by, lambda { 
+                                                    |user_id| 
+                                                      return {} if user_id.blank?; 
+                                                      {:include => :owner, 
+                                                        :conditions => ["owner_id = :user_id" , {:user_id => user_id}]
+                                                      } 
+                                                  } 
+                                                  
   named_scope :limit, lambda { |num| { :limit => num }} 
 
 
@@ -60,11 +63,11 @@ class BusinessOwnership < ActiveRecord::Base
   # --- Permissions --- #
 
   def create_permitted?
-    acting_user.administrator?
+    acting_user.signed_up?
   end
 
   def update_permitted?
-    acting_user.administrator?
+    acting_user.administrator? || owner_is?(acting_user)
   end
 
   def destroy_permitted?
@@ -72,7 +75,8 @@ class BusinessOwnership < ActiveRecord::Base
   end
 
   def view_permitted?(field)
-    true
+    # true ||  
+    acting_user.administrator? || owner_is?(acting_user) || claimant_is?(acting_user)  || claimant.nil?
   end
 
 end

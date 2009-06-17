@@ -164,6 +164,7 @@
 
 <!-- ====== CARDS ====== -->
 
+<!-- ====== Review ====== -->
 <def tag="card" for="Review">
   <card class="review" param="default" merge>
     <body: param>
@@ -183,6 +184,9 @@
     </body:>
   </card>
 </def>
+
+
+<!-- ====== Business ====== -->
 
 <def tag="card" for="Business">
   <card class="business" param="default" merge>
@@ -204,7 +208,7 @@
   </card>
 </def>
 
-<!-- ====== PERSON ====== -->
+<!-- ====== Person (Professional) ====== -->
 
 <def tag="card" for="Person">
   <card class="person" param="default" merge>
@@ -219,14 +223,13 @@
   </card>
 </def>
 
+<!-- ====== Business Ownership ====== -->
 
 <def tag="card" for="BusinessOwnership">
   <card class="business-ownership" param="default" merge>
-    <header: param>
-      <h4 param="heading"><a>You have a pending claim for <field-list fields="business" param/></a></h4>
-    </header:>
     <body: param>       
       <section class="business_ownership">
+      ABC
       </section>
     </body:>
   </card>
