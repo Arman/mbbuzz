@@ -229,7 +229,8 @@
   <card class="business-ownership" param="default" merge>
     <body: param>       
       <section class="business_ownership">
-      ABC
+      <a><name/></a>
+      <p><view:claimant/> claimed <view:business/> <transition-buttons/></p>
       </section>
     </body:>
   </card>

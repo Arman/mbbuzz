@@ -46,12 +46,12 @@ class BusinessOwnership < ActiveRecord::Base
       :user_becomes => :claimant 
       
     transition :accept, { :in_review => :active }, 
-      :available_to => "Administrator",
+      :available_to => "User",
       :user_becomes => :reviewer,
       :claimant_becomes => :owner
     
     transition :reject, { :in_review => :unclaimed }, 
-      :available_to => "Administrator",
+      :available_to => "User",
       :user_becomes => :reviewer
 
     transition :contest, { :active => :contested },
@@ -59,7 +59,10 @@ class BusinessOwnership < ActiveRecord::Base
       :user_becomes => :claimant     
   end 
 
-
+  # --- TO DO: Lifecycle Validations --- #
+  # --- Claim: Validate that ownership claim is first one for a business if not then execute contest action instead. --- #
+  
+  
   # --- Permissions --- #
 
   def create_permitted?
