@@ -35,7 +35,9 @@ class Review < ActiveRecord::Base
   end
   
   def after_save
-    self.review.update_attribute(:avg_rating, self.review.average_review_rating)
+    # shouldn't this update self.business? Changing as the next line - Arman 2009.06.22
+    # self.review.update_attribute(:avg_rating, self.review.average_review_rating)
+    self.business.update_attribute(:avg_rating, self.business.average_review_rating)
   end
 
   # --- Permissions --- #

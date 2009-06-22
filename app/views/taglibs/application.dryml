@@ -40,7 +40,17 @@
       <nav-item href="/static/about">About</nav-item>      
       <nav-item href="/static/faq">FAQ</nav-item>       
       <nav-item href="/static/terms">Terms of Use</nav-item>  
-      <nav-item href="/owner_dashboard">Business Owners</nav-item>        
+      <nav-item href="/owner_dashboard">Business Owners</nav-item>  
+      <nav-item href="/admin_dashboard">Site Admin</nav-item>        
+    </ul>   
+  </div> 
+</def>
+
+<!--    1.3. Secondary Footer Nav  ============================= -->
+<def tag="secondary-footer-nav">   
+  <div class="footer-nav">     
+    <ul>       
+      <nav-item href="/admin dashboard">Site Admin</nav-item>      
     </ul>   
   </div> 
 </def>
@@ -78,7 +88,7 @@
     </append-header:>
     <footer: param>
     <footer-nav/><br/>
-      a human powered production &copy; 2009
+      <p>a human powered production &copy; 2009</p>
     </footer:> 
   </old-page> 
 </extend>

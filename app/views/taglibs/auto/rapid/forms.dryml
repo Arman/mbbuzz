@@ -26,7 +26,18 @@
   <form lifecycle="accept">
     <error-messages param/>
     <input type="hidden" name="key" value="&this.lifecycle.provided_key" if="&this.lifecycle.provided_key"/>
-    <field-list fields="" param/>
+    <field-list fields="notes" param/>
+    <div param="actions">
+      <submit label="Accept" param/><or-cancel param="cancel"/>
+    </div>
+  </form>
+</def>
+<def tag="accept-form" polymorphic/>
+<def tag="accept-form" for="BusinessOwnership">
+  <form lifecycle="accept">
+    <error-messages param/>
+    <input type="hidden" name="key" value="&this.lifecycle.provided_key" if="&this.lifecycle.provided_key"/>
+    <field-list fields="notes" param/>
     <div param="actions">
       <submit label="Accept" param/><or-cancel param="cancel"/>
     </div>
@@ -37,7 +48,18 @@
   <form lifecycle="reject">
     <error-messages param/>
     <input type="hidden" name="key" value="&this.lifecycle.provided_key" if="&this.lifecycle.provided_key"/>
-    <field-list fields="" param/>
+    <field-list fields="notes" param/>
+    <div param="actions">
+      <submit label="Reject" param/><or-cancel param="cancel"/>
+    </div>
+  </form>
+</def>
+<def tag="reject-form" polymorphic/>
+<def tag="reject-form" for="BusinessOwnership">
+  <form lifecycle="reject">
+    <error-messages param/>
+    <input type="hidden" name="key" value="&this.lifecycle.provided_key" if="&this.lifecycle.provided_key"/>
+    <field-list fields="notes" param/>
     <div param="actions">
       <submit label="Reject" param/><or-cancel param="cancel"/>
     </div>

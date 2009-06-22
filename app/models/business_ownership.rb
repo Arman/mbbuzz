@@ -45,14 +45,30 @@ class BusinessOwnership < ActiveRecord::Base
       :available_to => "User",
       :user_becomes => :claimant 
       
-    transition :accept, { :in_review => :active }, 
+    transition :accept,{ :in_review => :active },
+      :params => [ :notes ],
       :available_to => "User",
-      :user_becomes => :reviewer,
-      :claimant_becomes => :owner
+      :user_becomes => :reviewer do
+      self.update_attribute(:owner_id, self.claimant_id)
+    end
     
-    transition :reject, { :in_review => :unclaimed }, 
+    transition :accept,{ :contested => :active },
+      :params => [ :notes ],
+      :available_to => "User",
+      :user_becomes => :reviewer do
+      self.update_attribute(:owner_id, self.claimant_id)
+    end
+    
+    transition :reject,{ :in_review => :unclaimed },
+      :params => [ :notes ],
       :available_to => "User",
       :user_becomes => :reviewer
+      
+    transition :reject,{ :contested => :active },
+      :params => [ :notes ],
+      :available_to => "User",
+      :user_becomes => :reviewer  
+    
 
     transition :contest, { :active => :contested },
       :available_to => "User",
@@ -61,6 +77,9 @@ class BusinessOwnership < ActiveRecord::Base
 
   # --- TO DO: Lifecycle Validations --- #
   # --- Claim: Validate that ownership claim is first one for a business if not then execute contest action instead. --- #
+  
+  # --- TO DO: Lifecycle History --- #
+  # --- Keep history of changes to business ownership. Date contested, contested by. these can be automatically added to a history field or as a seperate object  --- #  
   
   
   # --- Permissions --- #
