@@ -5,6 +5,7 @@ class FrontController < ApplicationController
   def index  
     @recent_reviews = Review.recent.limit(4)
     @top_businesses = Business.top_rated.limit(4)
+    @recent_people = Person.recent.limit(4)
     @recent_businesses = Business.recent.limit(4)
   end
 

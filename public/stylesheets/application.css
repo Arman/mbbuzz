@@ -226,7 +226,7 @@ div.review {
 div.review_card_header {
 	width:100%;
 	padding: 5px;
-	background:#feb;	
+	background: #fff; /* #feb;*/
 }
 
 div.reviewer {
@@ -257,7 +257,7 @@ div.review_text {
 }
 
 
-/* ORGANIZATION Index SEARCH Classes */
+/* BUSINESS Index SEARCH Classes */
 
 div.filter-container {
 	width:100%;
@@ -273,7 +273,7 @@ div.filter-link {
 	margin: 0px 10px 0px 0px;
 }
 
-/* ORGANIZATION card classes*/
+/* BUSINESS card classes*/
 div.organization {
 	width:100%;
 	position:relative;
@@ -282,7 +282,7 @@ div.organization {
 div.organization_card_header {
 	width:100%;
 	position:relative;
-	background:#feb;	
+	background:#fff;	
 	padding: 5px; 
 	height: 1.2em;
 }

@@ -14,6 +14,10 @@ class Person < ActiveRecord::Base
   has_many :employments, :dependent => :destroy  
   has_many :employers, :through => :employments, :uniq => true, :source => :business
 
+  named_scope :named, lambda {|*args| {:conditions => ["name like :name" , {:name =>   if args.first then '%'+args.first+'%' else '%' end}]}}
+  named_scope :limit, lambda { |num| { :limit => num }} 
+  named_scope :recent, {:order => 'created_at DESC' } 
+  
   # --- Permissions --- #
 
   def create_permitted?
