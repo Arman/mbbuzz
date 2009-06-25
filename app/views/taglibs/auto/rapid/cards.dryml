@@ -6,7 +6,7 @@
       <h4 param="heading"><a><name/></a></h4>
     </header:>
     <body: param>
-      <a:owner param="creator-link"/>
+      <a:creator param="creator-link"/>
       <count:business_categories param/>
     </body:>
   </card>
@@ -95,6 +95,14 @@
     <body: param>
       <count:employments param/>
     </body:>
+  </card>
+</def>
+
+<def tag="card" for="ProfessionalProfileOwnership">
+  <card class="professional-profile-ownership" param="default" merge>
+    <header: param>
+      <h4 param="heading"><a><name/></a></h4>
+    </header:>
   </card>
 </def>
 

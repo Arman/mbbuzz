@@ -5,8 +5,8 @@
     <section class="content-body" unless="&logged_in?">
         <br/><br/>
         <h5>Welcome to <app-name/>. Please sign up or login to use all capabilities of out site! <br/>
-        Once logged in you'll be able to add your business to our directory and claim ownership. <br/>
-        We will contact you to verify your identity and your relationship to the business. After this step you'll have increased control over the business listing.
+        Once logged in you'll be able to add your business or professional profile to our directory and claim ownership. <br/>
+        We will contact you to verify your identity and/or your relationship to the business. After this step you'll have increased control over the business listing and your professional profile.
         </h5>
         <br/><br/>
     </section>
@@ -26,7 +26,22 @@
             <card/>
           </repeat> 
       </section><br/><br/>
+  
+      <section class="dashboard-without-profile" if="&logged_in?">
+        <h5> You currently do not have a professional profile on our systems. Please choose one the following options to claim your profile:</h5><br/>
+        <ul>
+          <li><%= link_to "Add your profile to our directory", new_person_path %></li>
+          <li><a href="professional_profile_ownerships/claim">Claim ownership of an existing professional profile in our directory.</a></li>
+        </ul>
+      </section><br/><br/>    
       
+      <section class="pending claims" unless="&@professional_profile_ownership_claims_in_review.empty?"> 
+      <h3>Pending business ownership claims</h3>
+          <repeat with="&@professional_profile_ownership_claims_in_review"> 
+            <card/>
+          </repeat> 
+      </section><br/><br/>
+    
       
       <section class="dashboard-with-business" if="&logged_in?">
         <h3>Reviews trends</h3>

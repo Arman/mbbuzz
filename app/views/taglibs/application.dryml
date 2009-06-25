@@ -29,6 +29,7 @@
       <nav-item href="/people/new">Add Person</nav-item>  
       <nav-item href="/reviews/new">Add Review</nav-item>  
       <nav-item href="/owner_dashboard">Business Owners</nav-item>   
+      <nav-item href="/owner_dashboard">Professionals</nav-item>  
   </div>    
 </def>
 
@@ -41,6 +42,7 @@
       <nav-item href="/static/faq">FAQ</nav-item>       
       <nav-item href="/static/terms">Terms of Use</nav-item>  
       <nav-item href="/owner_dashboard">Business Owners</nav-item>  
+      <nav-item href="/owner_dashboard">Professionals</nav-item>  
       <nav-item href="/admin_dashboard">Site Admin</nav-item>        
     </ul>   
   </div> 
@@ -133,7 +135,7 @@
               <collection:reviews param/>
               <a:reviews action="new" if="&can_create?(@business.reviews)" param="new-link">Write a Review</a:reviews>
                <h3 param="collection-heading">Employees</h3>
-              <collection:employees param/>
+              <collection:employees param="default"/>             
               <a:employees action="new" if="&can_create?(@business.employees)" param="new-link">Add an Employee</a:employees>
             </section>
           </section>

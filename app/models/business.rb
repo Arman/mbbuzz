@@ -27,7 +27,7 @@ class Business < ActiveRecord::Base
   acts_as_mappable 
   before_validation :geocode_address
   
-  belongs_to :owner, :class_name => "User", :creator => true 
+  belongs_to :creator, :class_name => "User", :creator => true 
   has_many :reviews, :dependent => :destroy, :accessible => :true
   # has_many :business_ownerships, :dependent => :destroy, :accessible => :true
   # has_many :reviews, :as => :reviewable, :dependent => :destroy, :accessible => :true

@@ -25,7 +25,14 @@
             <card/>
           </repeat> 
       </section><br/><br/>
-    
+
+      <section class="pending claims" unless="&@professional_profile_ownership_claims_in_review.empty?"> 
+      <h3>Pending business ownership claims</h3>
+          <repeat with="&@professional_profile_ownership_claims_in_review"> 
+            <card/>
+          </repeat> 
+      </section><br/><br/>
+      
     </section>
       
   </content:>

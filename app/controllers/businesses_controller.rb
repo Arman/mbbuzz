@@ -4,6 +4,13 @@ class BusinessesController < ApplicationController
 
   auto_actions :all
   
+  
+  autocomplete :new_employee_name do
+    business = find_instance
+    hobo_completions :name, Person.without_business(business)
+  end
+
+  
   def index
     @businesses = Business.located_at(params[:location]).named(params[:search_string]).in_category(params[:category_id]) 
     hobo_index(@businesses)

@@ -3,7 +3,8 @@ class Employment < ActiveRecord::Base
   hobo_model # Don't put anything above this
 
   fields do
-
+    start_date :date
+    end_date :date
     timestamps
   end
 

@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090520200206) do
+ActiveRecord::Schema.define(:version => 20090624212213) do
 
   create_table "business_categories", :force => true do |t|
     t.datetime "created_at"
@@ -52,7 +52,7 @@ ActiveRecord::Schema.define(:version => 20090520200206) do
     t.datetime "photo_updated_at"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "owner_id"
+    t.integer  "creator_id"
   end
 
   create_table "categories", :force => true do |t|
@@ -69,6 +69,8 @@ ActiveRecord::Schema.define(:version => 20090520200206) do
     t.datetime "updated_at"
     t.integer  "business_id"
     t.integer  "person_id"
+    t.date     "start_date"
+    t.date     "end_date"
   end
 
   create_table "folders", :force => true do |t|
@@ -120,6 +122,19 @@ ActiveRecord::Schema.define(:version => 20090520200206) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "professional_title"
+  end
+
+  create_table "professional_profile_ownerships", :force => true do |t|
+    t.boolean  "acknowledge"
+    t.text     "notes"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "person_id"
+    t.integer  "claimant_id"
+    t.integer  "reviewer_id"
+    t.integer  "owner_id"
+    t.string   "state"
+    t.datetime "key_timestamp"
   end
 
   create_table "reviews", :force => true do |t|
